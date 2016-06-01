@@ -9,14 +9,14 @@ import android.widget.TextView;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.fragment.Troubleshooting;
+import ph.edu.bulsu.compnetworkingapp.fragment.TroubleshootingFragment;
 
 /**
  * Created by FDM CjC on 3/12/2016.
  */
 public class TroubleshootingAdapter extends RecyclerView.Adapter<TroubleshootingAdapter.MyViewHolder> {
 
-    private List<Troubleshooting> list;
+    private List<TroubleshootingFragment> list;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
@@ -28,7 +28,7 @@ public class TroubleshootingAdapter extends RecyclerView.Adapter<Troubleshooting
             year = (TextView) view.findViewById(R.id.year);
         }
     }
-    public TroubleshootingAdapter(List<Troubleshooting> troubleList) {
+    public TroubleshootingAdapter(List<TroubleshootingFragment> troubleList) {
         this.list = troubleList;
     }
 
@@ -42,7 +42,7 @@ public class TroubleshootingAdapter extends RecyclerView.Adapter<Troubleshooting
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Troubleshooting trouble = list.get(position);
+        TroubleshootingFragment trouble = list.get(position);
 //        holder.title.setText(trouble.getTitle());
 //        holder.genre.setText(trouble.getGenre());
 //        holder.year.setText(trouble.getYear());

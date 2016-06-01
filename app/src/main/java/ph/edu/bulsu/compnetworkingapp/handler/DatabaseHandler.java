@@ -10,7 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import ph.edu.bulsu.compnetworkingapp.fragment.Troubleshooting;
+import ph.edu.bulsu.compnetworkingapp.fragment.TroubleshootingFragment;
 
 /**
  * Created by FDM CjC on 3/12/2016.
@@ -62,7 +62,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Log.d("DB ERROR:", db.toString());
     }
 
-    public void addTopic(Troubleshooting troubleshooting)
+    public void addTopic(TroubleshootingFragment troubleshooting)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -75,8 +75,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     // Getting All Shops
-    public List<Troubleshooting> getAllTopics() {
-        List<Troubleshooting> shopList = new ArrayList<Troubleshooting>();
+    public List<TroubleshootingFragment> getAllTopics() {
+        List<TroubleshootingFragment> shopList = new ArrayList<TroubleshootingFragment>();
 // Select All Query
         String selectQuery = "SELECT * FROM " + TABLE_TOPICS;
 
@@ -86,7 +86,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Troubleshooting shop = new Troubleshooting();
+                TroubleshootingFragment shop = new TroubleshootingFragment();
                 shop.setID(Integer.parseInt(cursor.getString(0)));
                 shop.setTopic(cursor.getString(1));
                 shop.setContent(cursor.getString(2));
