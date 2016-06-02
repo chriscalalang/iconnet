@@ -12,21 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ph.edu.bulsu.compnetworkingapp.R;
+import ph.edu.bulsu.compnetworkingapp.interfaces.MainWindowController;
 
-//import ph.edu.bulsu.compnetworkingapp.adapter.TroubleshootingAdapter;
-public class TroubleshootingFragment extends BaseFragment {
+public class TutorialFragment extends BaseFragment {
 
-
-    private View parentView;
-
-    public static TroubleshootingFragment newInstance() {
+    public static TutorialFragment newInstance() {
         Bundle args = new Bundle();
 
-        TroubleshootingFragment fragment = new TroubleshootingFragment();
+        TutorialFragment fragment = new TutorialFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,7 +28,7 @@ public class TroubleshootingFragment extends BaseFragment {
 
     @Override
     public int getParentLayoutId() {
-        return R.layout.fragment_troubleshooting;
+        return R.layout.fragment_tutorial;
     }
 
     @Override

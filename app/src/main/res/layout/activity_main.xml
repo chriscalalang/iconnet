@@ -26,12 +26,18 @@
                 android:id="@+id/tlMain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 app:tabGravity="fill"
                 app:tabMode="fixed" />
         </android.support.design.widget.AppBarLayout>
 
     </android.support.design.widget.CoordinatorLayout>
 
+    <!-- Body -->
+    <FrameLayout
+        android:id="@+id/flMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <!-- Navigation Drawer -->
     <android.support.design.widget.NavigationView
         android:id="@+id/nvDrawer"
