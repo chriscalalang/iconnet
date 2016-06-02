@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/mainModules"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/miTutorials"
+            android:checked="false"
+            android:title="@string/tutorials" />
+        <item
+            android:id="@+id/miTroubleshooting"
+            android:checked="false"
+            android:title="@string/troubleshooting" />
+
+        <item
+            android:id="@+id/miIPCalculator"
+            android:checked="false"
+            android:title="@string/ip_calculator" />
+    </group>
+
+    <group
+        android:id="@+id/support_modules"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/miExit"
+            android:checked="false"
+            android:title="@string/exit" />
+    </group>
+
+</menu>
