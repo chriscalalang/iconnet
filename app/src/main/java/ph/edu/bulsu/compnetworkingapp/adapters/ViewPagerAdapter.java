@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.adapter;
+package ph.edu.bulsu.compnetworkingapp.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

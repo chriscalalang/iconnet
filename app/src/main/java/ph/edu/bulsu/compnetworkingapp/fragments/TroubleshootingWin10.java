@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.fragment;
+package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,18 +14,17 @@ import ph.edu.bulsu.compnetworkingapp.R;
  * Activities that contain this fragment must implement the
  * {@link TroubleshootingWin8.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the  factory method to
+ * Use the {@link TroubleshootingWin10#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TutorialSimulation extends Fragment {
+public class TroubleshootingWin10 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String TAG = "TutorialSimulation";
+    private static final String TAG = "TroubleshootingWin10";
 
     private OnFragmentInteractionListener mListener;
 
-
-    public TutorialSimulation() {
+    public TroubleshootingWin10() {
         // Required empty public constructor
     }
 
@@ -38,7 +37,7 @@ public class TutorialSimulation extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tutorial_simulation, container, false);
+        return inflater.inflate(R.layout.fragment_troubleshooting_win10, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -47,7 +46,6 @@ public class TutorialSimulation extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
-
 
     /**
      * This interface must be implemented by activities that contain this

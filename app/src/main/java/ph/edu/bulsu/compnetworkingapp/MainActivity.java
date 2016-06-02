@@ -13,9 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import ph.edu.bulsu.compnetworkingapp.fragment.IPCalculatorFragment;
-import ph.edu.bulsu.compnetworkingapp.fragment.TroubleshootingFragment;
-import ph.edu.bulsu.compnetworkingapp.fragment.TutorialFragment;
+import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
+import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
+import ph.edu.bulsu.compnetworkingapp.fragments.TutorialFragment;
 import ph.edu.bulsu.compnetworkingapp.interfaces.MainWindowController;
 
 public class MainActivity extends AppCompatActivity implements MainWindowController {
@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
                     case R.id.miTroubleshooting:
                         if (troubleshootingFragment == null)
                             troubleshootingFragment = TroubleshootingFragment.newInstance();
-                        fragment = tutorialFragment;
+                        fragment = troubleshootingFragment;
                         title = getString(R.string.troubleshooting);
                         break;
                     case R.id.miIPCalculator:
-                        if (tutorialFragment == null)
-                            tutorialFragment = TutorialFragment.newInstance();
-                        fragment = tutorialFragment;
+                        if (ipCalculatorFragment == null)
+                            ipCalculatorFragment = IPCalculatorFragment.newInstance();
+                        fragment = ipCalculatorFragment;
                         title = getString(R.string.ip_calculator);
                         break;
                     case R.id.miExit:
@@ -81,11 +81,12 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
 
 
                 final Fragment finalFragment = fragment;
+                final String finalTitle = title;
                 dlDrawer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.flMain, finalFragment, finalFragment.getClass().getSimpleName());
+                        fragmentTransaction.replace(R.id.flMain, finalFragment, finalTitle);
                         fragmentTransaction.commitAllowingStateLoss();
                     }
                 }, 350);

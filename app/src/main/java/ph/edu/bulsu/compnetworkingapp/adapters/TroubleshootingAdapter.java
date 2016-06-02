@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.adapter;
+package ph.edu.bulsu.compnetworkingapp.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.fragment.TroubleshootingFragment;
+import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
 
 /**
  * Created by FDM CjC on 3/12/2016.

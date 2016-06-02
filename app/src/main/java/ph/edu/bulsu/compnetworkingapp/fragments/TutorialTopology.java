@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.fragment;
+package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,15 +17,15 @@ import ph.edu.bulsu.compnetworkingapp.R;
  * Use the  factory method to
  * create an instance of this fragment.
  */
-public class TutorialSearch extends Fragment {
+public class TutorialTopology extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String TAG = "TutorialSearch";
+    private static final String TAG = "TutorialTopology";
 
     private OnFragmentInteractionListener mListener;
 
 
-    public TutorialSearch() {
+    public TutorialTopology() {
         // Required empty public constructor
     }
 
@@ -38,7 +38,7 @@ public class TutorialSearch extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tutorial_search, container, false);
+        return inflater.inflate(R.layout.fragment_tutorial_topology, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.fragment;
+package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.content.Context;
 import android.os.Bundle;

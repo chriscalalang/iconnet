@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.fragment;
+package ph.edu.bulsu.compnetworkingapp.fragments;
 
 /**
  * Created by FDM CjC on 3/12/2016.
