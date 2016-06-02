@@ -1,6 +1,7 @@
 package ph.edu.bulsu.compnetworkingapp;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
     private NavigationView nvDrawer;
     private DrawerLayout dlDrawer;
     private TabLayout tabLayout;
-    private ViewPager viewPager;
 
     private TutorialFragment tutorialFragment;
     private TroubleshootingFragment troubleshootingFragment;
@@ -117,16 +117,18 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
         tabLayout = (TabLayout) findViewById(R.id.tlMain);
     }
 
-    public TabLayout getTabLayout() {
+    @Override
+    public void useTabLayout(@Nullable ViewPager viewPager) {
 //        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 //        adapter.addFragment(new TroubleshootingFragment(), "TroubleshootingFragment");
 //        adapter.addFragment(new TutorialFragment(), "Tutorials");
 //        adapter.addFragment(new IPCalculatorFragment(), "IP Calculator");
 //
 //        viewPager.setAdapter(adapter);
-
-        return tabLayout;
+        tabLayout.setVisibility(viewPager != null ? View.VISIBLE : View.GONE);
+        tabLayout.setupWithViewPager(viewPager);
     }
+
 
 }
 
