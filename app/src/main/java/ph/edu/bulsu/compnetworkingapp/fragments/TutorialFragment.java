@@ -30,7 +30,7 @@ public class TutorialFragment extends BaseFragment {
     public void initializeParentView(View view) {
 
         vpTutorial = (ViewPager) view.findViewById(R.id.vpTutorial);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new TutorialTopology(), "Topology");
         adapter.addFragment(new TutorialSimulation(), "Simulation");
         vpTutorial.setAdapter(adapter);
