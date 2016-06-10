@@ -6,8 +6,11 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import ph.edu.bulsu.compnetworkingapp.R;
+import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
 
 public class TutorialFragment extends BaseFragment {
+    private ViewPager vpTutorial;
+
 
     public static TutorialFragment newInstance() {
         Bundle args = new Bundle();
@@ -26,12 +29,18 @@ public class TutorialFragment extends BaseFragment {
     @Override
     public void initializeParentView(View view) {
 
+        vpTutorial = (ViewPager) view.findViewById(R.id.vpTutorial);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        adapter.addFragment(new TutorialTopology(), "Topology");
+        adapter.addFragment(new TutorialSimulation(), "Simulation");
+        vpTutorial.setAdapter(adapter);
+
     }
 
     @Nullable
     @Override
     public ViewPager getTabLayoutViewPager() {
-        return null;
+        return vpTutorial;
     }
 
 

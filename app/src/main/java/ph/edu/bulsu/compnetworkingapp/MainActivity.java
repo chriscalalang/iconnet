@@ -119,12 +119,6 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
 
     @Override
     public void useTabLayout(@Nullable ViewPager viewPager) {
-//        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-//        adapter.addFragment(new TroubleshootingFragment(), "TroubleshootingFragment");
-//        adapter.addFragment(new TutorialFragment(), "Tutorials");
-//        adapter.addFragment(new IPCalculatorFragment(), "IP Calculator");
-//
-//        viewPager.setAdapter(adapter);
         tabLayout.setVisibility(viewPager != null ? View.VISIBLE : View.GONE);
         tabLayout.setupWithViewPager(viewPager);
     }
