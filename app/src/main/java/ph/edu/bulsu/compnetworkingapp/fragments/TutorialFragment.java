@@ -31,8 +31,8 @@ public class TutorialFragment extends BaseFragment {
 
         vpTutorial = (ViewPager) view.findViewById(R.id.vpTutorial);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new TutorialTopology(), "Topology");
-        adapter.addFragment(new TutorialSimulation(), "Simulation");
+        adapter.addFragment(TopologyFragment.newInstance(), "Topology");
+        adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
 
     }

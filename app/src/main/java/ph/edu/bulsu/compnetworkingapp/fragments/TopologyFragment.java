@@ -1,31 +1,34 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
 
-public class TroubleshootingFragment extends BaseFragment {
+public class TopologyFragment extends BaseFragment {
 
-    public static TroubleshootingFragment newInstance() {
+    @Override
+    public int getParentLayoutId() {
+        return R.layout.fragment_topology;
+    }
+
+    public static TopologyFragment newInstance() {
         Bundle args = new Bundle();
 
-        TroubleshootingFragment fragment = new TroubleshootingFragment();
+        TopologyFragment fragment = new TopologyFragment();
         fragment.setArguments(args);
         return fragment;
     }
 
-
-    @Override
-    public int getParentLayoutId() {
-        return R.layout.fragment_troubleshooting;
-    }
-
     @Override
     public void initializeParentView(View view) {
+
     }
 
     @Nullable
@@ -33,5 +36,4 @@ public class TroubleshootingFragment extends BaseFragment {
     public ViewPager getTabLayoutViewPager() {
         return null;
     }
-
 }

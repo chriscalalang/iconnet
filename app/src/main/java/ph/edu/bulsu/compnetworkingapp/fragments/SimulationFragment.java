@@ -6,26 +6,24 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
 
-public class TroubleshootingFragment extends BaseFragment {
+public class SimulationFragment extends BaseFragment{
+    @Override
+    public int getParentLayoutId() {
+        return R.layout.fragment_simulation;
+    }
 
-    public static TroubleshootingFragment newInstance() {
+    public static SimulationFragment newInstance() {
         Bundle args = new Bundle();
 
-        TroubleshootingFragment fragment = new TroubleshootingFragment();
+        SimulationFragment fragment = new SimulationFragment();
         fragment.setArguments(args);
         return fragment;
     }
 
-
-    @Override
-    public int getParentLayoutId() {
-        return R.layout.fragment_troubleshooting;
-    }
-
     @Override
     public void initializeParentView(View view) {
+
     }
 
     @Nullable
@@ -33,5 +31,4 @@ public class TroubleshootingFragment extends BaseFragment {
     public ViewPager getTabLayoutViewPager() {
         return null;
     }
-
 }
