@@ -34,7 +34,6 @@ public class TutorialFragment extends BaseFragment {
         adapter.addFragment(TopologyFragment.newInstance(), "Topology");
         adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
-
     }
 
     @Nullable
