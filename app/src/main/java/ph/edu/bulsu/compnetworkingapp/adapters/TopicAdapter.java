@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import ph.edu.bulsu.compnetworkingapp.R;
+import ph.edu.bulsu.compnetworkingapp.TopicContentActivity;
+import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHolder> {
@@ -72,7 +74,9 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent = new Intent(context, TopicContentActivity.class);
+                    intent.putExtra(BundleIDs.TOPIC, topicList.get(getAdapterPosition()));
+                    context.startActivity(intent);
                 }
             });
         }
