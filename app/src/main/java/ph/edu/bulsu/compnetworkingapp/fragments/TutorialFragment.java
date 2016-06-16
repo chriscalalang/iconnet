@@ -2,6 +2,7 @@ package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
@@ -10,6 +11,7 @@ import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
 
 public class TutorialFragment extends BaseFragment {
     private ViewPager vpTutorial;
+    private TabLayout tabLayout;
 
 
     public static TutorialFragment newInstance() {
@@ -34,13 +36,9 @@ public class TutorialFragment extends BaseFragment {
         adapter.addFragment(TopologyFragment.newInstance(), "Topology");
         adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
+
+        tabLayout = (TabLayout) parentView.findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(vpTutorial);
+
     }
-
-    @Nullable
-    @Override
-    public ViewPager getTabLayoutViewPager() {
-        return vpTutorial;
-    }
-
-
 }

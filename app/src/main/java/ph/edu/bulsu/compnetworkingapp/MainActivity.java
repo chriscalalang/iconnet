@@ -1,12 +1,9 @@
 package ph.edu.bulsu.compnetworkingapp;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,14 +14,12 @@ import android.view.View;
 import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TutorialFragment;
-import ph.edu.bulsu.compnetworkingapp.interfaces.MainWindowController;
 
-public class MainActivity extends AppCompatActivity implements MainWindowController {
+public class MainActivity extends AppCompatActivity {
 
     private Toolbar tbMain;
     private NavigationView nvDrawer;
     private DrawerLayout dlDrawer;
-    private TabLayout tabLayout;
 
     private TutorialFragment tutorialFragment;
     private TroubleshootingFragment troubleshootingFragment;
@@ -49,50 +44,20 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 dlDrawer.closeDrawers();
-
-
-                Fragment fragment = null;
-                String title = "";
-
-
                 switch (item.getItemId()) {
                     case R.id.miTutorials:
-                        if (tutorialFragment == null)
-                            tutorialFragment = TutorialFragment.newInstance();
-                        fragment = tutorialFragment;
-                        title = getString(R.string.tutorials);
+                        showTutorialsPage();
                         break;
                     case R.id.miTroubleshooting:
-                        if (troubleshootingFragment == null)
-                            troubleshootingFragment = TroubleshootingFragment.newInstance();
-                        fragment = troubleshootingFragment;
-                        title = getString(R.string.troubleshooting);
+                        showTroubleShootingPage();
                         break;
                     case R.id.miIPCalculator:
-                        if (ipCalculatorFragment == null)
-                            ipCalculatorFragment = IPCalculatorFragment.newInstance();
-                        fragment = ipCalculatorFragment;
-                        title = getString(R.string.ip_calculator);
+                        showIPCalculatorPage();
                         break;
                     case R.id.miExit:
                         finish();
                         return true;
                 }
-
-
-                final Fragment finalFragment = fragment;
-                final String finalTitle = title;
-                dlDrawer.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.flMain, finalFragment, finalTitle);
-                        fragmentTransaction.commitAllowingStateLoss();
-                    }
-                }, 350);
-                getSupportActionBar().setTitle(title);
-
-
                 return true;
             }
         });
@@ -113,16 +78,40 @@ public class MainActivity extends AppCompatActivity implements MainWindowControl
         dlDrawer.addDrawerListener(toggle);
         toggle.syncState();
 
-
-        tabLayout = (TabLayout) findViewById(R.id.tlMain);
+        showTutorialsPage();
     }
 
-    @Override
-    public void useTabLayout(@Nullable ViewPager viewPager) {
-        tabLayout.setVisibility(viewPager != null ? View.VISIBLE : View.GONE);
-        tabLayout.setupWithViewPager(viewPager);
+    private void useFragment(Fragment fragment, String title) {
+        final Fragment finalFragment = fragment;
+        final String finalTitle = title;
+        dlDrawer.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.flMain, finalFragment, finalTitle);
+                fragmentTransaction.commitAllowingStateLoss();
+            }
+        }, 350);
+        getSupportActionBar().setTitle(title);
     }
 
+    private void showIPCalculatorPage() {
+        if (ipCalculatorFragment == null)
+            ipCalculatorFragment = IPCalculatorFragment.newInstance();
+        useFragment(ipCalculatorFragment, getString(R.string.ip_calculator));
+    }
 
+    private void showTroubleShootingPage() {
+        if (troubleshootingFragment == null)
+            troubleshootingFragment = TroubleshootingFragment.newInstance();
+        useFragment(troubleshootingFragment, getString(R.string.troubleshooting));
+
+    }
+
+    private void showTutorialsPage() {
+        if (tutorialFragment == null)
+            tutorialFragment = TutorialFragment.newInstance();
+        useFragment(tutorialFragment, getString(R.string.tutorials));
+    }
 }
 

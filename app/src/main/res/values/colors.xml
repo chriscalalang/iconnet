@@ -6,7 +6,4 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#efefef</color>
-    <color name="year">#999999</color>
-    <color name="title">#222222</color>
-    <color name="buttons">#423eff</color>
 </resources>

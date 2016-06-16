@@ -28,10 +28,4 @@ public class TroubleshootingFragment extends BaseFragment {
     public void initializeParentView(View view) {
     }
 
-    @Nullable
-    @Override
-    public ViewPager getTabLayoutViewPager() {
-        return null;
-    }
-
 }

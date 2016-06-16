@@ -28,9 +28,4 @@ public class IPCalculatorFragment extends BaseFragment {
 
     }
 
-    @Nullable
-    @Override
-    public ViewPager getTabLayoutViewPager() {
-        return null;
-    }
 }

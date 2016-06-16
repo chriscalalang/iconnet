@@ -7,7 +7,7 @@ import android.view.View;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 
-public class SimulationFragment extends BaseFragment{
+public class SimulationFragment extends BaseFragment {
     @Override
     public int getParentLayoutId() {
         return R.layout.fragment_simulation;
@@ -26,9 +26,4 @@ public class SimulationFragment extends BaseFragment{
 
     }
 
-    @Nullable
-    @Override
-    public ViewPager getTabLayoutViewPager() {
-        return null;
-    }
 }

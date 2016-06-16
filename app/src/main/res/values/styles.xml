@@ -18,4 +18,18 @@
         <item name="android:background">@drawable/btn_primary</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
+
+    <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+
+    <style name="AppTheme.TabLayout.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:padding">0dp</item>
+    </style>
 </resources>
