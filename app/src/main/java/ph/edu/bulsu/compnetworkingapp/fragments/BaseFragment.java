@@ -15,10 +15,13 @@ public abstract class BaseFragment extends Fragment {
 
     protected View parentView;
 
+    protected Context context;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+
+        this.context = context;
     }
 
     @Override
