@@ -1,7 +1,6 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -33,6 +32,7 @@ public class TutorialFragment extends BaseFragment {
 
         vpTutorial = (ViewPager) view.findViewById(R.id.vpTutorial);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
+        adapter.addFragment(AllTutorialsFragment.newInstance(), "All");
         adapter.addFragment(TopologyFragment.newInstance(), "Topology");
         adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
