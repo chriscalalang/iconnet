@@ -1,8 +1,6 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,7 +13,7 @@ import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.TopicAdapter;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 
-public class TopologyFragment extends BaseFragment {
+public class AllTutorialsFragment extends BaseFragment {
 
     private RecyclerView recyclerView;
 
@@ -25,13 +23,13 @@ public class TopologyFragment extends BaseFragment {
 
     @Override
     public int getParentLayoutId() {
-        return R.layout.fragment_topology;
+        return R.layout.fragment_all_tutorials;
     }
 
-    public static TopologyFragment newInstance() {
+    public static AllTutorialsFragment newInstance() {
         Bundle args = new Bundle();
 
-        TopologyFragment fragment = new TopologyFragment();
+        AllTutorialsFragment fragment = new AllTutorialsFragment();
         fragment.setArguments(args);
         return fragment;
     }
