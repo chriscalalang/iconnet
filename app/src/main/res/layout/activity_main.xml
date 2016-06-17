@@ -17,7 +17,6 @@
             android:animateLayoutChanges="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +30,7 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <android.support.v7.widget.SearchView
+                android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_scrollFlags="scroll|enterAlways" />

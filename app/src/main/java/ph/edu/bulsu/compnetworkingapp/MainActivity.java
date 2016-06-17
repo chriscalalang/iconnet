@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Toolbar tbMain;
     private NavigationView nvDrawer;
+    private SearchView searchView;
     private DrawerLayout dlDrawer;
 
     private TutorialFragment tutorialFragment;
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+
+        searchView = (SearchView) findViewById(R.id.searchView);
 
 
         nvDrawer = (NavigationView) findViewById(R.id.nvDrawer);
@@ -99,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         if (ipCalculatorFragment == null)
             ipCalculatorFragment = IPCalculatorFragment.newInstance();
         useFragment(ipCalculatorFragment, getString(R.string.ip_calculator));
+
+        searchView.setVisibility(View.GONE);
     }
 
     private void showTroubleShootingPage() {
@@ -106,12 +112,16 @@ public class MainActivity extends AppCompatActivity {
             troubleshootingFragment = TroubleshootingFragment.newInstance();
         useFragment(troubleshootingFragment, getString(R.string.troubleshooting));
 
+        searchView.setVisibility(View.VISIBLE);
     }
 
     private void showTutorialsPage() {
         if (tutorialFragment == null)
             tutorialFragment = TutorialFragment.newInstance();
         useFragment(tutorialFragment, getString(R.string.tutorials));
+
+
+        searchView.setVisibility(View.VISIBLE);
     }
 }
 
