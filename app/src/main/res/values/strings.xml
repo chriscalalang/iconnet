@@ -12,4 +12,10 @@
     <string name="exit">Exit</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
+    <string name="ip_adress">IP Adress</string>
+    <string name="cidm">CIDM</string>
+    <string name="subnet_mask">Subnet Mask</string>
+    <string name="high_address">High Address</string>
+    <string name="low_address">Low Address</string>
+    <string name="broadcast_address">Broadcast Address</string>
 </resources>
