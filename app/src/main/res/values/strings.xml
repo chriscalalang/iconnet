@@ -18,4 +18,9 @@
     <string name="high_address">High Address</string>
     <string name="low_address">Low Address</string>
     <string name="broadcast_address">Broadcast Address</string>
+    <string name="windows_7">Windows 7</string>
+    <string name="windows_8">Windows 8</string>
+    <string name="windows_10">Windows 10</string>
+    <string name="ubuntu">Ubuntu</string>
+    <string name="all">All</string>
 </resources>
