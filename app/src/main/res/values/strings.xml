@@ -12,15 +12,15 @@
     <string name="exit">Exit</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
-    <string name="ip_adress">IP Adress</string>
-    <string name="cidm">CIDM</string>
+    <string name="ip_adress">IP Address</string>
     <string name="subnet_mask">Subnet Mask</string>
     <string name="high_address">High Address</string>
     <string name="low_address">Low Address</string>
-    <string name="broadcast_address">Broadcast Address</string>
+    <string name="maximum_addresses">Maximum Addresses</string>
     <string name="windows_7">Windows 7</string>
     <string name="windows_8">Windows 8</string>
     <string name="windows_10">Windows 10</string>
     <string name="ubuntu">Ubuntu</string>
     <string name="all">All</string>
+    <string name="cidr">cidr</string>
 </resources>
