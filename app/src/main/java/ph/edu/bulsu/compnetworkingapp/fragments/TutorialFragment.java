@@ -6,7 +6,6 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.TopologyFragment;
 import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
 
 public class TutorialFragment extends BaseFragment {

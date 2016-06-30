@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp;
+package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TutorialFragment;

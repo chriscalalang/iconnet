@@ -3,12 +3,13 @@
     package="ph.edu.bulsu.compnetworkingapp">
 
     <application
+        android:name=".IconNetApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -18,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TopicContentActivity"
+            android:name=".activities.TopicContentActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
     </application>

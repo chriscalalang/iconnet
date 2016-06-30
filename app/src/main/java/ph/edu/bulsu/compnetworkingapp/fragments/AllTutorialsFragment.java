@@ -1,16 +1,20 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ph.edu.bulsu.compnetworkingapp.IconNetApplication;
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.TopicAdapter;
+import ph.edu.bulsu.compnetworkingapp.managers.ResourcesManager;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 
 public class AllTutorialsFragment extends BaseFragment {
@@ -59,6 +63,8 @@ public class AllTutorialsFragment extends BaseFragment {
         topicList.add(new Topic("A title", "Text content text content text content"));
         topicList.add(new Topic("I want food", "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"));
         topicList.add(new Topic("Android is cool", "I'm the coolest though. . . . . . . . . . . . ."));
+
+        Log.e("TOPICS COUNT", "" + ResourcesManager.getTopicAssetsCount());
     }
 
 

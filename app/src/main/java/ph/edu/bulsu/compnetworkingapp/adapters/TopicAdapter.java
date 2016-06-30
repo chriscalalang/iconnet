@@ -2,26 +2,18 @@ package ph.edu.bulsu.compnetworkingapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.TopicContentActivity;
+import ph.edu.bulsu.compnetworkingapp.activities.TopicContentActivity;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 

@@ -1,11 +1,12 @@
-package ph.edu.bulsu.compnetworkingapp;
+package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
+import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
-import ph.edu.bulsu.compnetworkingapp.views.HidingToolbarActivity;
+import ph.edu.bulsu.compnetworkingapp.activities.HidingToolbarActivity;
 
 /**
  * Created by Sheychan on 6/17/2016.

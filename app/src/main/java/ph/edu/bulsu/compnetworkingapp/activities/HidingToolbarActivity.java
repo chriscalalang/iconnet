@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp.views;
+package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.content.Intent;
 import android.os.Build;
