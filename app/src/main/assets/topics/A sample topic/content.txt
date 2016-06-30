@@ -1,5 +1,3 @@
-text:
-{{
 This is a sample topic's text content.
 You should insert it inside the double brackets.
 There is no restriction of the characters that can be read.
@@ -7,18 +5,7 @@ There is no restriction of the characters that can be read.
 I will guide you on how to create a topic.
 First create a folder with filename of your intended title of the topic.
 Create content.txt file inside the folder. This will serve as the reference for the text and html contents.
-text section will be the text content and if you want additional info via html, you may add html section.
+content.txt will be the text content and if you want additional info via html, you may add content.html.
 its ok if it's not present in content.txt file.
 
 Inside the folder, you may put images which will be used for slideshow. This supports images with .png and .jpg file extension.
-}}
-
-
-html:
-{{
-<html>
-    <body>
-        An optional html txt
-    </body>
-</html>
-}}
