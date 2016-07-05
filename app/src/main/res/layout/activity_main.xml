@@ -5,19 +5,12 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <android.support.design.widget.CoordinatorLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Body -->
-        <FrameLayout
-            android:id="@+id/flMain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:animateLayoutChanges="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/toolbarContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -29,13 +22,42 @@
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-            <android.support.v7.widget.SearchView
-                android:id="@+id/searchView"
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways|snap" />
+                app:tabGravity="fill"
+                app:tabMode="fixed" />
+
         </android.support.design.widget.AppBarLayout>
-    </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarContainer">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|enterAlways|snap" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <!-- Body -->
+            <FrameLayout
+                android:id="@+id/flMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
 
     <!-- Navigation Drawer -->
     <android.support.design.widget.NavigationView

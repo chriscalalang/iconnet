@@ -2,6 +2,7 @@ package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -16,12 +17,14 @@ import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TutorialFragment;
+import ph.edu.bulsu.compnetworkingapp.interfaces.MainViewController;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainViewController {
 
     private Toolbar tbMain;
     private NavigationView nvDrawer;
     private SearchView searchView;
+    private TabLayout tabLayout;
     private DrawerLayout dlDrawer;
 
     private TutorialFragment tutorialFragment;
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         searchView = (SearchView) findViewById(R.id.searchView);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
 
         nvDrawer = (NavigationView) findViewById(R.id.nvDrawer);
@@ -106,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         useFragment(ipCalculatorFragment, getString(R.string.ip_calculator));
 
         searchView.setVisibility(View.GONE);
+        tabLayout.setVisibility(View.GONE);
     }
 
     private void showTroubleShootingPage() {
@@ -114,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         useFragment(troubleshootingFragment, getString(R.string.troubleshooting));
 
         searchView.setVisibility(View.VISIBLE);
+        tabLayout.setVisibility(View.GONE);
     }
 
     private void showTutorialsPage() {
@@ -123,6 +129,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         searchView.setVisibility(View.VISIBLE);
+        tabLayout.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public TabLayout getTabLayout() {
+        return tabLayout;
     }
 }
 

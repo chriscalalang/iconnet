@@ -37,7 +37,7 @@ public class TutorialFragment extends BaseFragment {
         adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
 
-        tabLayout = (TabLayout) parentView.findViewById(R.id.tabLayout);
+        tabLayout = mainViewController.getTabLayout();
         tabLayout.setupWithViewPager(vpTutorial);
 
     }

@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ph.edu.bulsu.compnetworkingapp.interfaces.MainViewController;
+
 /**
  * Created by Sheychan on 6/3/2016.
  */
@@ -17,10 +19,17 @@ public abstract class BaseFragment extends Fragment {
 
     protected Context context;
 
+    protected MainViewController mainViewController;
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
 
+        if (!(context instanceof MainViewController)) {
+            throw new RuntimeException("BaseFragment should be attached to a MainViewController Activity");
+        }
+
+        this.mainViewController = (MainViewController) context;
         this.context = context;
     }
 
