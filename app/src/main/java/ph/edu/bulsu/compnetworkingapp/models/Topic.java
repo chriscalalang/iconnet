@@ -16,6 +16,10 @@ public class Topic implements Parcelable {
     private String html;
 
 
+    public Topic(String title) {
+        this.title = title;
+    }
+
     public Topic(String title, String text) {
         this.title = title;
         this.text = text;

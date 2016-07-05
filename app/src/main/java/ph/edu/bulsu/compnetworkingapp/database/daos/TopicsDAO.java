@@ -4,6 +4,10 @@ import android.content.ContentValues;
 import android.database.Cursor;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.database.tables.TopicsTable;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
@@ -39,9 +43,20 @@ public class TopicsDAO extends BaseDAO<Topic> {
 
     @Override
     protected Topic getObjectFromCursor(Cursor cursor) {
-        Topic topic = new Topic(cursor.getString(cursor.getColumnIndex(TopicsTable.TITLE)), cursor.getString(cursor.getColumnIndex(TopicsTable.TEXT)));
-        topic.setText(cursor.getString(cursor.getColumnIndex(TopicsTable.IMAGES)));
-        topic.setHtml(cursor.getString(cursor.getColumnIndex(TopicsTable.HTML)));
-        return topic;
+        try {
+            Topic topic = new Topic(cursor.getString(cursor.getColumnIndex(TopicsTable.TITLE)), cursor.getString(cursor.getColumnIndex(TopicsTable.TEXT)));
+
+            JSONArray imagesJsonArray = new JSONArray(cursor.getString(cursor.getColumnIndex(TopicsTable.IMAGES)));
+            List<String> images = new ArrayList<>();
+            for (int i = 0; i < imagesJsonArray.length(); i++)
+                images.add(imagesJsonArray.get(i).toString());
+
+            topic.setImages(images);
+            topic.setHtml(cursor.getString(cursor.getColumnIndex(TopicsTable.HTML)));
+
+            return topic;
+        } catch (JSONException e) {
+            throw new RuntimeException("App error contact developer immediately");
+        }
     }
 }

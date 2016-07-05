@@ -1,7 +1,8 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
-import android.graphics.drawable.Icon;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,9 +12,10 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import ph.edu.bulsu.compnetworkingapp.IconNetApplication;
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.TopicAdapter;
+import ph.edu.bulsu.compnetworkingapp.database.daos.TopicsDAO;
+import ph.edu.bulsu.compnetworkingapp.interfaces.ResourceUpdateStatusListener;
 import ph.edu.bulsu.compnetworkingapp.managers.ResourcesManager;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 
@@ -50,23 +52,36 @@ public class AllTutorialsFragment extends BaseFragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setItemViewCacheSize(0);
-
-        topicList.add(new Topic("A title", "Text content text content text content"));
-        topicList.add(new Topic("I want food", "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"));
-        topicList.add(new Topic("Android is cool", "I'm the coolest though. . . . . . . . . . . . ."));
-        topicList.add(new Topic("A title", "Text content text content text content"));
-        topicList.add(new Topic("I want food", "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"));
-        topicList.add(new Topic("Android is cool", "I'm the coolest though. . . . . . . . . . . . ."));
-        topicList.add(new Topic("A title", "Text content text content text content"));
-        topicList.add(new Topic("I want food", "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"));
-        topicList.add(new Topic("Android is cool", "I'm the coolest though. . . . . . . . . . . . ."));
-        topicList.add(new Topic("A title", "Text content text content text content"));
-        topicList.add(new Topic("I want food", "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"));
-        topicList.add(new Topic("Android is cool", "I'm the coolest though. . . . . . . . . . . . ."));
-
-        Log.e("TOPICS COUNT", "" + ResourcesManager.getTopicAssetsCount());
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        final ProgressDialog progressDialog = new ProgressDialog(context);
+
+        Log.e("TOPICS COUNT", "" + ResourcesManager.getTopicAssetsCount());
+        if (ResourcesManager.hasNewTopicAssets()) {
+            progressDialog.setMessage("Loading resources");
+            progressDialog.setIndeterminate(true);
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+            ResourcesManager.updateTopicAssets(new ResourceUpdateStatusListener() {
+                @Override
+                public View getHandler() {
+                    return parentView;
+                }
+
+                @Override
+                public void onUpdateCompleted() {
+                    populateList(TopicsDAO.getInstance().getAll(), false, false);
+                    progressDialog.dismiss();
+                }
+            });
+        } else {
+            populateList(TopicsDAO.getInstance().getAll(), false, false);
+        }
+    }
 
     public void populateList(final List<Topic> topicList, boolean incremental, boolean shouldLoadMore) {
         int previousSize = this.topicList.size();

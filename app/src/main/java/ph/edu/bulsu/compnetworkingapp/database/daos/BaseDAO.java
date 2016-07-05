@@ -3,6 +3,9 @@ package ph.edu.bulsu.compnetworkingapp.database.daos;
 import android.content.ContentValues;
 import android.database.Cursor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ph.edu.bulsu.compnetworkingapp.managers.DatabaseManager;
 
 /**
@@ -10,11 +13,19 @@ import ph.edu.bulsu.compnetworkingapp.managers.DatabaseManager;
  */
 public abstract class BaseDAO<T> {
 
-    protected void save(T object) {
+    public void save(T object) {
         DatabaseManager.getInstance().insert(getTableName(), null, getContentValues(object));
     }
 
-    protected T get(String selection, String[] selectionArgs) {
+    public void saveAll(List<T> objects) {
+        DatabaseManager.getInstance().beginTransaction();
+        for (T object : objects) {
+            save(object);
+        }
+        DatabaseManager.getInstance().endTransaction();
+    }
+
+    public T get(String selection, String[] selectionArgs) {
         T object = null;
 
         Cursor cursor = DatabaseManager.getInstance().query(getTableName(), null, selection, selectionArgs, null, null, null);
@@ -24,6 +35,22 @@ public abstract class BaseDAO<T> {
         cursor.close();
 
         return object;
+    }
+
+    public List<T> getAll() {
+        List<T> objects = new ArrayList<>();
+
+        Cursor cursor = DatabaseManager.getInstance().query(getTableName(), null, null, null, null, null, null);
+        while (cursor.moveToNext()) {
+            objects.add(getObjectFromCursor(cursor));
+        }
+        cursor.close();
+
+        return objects;
+    }
+
+    public void clearStorage() {
+        DatabaseManager.getInstance().delete(getTableName(), null, null);
     }
 
     protected abstract ContentValues getContentValues(T object);
