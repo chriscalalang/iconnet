@@ -1,9 +1,6 @@
 package ph.edu.bulsu.compnetworkingapp.managers;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 
 import java.io.IOException;
@@ -20,6 +17,9 @@ public class ResourcesManager {
 
     private static final String ASSETS_VERSION = "assets_version";
     private static final String ASSETS_TOPIC_COUNT = "assets_topic_count";
+    private static final String TOPICS_FOLDER = "topics";
+    private static final String CONTENT_TEXT_FILE_NAME = "content.txt";
+    private static final String CONTENT_HTML_FILE_NAME = "contents.html";
 
     public static boolean hasNewTopicAssets() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IconNetApplication.getInstance());
@@ -38,7 +38,7 @@ public class ResourcesManager {
 
     public static int getTopicAssetsCount() {
         try {
-            return IconNetApplication.getInstance().getResources().getAssets().list("topics").length;
+            return IconNetApplication.getInstance().getResources().getAssets().list(TOPICS_FOLDER).length;
         } catch (IOException e) {
             return -1;
         }
