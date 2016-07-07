@@ -49,6 +49,11 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
         if (topic.getText() != null) {
             boolean textMoreThan250Chars = topic.getText().length() > 250;
             holder.tvText.setText(Html.fromHtml(topic.getText().substring(0, textMoreThan250Chars ? 249 : topic.getText().length()) + (textMoreThan250Chars ? "..." : "")));
+        } else {
+            if (topic.getHtml() != null){
+                boolean htmlMoreThan250Chars = topic.getHtml().length() > 250;
+                holder.tvText.setText(Html.fromHtml(topic.getHtml().substring(0, htmlMoreThan250Chars ? 249 : topic.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
+            }
         }
     }
 

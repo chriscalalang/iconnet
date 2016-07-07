@@ -31,6 +31,8 @@ public abstract class HidingToolbarActivity extends AppCompatActivity {
         vs_container.setLayoutResource(getContentViewId());
         vs_container.inflate();
 
+        setStatusbarColor(getResources().getColor(R.color.colorPrimaryDark));
+
     }
 
     protected void setToolbarTitle(String title) {
