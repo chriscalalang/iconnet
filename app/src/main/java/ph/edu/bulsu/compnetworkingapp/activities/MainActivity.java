@@ -1,5 +1,6 @@
 package ph.edu.bulsu.compnetworkingapp.activities;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 dlDrawer.closeDrawers();
+                ablSearch.setExpanded(true, true);
+
                 switch (item.getItemId()) {
                     case R.id.miTutorials:
                         showTutorialsPage();
@@ -85,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
+                hideKeyBoard();
             }
         };
         dlDrawer.addDrawerListener(toggle);
@@ -113,7 +118,6 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
         useFragment(ipCalculatorFragment, getString(R.string.ip_calculator));
 
         searchView.setVisibility(View.GONE);
-        ablSearch.setExpanded(false, true);
         tabLayout.setVisibility(View.GONE);
     }
 
@@ -123,7 +127,6 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
         useFragment(troubleshootingFragment, getString(R.string.troubleshooting));
 
         searchView.setVisibility(View.VISIBLE);
-        ablSearch.setExpanded(true, true);
         tabLayout.setVisibility(View.GONE);
     }
 
@@ -134,13 +137,22 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
 
 
         searchView.setVisibility(View.VISIBLE);
-        ablSearch.setExpanded(true, true);
         tabLayout.setVisibility(View.VISIBLE);
+    }
+
+    private void hideKeyBoard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     @Override
     public TabLayout getTabLayout() {
         return tabLayout;
     }
+
+
 }
 

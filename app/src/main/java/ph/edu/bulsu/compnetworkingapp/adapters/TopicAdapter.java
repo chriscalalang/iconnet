@@ -3,11 +3,11 @@ package ph.edu.bulsu.compnetworkingapp.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -43,8 +43,13 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
     public void onBindViewHolder(final TopicViewHolder holder, int position) {
         final Topic topic = topicList.get(position);
 
-        holder.tvTitle.setText(topic.getTitle());
-        holder.tvText.setText(topic.getText());
+
+        holder.tvTitle.setText(Html.fromHtml(topic.getTitle()));
+
+        if (topic.getText() != null) {
+            boolean textMoreThan250Chars = topic.getText().length() > 250;
+            holder.tvText.setText(Html.fromHtml(topic.getText().substring(0, textMoreThan250Chars ? 249 : topic.getText().length()) + (textMoreThan250Chars ? "..." : "")));
+        }
     }
 
     @Override
