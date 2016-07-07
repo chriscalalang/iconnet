@@ -1,6 +1,7 @@
 package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
     private Toolbar tbMain;
     private NavigationView nvDrawer;
     private SearchView searchView;
+    private AppBarLayout ablSearch;
     private TabLayout tabLayout;
     private DrawerLayout dlDrawer;
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
+        ablSearch = (AppBarLayout) findViewById(R.id.ablSearch);
         searchView = (SearchView) findViewById(R.id.searchView);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
@@ -110,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
         useFragment(ipCalculatorFragment, getString(R.string.ip_calculator));
 
         searchView.setVisibility(View.GONE);
+        ablSearch.setExpanded(false, true);
         tabLayout.setVisibility(View.GONE);
     }
 
@@ -119,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
         useFragment(troubleshootingFragment, getString(R.string.troubleshooting));
 
         searchView.setVisibility(View.VISIBLE);
+        ablSearch.setExpanded(true, true);
         tabLayout.setVisibility(View.GONE);
     }
 
@@ -129,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
 
 
         searchView.setVisibility(View.VISIBLE);
+        ablSearch.setExpanded(true, true);
         tabLayout.setVisibility(View.VISIBLE);
     }
 
