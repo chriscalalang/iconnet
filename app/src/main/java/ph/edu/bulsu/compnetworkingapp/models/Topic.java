@@ -88,4 +88,8 @@ public class Topic implements Parcelable {
         dest.writeStringList(images);
         dest.writeString(html);
     }
+
+    public String getBaseFolderPath() {
+        return "file:///android_asset/topics/" + title + "/";
+    }
 }

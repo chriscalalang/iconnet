@@ -4,16 +4,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/rlImages"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/slideshow_image_height">
+
+        <ProgressBar
+            android:id="@+id/pbImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/slideshow_image_height"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llImages"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/slideshow_image_height"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/tvText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/default_padding_half" />
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding_half"
+        android:textSize="16sp" />
 
     <WebView
         android:id="@+id/wvHtml"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/default_padding_half" />
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding" />
 
 </LinearLayout>

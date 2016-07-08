@@ -6,6 +6,7 @@ package ph.edu.bulsu.compnetworkingapp.constants;
 public class BundleIDs {
 
     public static final String TOPIC = "topic";
+    public static final String IMAGE_URL = "image_url";
 
     private BundleIDs() {
     }

@@ -70,6 +70,23 @@ public class ResourcesManager {
                         e.printStackTrace();
                     }
 
+                    //attempt get images
+                    List<String> imageList = new ArrayList<String>();
+                    String[] imageFileNames = new String[0];
+                    try {
+                        imageFileNames = IconNetApplication.getInstance().getResources().getAssets().list(TOPICS_FOLDER + "/" + folder);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    for (String fileName : imageFileNames) {
+                        if (fileName.contains(".png") || fileName.contains(".jpg")) {
+                            imageList.add(fileName);
+                        }
+                    }
+
+                    topic.setImages(imageList);
+
                     topics.add(topic);
                 }
 
@@ -95,8 +112,7 @@ public class ResourcesManager {
         byte[] buffer = new byte[1024];
 
         int n;
-        while ((n = is.read(buffer)) != -1)
-        {
+        while ((n = is.read(buffer)) != -1) {
             fileContent.append(new String(buffer, 0, n));
         }
         return fileContent.toString();
