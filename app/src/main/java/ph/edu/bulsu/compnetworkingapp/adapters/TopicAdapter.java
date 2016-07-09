@@ -43,6 +43,10 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
     public void onBindViewHolder(final TopicViewHolder holder, int position) {
         final Topic topic = topicList.get(position);
 
+        if (position % 2 == 1)
+            holder.itemView.setBackgroundResource(R.drawable.background_simple_item_white);
+        else holder.itemView.setBackgroundResource(R.drawable.background_simple_item_gray);
+
 
         holder.tvTitle.setText(Html.fromHtml(topic.getTitle()));
 
@@ -50,7 +54,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
             boolean textMoreThan250Chars = topic.getText().length() > 250;
             holder.tvText.setText(Html.fromHtml(topic.getText().substring(0, textMoreThan250Chars ? 249 : topic.getText().length()) + (textMoreThan250Chars ? "..." : "")));
         } else {
-            if (topic.getHtml() != null){
+            if (topic.getHtml() != null) {
                 boolean htmlMoreThan250Chars = topic.getHtml().length() > 250;
                 holder.tvText.setText(Html.fromHtml(topic.getHtml().substring(0, htmlMoreThan250Chars ? 249 : topic.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
             }
