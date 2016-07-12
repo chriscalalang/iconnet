@@ -24,6 +24,18 @@ public class TopicsDAO extends BaseDAO<Topic> {
         return topicsDAO;
     }
 
+
+    public List<Topic> getAll(List<String> tags) {
+        List<Topic> topics = new ArrayList<>();
+
+        String selection = ";";
+        String[] selectionArgs = new String[tags.size()];
+
+        for (String tag : tags) {
+        }
+        return topics;
+    }
+
     @Override
     protected ContentValues getContentValues(Topic object) {
         ContentValues contentValues = new ContentValues();
