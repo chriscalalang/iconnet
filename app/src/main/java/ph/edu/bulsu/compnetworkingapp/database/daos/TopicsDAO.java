@@ -31,6 +31,7 @@ public class TopicsDAO extends BaseDAO<Topic> {
         contentValues.put(TopicsTable.TITLE, object.getTitle());
         contentValues.put(TopicsTable.TEXT, object.getText());
         contentValues.put(TopicsTable.IMAGES, new JSONArray(object.getImages()).toString());
+        contentValues.put(TopicsTable.TAGS, new JSONArray(object.getTags()).toString());
         contentValues.put(TopicsTable.HTML, object.getHtml());
 
         return contentValues;
@@ -52,6 +53,15 @@ public class TopicsDAO extends BaseDAO<Topic> {
                 images.add(imagesJsonArray.get(i).toString());
 
             topic.setImages(images);
+
+
+            JSONArray tagsJsonArray = new JSONArray(cursor.getString(cursor.getColumnIndex(TopicsTable.TAGS)));
+            List<String> tags = new ArrayList<>();
+            for (int i = 0; i < tagsJsonArray.length(); i++)
+                tags.add(tagsJsonArray.get(i).toString());
+
+            topic.setTags(tags);
+
             topic.setHtml(cursor.getString(cursor.getColumnIndex(TopicsTable.HTML)));
 
             return topic;

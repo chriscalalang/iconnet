@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.BuildConfig;
@@ -27,13 +28,14 @@ public class ResourcesManager {
     private static final String ASSETS_VERSION = "assets_version";
     private static final String ASSETS_TOPIC_COUNT = "assets_topic_count";
     private static final String TOPICS_FOLDER = "topics";
+    private static final String CONTENT_TAGS_FILE_NAME = "tags.txt";
     private static final String CONTENT_TEXT_FILE_NAME = "content.txt";
     private static final String CONTENT_HTML_FILE_NAME = "content.html";
 
     public static boolean hasNewTopicAssets() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IconNetApplication.getInstance());
 
-        return (preferences.getInt(ASSETS_VERSION, 0) != BuildConfig.VERSION_CODE) && (preferences.getInt(ASSETS_TOPIC_COUNT, 0) != getTopicAssetsCount());
+        return (preferences.getInt(ASSETS_VERSION, 0) != BuildConfig.VERSION_CODE) || (preferences.getInt(ASSETS_TOPIC_COUNT, 0) != getTopicAssetsCount());
     }
 
     public static void updateTopicAssets(final ResourceUpdateStatusListener listener) {
@@ -69,6 +71,14 @@ public class ResourcesManager {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+
+                    //attempt read tags
+                    try {
+                        topic.setTags(Arrays.asList(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_TAGS_FILE_NAME).split("\\W+")));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
 
                     //attempt get images
                     List<String> imageList = new ArrayList<String>();

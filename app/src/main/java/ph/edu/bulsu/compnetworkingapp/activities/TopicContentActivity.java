@@ -58,6 +58,7 @@ public class TopicContentActivity extends HidingToolbarActivity {
 
 
         Log.e("Images", "" + topic.getImages().size());
+        Log.e("Tags", "" + topic.getTags().size() + " with content" + topic.getTags().toString());
 
         if (topic.getImages().size() < 1) {
             rlImages.setVisibility(View.GONE);
@@ -88,7 +89,7 @@ public class TopicContentActivity extends HidingToolbarActivity {
         wvHtml = (WebView) findViewById(R.id.wvHtml);
         wvHtml.getSettings();
         wvHtml.setBackgroundColor(Color.TRANSPARENT);
-        wvHtml.loadDataWithBaseURL("", topic.getHtml(), "text/html", "UTF-8", "");
+        wvHtml.loadDataWithBaseURL(topic.getBaseFolderPath(), topic.getHtml(), "text/html", "UTF-8", "");
     }
 
     @Override

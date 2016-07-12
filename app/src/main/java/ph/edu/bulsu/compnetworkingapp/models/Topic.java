@@ -13,6 +13,7 @@ public class Topic implements Parcelable {
     private String title;
     private String text;
     private List<String> images;
+    private List<String> tags;
     private String html;
 
 
@@ -29,6 +30,7 @@ public class Topic implements Parcelable {
         title = in.readString();
         text = in.readString();
         images = in.createStringArrayList();
+        tags = in.createStringArrayList();
         html = in.readString();
     }
 
@@ -76,6 +78,14 @@ public class Topic implements Parcelable {
         this.html = html;
     }
 
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -86,6 +96,7 @@ public class Topic implements Parcelable {
         dest.writeString(title);
         dest.writeString(text);
         dest.writeStringList(images);
+        dest.writeStringList(tags);
         dest.writeString(html);
     }
 

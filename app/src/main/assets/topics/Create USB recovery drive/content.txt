@@ -1,0 +1,29 @@
+    •	Email
+    •	Print
+    If you run into problems with your PC running Windows, a USB recovery drive can help you troubleshoot and fix those problems, even if your PC won't start.
+
+
+Your PC might have come with a recovery image that’s used to refresh or reset your PC. The recovery image is stored on a dedicated recovery partition on your PC, and is typically 3 to 6 GB in size. To save space on your PC, you can delete the recovery image from your PC and use a recovery drive instead. Windows 8.1 includes a built-in tool to create a USB recovery drive. Windows will let you know how big the recovery partition is, and you'll need a USB flash drive at least that big.
+Warning
+Creating a recovery drive will erase anything already stored on your USB flash drive. Use an empty USB flash drive or make sure to transfer any important data from your USB flash drive to another storage device before using it to create a USB recovery drive.
+
+To create a USB recovery drive
+    1.	Swipe in from the right edge of the screen, and then tap Search. (If you're using a mouse, point to the lower-right corner of the screen, move the mouse pointer up, and then click Search.)
+    2.	Enter recovery drive in the search box, and then select Create a recovery drive.
+    3.	After the recovery drive tool opens, make sure the Copy the recovery partition from the PC to the recovery drive check box is selected, and then select Next.
+
+    Note
+    The check box is greyed out when your PC doesn’t have a recovery partition. The recovery drive will include only the recovery tools and a bootable image, but not a recovery image to use for refreshing or resetting your PC.
+    4.	Insert a USB flash drive into your PC that's at least as large as the size indicated on the screen.
+    5.	Select the USB drive you'd like to use for your recovery drive, then select Next.
+    6.	Select Create. The recovery image and necessary recovery tools will be copied to your USB flash drive, which will take a while, depending on your PC and the size of the recovery image.
+    7.	When the process is done, do one of the following:
+        •	If you want to keep the recovery partition on your PC, select Finish.
+        •	If you want to remove the recovery partition from your PC and free up disk space, selectDelete the recovery partition. Then select Delete. This will free up the disk space used to store your recovery image. When the removal is done, select Finish.
+
+    Note
+    Some PCs don't offer the option to remove a recovery partition. If you experience this, there isn't a recovery partition on your PC that's using additional disc space.
+    8.	Remove the USB flash drive. This is now your Windows 8.1 recovery drive, and you'll need it if you ever need to refresh or reset your PC. Keep it in a safe place and don't use it to store other files or data.
+
+    Note
+    If your PC came with Windows 8 and you upgraded it to Windows 8.1, your recovery drive will include Windows 8, and you’ll need to upgrade to Windows 8.1 after you refresh or reset your PC.

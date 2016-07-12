@@ -1,0 +1,5 @@
+You might need your PC's IP address if you want to set up an Internet connection, allow other people to connect to your PC, or need to troubleshoot network problems.
+    1.	Select the Start button, start typing View network connections, and then select it in the list.
+    2.	Select an active network connection, and then, in the toolbar, select View status of this connection. (You might need to select the chevron icon to find this command.)
+    3.	Select Details.
+Your PC's IP address appears in the Value column, next to IPv4 Address.

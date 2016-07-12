@@ -1,0 +1,32 @@
+Blue Screen errors (also sometimes called black screen errors or STOP code errors) can occur if a serious problem causes Windows to shut down or restart unexpectedly. You might see a message that says, "Windows has been shut down to prevent damage to your computer."
+These errors can be caused by both hardware and software issues. If you added new hardware to your PC before the Blue Screen error, shut down your PC, remove the hardware, and try restarting. If you're having trouble restarting, you can start your PC in safe mode. For more info, see Windows Startup Settings (including safe mode).
+You can also try getting the latest updates with Windows Update, help from other sources, or restoring Windows to an earlier point in time.
+
+
+Get latest updates
+In Windows 7
+Click the Start button, click All Programs, and then click Windows Update.
+
+
+In Windows 8 and Windows 8.1
+    1.	Swipe in from the right edge of the screen, tap Settings, and then tap Change PC settings. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click Settings, and then click Change PC settings.)
+    2.	Tap or click Update and recovery, and then tap or click Windows Update.
+    3.	Tap or click Check now, and then wait while Windows looks for the latest updates for your PC.
+    4.	If Windows finds updates, tap or click Install updates.
+
+You might be asked for an admin password or to confirm your choice.
+Read and accept the license terms, and then tap or click Finish if the update requires Windows Update will tell you if it successfully installed the updates.
+
+Get help from other sources
+If these solutions don't solve the problem, you can get help from Microsoft Support and the Microsoft community. Microsoft Support offers technical help about different versions of Windows. The Microsoft community pages in the Windows forum offer solutions from other people who have experienced similar problems with their PCs.
+If your PC came with Windows preinstalled on it, contact the PC manufacturer.
+
+Restore Windows to an earlier point in time
+You can restore Windows back to an earlier point in time, called a restore point. System Restore doesn’t change your personal files, but it might remove recently installed apps and drivers.
+If you're having trouble starting (booting) your PC, you can restore Windows in the Windows Recovery Environment. For instructions, see Windows Startup Settings (including safe mode).
+
+ In Windows 7
+    1.	Swipe in from the right edge of the screen, and then tap Search. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then click Search.)
+    2.	Enter Control Panel in the search box, and tap or click Control Panel.
+    3.	Enter Recovery in the Control Panel search box, and then tap or click Recovery.
+    4.	Tap or click Open System Restore, and then follow the instructions.

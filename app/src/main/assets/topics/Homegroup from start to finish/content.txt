@@ -1,0 +1,49 @@
+A homegroup is a group of PCs on a home network that can share files and printers. Using a homegroup makes sharing easier. You can share pictures, music, videos, documents, and printers with other people in your homegroup.
+To create a homegroup:
+    1.	Open HomeGroup by swiping in from the right edge of the screen, tapping Settings (or if you're using a mouse, pointing to the lower-right corner of the screen, moving the mouse pointer up, and then clickingSettings), tapping or clicking Change PC settings, tapping or click Network, and then tapping or clickingHomeGroup.
+    2.	Tap or click Create.
+    3.	Select the libraries and devices you want to share with the homegroup.
+Add your other PCs to the homegroup
+After someone on your network creates a homegroup, the next step is to join it. You'll need the homegroup password, which you can get from any homegroup member. All user accounts except the Guest account will belong to the homegroup. Each person controls access to his or her own libraries.
+To join a homegroup, follow these steps on the PC that you want to add to the homegroup:
+    1.	Open HomeGroup by swiping in from the right edge of the screen, tapping Settings (or if you're using a mouse, pointing to the lower-right corner of the screen, moving the mouse pointer up, and then clicking Settings), tapping or clicking Change PC settings, tapping or click Network, and then tapping or clicking HomeGroup.
+    2.	Enter the homegroup password, and then tap or click Join.
+    3.	Select the libraries and devices you want to share with the homegroup.
+    4.	Tap or click the control under Media devices if you want to allow devices on the network, such as TVs and game consoles, to play your shared content.
+Find homegroup files
+PCs that belong to your homegroup will appear in File Explorer.
+To get to shared libraries on other homegroup PCs
+    1.	Open File Explorer by swiping in from the right edge of the screen, tapping Search (or if you're using a mouse, pointing to the upper-right corner of the screen, moving the mouse pointer down, and then clickingSearch), entering File Explorer in the search box, and then tapping or clicking File Explorer.
+    2.	Under Homegroup, tap or click the user account name of the person whose libraries you want to get to.
+    3.	In the file list, double-tap or double-click the library you want to get to, and then double-tap or double-click the file or folder you want.
+
+
+To share devices and entire libraries
+    1.	Open HomeGroup by swiping in from the right edge of the screen, tapping Settings (or if you're using a mouse, pointing to the lower-right corner of the screen, moving the mouse pointer up, and then clickingSettings), tapping or clicking Change PC settings, tapping or click Network, and then tapping or clickingHomeGroup.
+    2.	Select the libraries and devices you want to share with the homegroup.
+To share individual files or folders
+    1.	Open File Explorer by swiping in from the right edge of the screen, tapping Search (or if you're using a mouse, pointing to the upper-right corner of the screen, moving the mouse pointer down, and then clickingSearch), entering File Explorer in the search box, and then tapping or clicking File Explorer.
+    2.	Select the item, and then tap or click the Share tab.
+    3.	Choose an option in the Share with group. There are different Share with options depending on whether your PC is connected to a network and what kind of network it is.
+        o	To share items with a particular person, choose that person's account.
+        o	To share with all the members of your homegroup, choose one of the Homegroup options. To select libraries to share with all the members of your homegroup, swipe in from the right edge of the screen, tap Settings, and then tap Change PC settings. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click Settings, and then click Change PC settings.) Then tap or click HomeGroup.
+        o	To prevent a file or folder from being shared with anyone, tap or click the Share tab, and then tap or click Stop sharing.
+        o	To change the level of access to a file or folder, tap or click the Share tab, and then select eitherHomegroup (view) or Homegroup (view and edit).
+        o	If you need to share a location such as a drive or system folder, use the Advanced sharing option.
+Share a printer
+Printers that are connected with a USB cable can be shared with a homegroup. After the printer is shared, you can get to it through the Print dialog box in any program, just like a printer that's directly connected to your PC.
+To share your printer with the homegroup
+    1.	Open HomeGroup by swiping in from the right edge of the screen, tapping Settings (or if you're using a mouse, pointing to the lower-right corner of the screen, moving the mouse pointer up, and then clickingSettings), tapping or clicking Change PC settings, tapping or click Network, and then tapping or clickingHomeGroup.
+    2.	Tap or click the control to share Printers and devices.
+Open the Print menu of the app you want to print from, select the homegroup printer, and then tap or click Print.
+Change homegroup settings if needed
+At any time after you set up your homegroup, you can change settings by following these steps:
+    1.	Open HomeGroup by swiping in from the right edge of the screen, tapping Settings (or if you're using a mouse, pointing to the lower-right corner of the screen, moving the mouse pointer up, and then clickingSettings), tapping or clicking Change PC settings, tapping or click Network, and then tapping or clickingHomeGroup.
+    2.	Select the settings you want.
+
+Change the homegroup password
+To change your homegroup password, follow these steps:
+    1.	Swipe in from the right edge of the screen, and then tap Search. (If you're using a mouse, point to the lower-right corner of the screen, move the mouse pointer up, and then click Search.)
+    2.	In the search box, enter homegroup, and then click Settings.
+    3.	In the list of results, tap or click Change homegroup password.
+    4.	Tap or click Change the password, and then follow the instructions. You might be asked for an admin password or to confirm your choice.

@@ -1,0 +1,36 @@
+Start by checking your hardware
+Make sure that the printer's electrical cord is plugged into an electrical outlet and that the power switch is turned on. If you're printing to a shared printer or a printer on a network, make sure that all necessary computers and routers are turned on too. If your printer or other equipment is plugged in to a surge protector or a backup power supply, make sure that hardware is plugged in and turned on as well.
+
+If you’re using a wired printer, make sure that the printer cable is properly connected from the printer to your PC.
+
+For wireless printers, check the wireless connection. Make sure the printer’s wireless option is turned on and available. Many printers have a button that displays a blue wireless icon when wireless is available.
+
+Next, run the printer’s wireless connectivity test. Read the instructions that came with the printer or check the printer manufacturer’s website for instructions about how to do this.
+
+Use a troubleshooter
+A troubleshooter is an automated tool that can find and automatically fix some problems with your PC. The printing troubleshooter can fix problems with installing and connecting to a printer.
+
+Update drivers
+Most printers require driver software to work properly. If you recently upgraded from one version of Windows to another, it's possible that the current printer driver is for the previous version of Windows. If you've had recent power outages, viruses, or other computer problems, it's possible that the drivers have become damaged. Downloading and installing the latest driver for your printer can resolve these types of problems.
+
+Three ways to find and install a driver:
+    •	Use Windows Update. Windows Update might have an updated version of your printer driver.
+    •	Install software from the printer manufacturer. If your printer came with a disc, that disc might contain software that installs a driver for the printer.
+    •	Download and install the driver yourself . You can search for a driver on the manufacturer's website. Try this if Windows Update can't find a driver for your printer, and the printer didn't come with software that installs a driver.
+
+For Windows 8
+To print webpages using Internet Explorer, click the Tools button, select Print, and then select Print again. See what the printed page will look like by selecting Print Preview. Or, print pages by pressing Crtl + P.
+
+To print only a picture from a page (and not the whole page), right-click on the picture, and select Print. In the Print dialog box, select Print again.
+
+
+
+
+Connect a Bluetooth device
+    1.	Turn on your Bluetooth device and make it discoverable.
+
+    The way you make it discoverable depends on the device. Check the device or visit the manufacturer's website to learn how.
+    2.	Select the Start button > type Bluetooth > select Bluetooth settings from the list.
+    3.	Turn on Bluetooth > select the device > Pair.
+    4.	Follow any instructions if they appear. Otherwise, you're done and connected.
+    Your Bluetooth device and PC will usually automatically connect anytime the two devices are in range of each other with Bluetooth turned on.

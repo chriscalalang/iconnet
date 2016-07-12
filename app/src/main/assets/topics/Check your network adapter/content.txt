@@ -1,0 +1,8 @@
+If you’re still having trouble connecting to a network, it might be related to your network adapter.
+    -	Try using the Network Adapter troubleshooter to automatically find and fix some problems. This troubleshooter will disable and re-enable the adapter
+        •	Select the Start button, start typing Troubleshooting, and then select Troubleshooting in the list. Select View all, and then select Network Adapter.
+    -	Update the network adapter driver. An outdated or incompatible network adapter driver can cause connection problems. Check to see if an updated driver is available.
+        •	Select the Start button, start typing Device Manager, and then select it in the list.
+        •	In Device Manager, double-click Network adapters, right-click your adapter, and then select Properties.
+        •	Select the Driver tab, and then select Update Driver.
+        •	Select Search automatically for updated driver software.

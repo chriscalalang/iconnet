@@ -14,6 +14,7 @@ public class TopicsTable {
     public static final String TITLE = "_title";
     public static final String TEXT = "_text";
     public static final String IMAGES = "_images";
+    public static final String TAGS = "_tags";
     public static final String HTML = "_html";
 
     private static final String TABLE_CREATE_COMMAND = "CREATE TABLE "
@@ -21,6 +22,7 @@ public class TopicsTable {
             + TITLE + "' TEXT PRIMARY KEY, '"
             + TEXT + "' TEXT, '"
             + IMAGES + "' TEXT, '"
+            + TAGS + "' TEXT, '"
             + HTML+ "' TEXT); ";
 
     public static void onCreate(SQLiteDatabase db) {

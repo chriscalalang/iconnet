@@ -1,0 +1,7 @@
+Most of the settings you'll want to change in Windows 8.1 and Windows RT 8.1 are in PC settings. You'll find settings for screen resolution, adding and removing devices, personalizing the lock screen, changing the date and time, and adding user accounts.
+To open PC settings
+Swipe in from the right edge of the screen, tap Search (or if you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then click Search), enter PC settings in the search box, and then tap or click PC settings.
+To open the Settings charm
+Swipe in from the right edge of the screen, and then tap Settings. (If you're using a mouse, point to the lower-right corner of the screen, move the mouse pointer up, and then click Settings.)
+
+If you don't see the setting you're looking for, it might be in Control Panel.
