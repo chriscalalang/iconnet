@@ -16,6 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
@@ -35,10 +38,13 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
     private TroubleshootingFragment troubleshootingFragment;
     private IPCalculatorFragment ipCalculatorFragment;
 
+    private List<SearchView.OnQueryTextListener> queryTextListeners;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         tbMain = (Toolbar) findViewById(R.id.tbMain);
         setSupportActionBar(tbMain);
@@ -48,10 +54,28 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
+        queryTextListeners = new ArrayList<>();
+
         ablSearch = (AppBarLayout) findViewById(R.id.ablSearch);
         searchView = (SearchView) findViewById(R.id.searchView);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                for (SearchView.OnQueryTextListener listener : queryTextListeners)
+                    listener.onQueryTextSubmit(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                for (SearchView.OnQueryTextListener listener : queryTextListeners)
+                    listener.onQueryTextChange(newText);
+                return true;
+            }
+        });
 
         nvDrawer = (NavigationView) findViewById(R.id.nvDrawer);
         nvDrawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -151,6 +175,11 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
     @Override
     public TabLayout getTabLayout() {
         return tabLayout;
+    }
+
+    @Override
+    public List<SearchView.OnQueryTextListener> getQueryTextListeners() {
+        return queryTextListeners;
     }
 
 

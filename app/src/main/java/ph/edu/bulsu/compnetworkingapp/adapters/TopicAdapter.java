@@ -25,11 +25,13 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     private List<Topic> topicList;
 
+    private List<String> textQuery;
 
-    public TopicAdapter(Context context, List<Topic> TopicList) {
+    public TopicAdapter(Context context, List<Topic> TopicList, List<String> textQueries) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
         this.topicList = TopicList;
+        this.textQuery = textQueries;
     }
 
     @Override
@@ -58,7 +60,6 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
                 holder.tvText.setText(Html.fromHtml(topic.getHtml().substring(0, htmlMoreThan250Chars ? 249 : topic.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
             }
         }
-
         holder.tagWin7.setVisibility(View.GONE);
         holder.tagWin8.setVisibility(View.GONE);
         holder.tagWin10.setVisibility(View.GONE);

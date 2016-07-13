@@ -2,6 +2,8 @@ package ph.edu.bulsu.compnetworkingapp.database.daos;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -27,21 +29,44 @@ public class TopicsDAO extends BaseDAO<Topic> {
     }
 
 
-    public List<Topic> getAll(List<String> tags) {
+    public List<Topic> getAll(@Nullable List<String> tags, @Nullable List<String> wordQueries) {
         List<Topic> topics = new ArrayList<>();
 
-        if (tags.size() > 0) {
-            String selection = "";
-            String[] selectionArgs = new String[tags.size()];
+        int tagsCount = tags != null ? tags.size() : 0;
+        int wordQueriesCount = wordQueries != null ? wordQueries.size() : 0;
 
-            for (int i = 0; i < tags.size(); i++) {
+        String selection = "";
+        List<String> selectionArgs = new ArrayList<>();
+
+        if (tagsCount > 0) {
+            selection += "(";
+            for (int i = 0; i < tagsCount; i++) {
                 if (i > 0) selection += " OR ";
-                selection += ("("+TopicsTable.TAGS + " LIKE ? )");
-                selectionArgs[i] = "%" + tags.get(i) + "%";
+                selection += ("(" + TopicsTable.TAGS + " LIKE ? )");
+                selectionArgs.add("%" + tags.get(i) + "%");
             }
-            Log.e("SELECTION", selection + " selectionArgs: " + Arrays.asList(selectionArgs).toString());
-            topics = getAll(selection, selectionArgs);
+            selection += ")";
         }
+
+        if (wordQueriesCount > 0) {
+            if (!selection.isEmpty()) selection += " AND ";
+            selection += "(";
+            for (int i = 0; i < wordQueriesCount; i++) {
+                if (i > 0) selection += " OR ";
+                selection += ("(" + TopicsTable.TEXT + " LIKE ? )");
+                selectionArgs.add("%" + wordQueries.get(i) + "%");
+            }
+            selection += ")";
+        }
+
+
+        Log.e("SELECTION", selection + " selectionArgs: " + selectionArgs.toString());
+        if (!selection.isEmpty()) {
+            topics = getAll(selection, selectionArgs.toArray(new String[0]));
+        } else {
+            topics = getAll();
+        }
+
         return topics;
     }
 

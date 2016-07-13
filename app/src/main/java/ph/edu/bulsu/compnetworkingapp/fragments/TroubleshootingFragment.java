@@ -28,6 +28,9 @@ public class TroubleshootingFragment extends BaseFragment {
 
     private List<Topic> topicList;
 
+
+    private List<String> textQueries;
+
     private MenuItem all, win7, win8, win10, ubuntu;
 
     public static TroubleshootingFragment newInstance() {
@@ -48,8 +51,9 @@ public class TroubleshootingFragment extends BaseFragment {
     @Override
     public void initializeParentView(View view) {
         topicList = new ArrayList<>();
+        textQueries = new ArrayList<>();
 
-        adapter = new TopicAdapter(context, topicList);
+        adapter = new TopicAdapter(context, topicList, textQueries);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
@@ -79,7 +83,7 @@ public class TroubleshootingFragment extends BaseFragment {
         if (ubuntu.isChecked()) {
             tags.add("ubuntu");
         }
-        populateList(TopicsDAO.getInstance().getAll(tags), false, false);
+        populateList(TopicsDAO.getInstance().getAll(tags, null), false, false);
     }
 
     @Override
