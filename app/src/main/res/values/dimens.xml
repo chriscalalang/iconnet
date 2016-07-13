@@ -3,4 +3,5 @@
     <dimen name="default_padding_half">8dp</dimen>
     <dimen name="slideshow_image_height">98dp</dimen>
     <dimen name="slideshow_image_width">196dp</dimen>
+    <dimen name="tag_space">12dp</dimen>
 </resources>

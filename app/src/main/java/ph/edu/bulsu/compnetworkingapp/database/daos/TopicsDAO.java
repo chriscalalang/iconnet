@@ -2,11 +2,13 @@ package ph.edu.bulsu.compnetworkingapp.database.daos;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.database.tables.TopicsTable;
@@ -28,10 +30,17 @@ public class TopicsDAO extends BaseDAO<Topic> {
     public List<Topic> getAll(List<String> tags) {
         List<Topic> topics = new ArrayList<>();
 
-        String selection = ";";
-        String[] selectionArgs = new String[tags.size()];
+        if (tags.size() > 0) {
+            String selection = "";
+            String[] selectionArgs = new String[tags.size()];
 
-        for (String tag : tags) {
+            for (int i = 0; i < tags.size(); i++) {
+                if (i > 0) selection += " OR ";
+                selection += ("("+TopicsTable.TAGS + " LIKE ? )");
+                selectionArgs[i] = "%" + tags.get(i) + "%";
+            }
+            Log.e("SELECTION", selection + " selectionArgs: " + Arrays.asList(selectionArgs).toString());
+            topics = getAll(selection, selectionArgs);
         }
         return topics;
     }

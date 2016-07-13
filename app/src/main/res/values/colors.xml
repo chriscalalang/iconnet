@@ -6,4 +6,18 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#FF8F79</color>
+
+
+    <!-- Tags colors -->
+    <color name="win7">#2196F3</color>
+    <color name="win7_dark">#1976D2</color>
+    <color name="win8">#4CAF50</color>
+    <color name="win8_dark">#388E3C</color>
+    <color name="win10">#673AB7</color>
+    <color name="win10_dark">#512DA8</color>
+    <color name="ubu">#795548</color>
+    <color name="ubu_dark">#5D4037</color>
+    <color name="topo">#757575</color>
+    <color name="topo_dark">#424242</color>
+
 </resources>

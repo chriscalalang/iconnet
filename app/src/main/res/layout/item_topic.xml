@@ -1,23 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background_simple_item_white"
-    android:minHeight="56dp"
-    android:orientation="vertical"
-    android:padding="@dimen/default_padding_half">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp" />
+        android:background="@drawable/background_simple_item_white"
+        android:minHeight="56dp"
+        android:orientation="vertical"
+        android:padding="@dimen/tag_space"
+        android:paddingBottom="@dimen/default_padding_half"
+        android:paddingLeft="@dimen/default_padding_half"
+        android:paddingRight="@dimen/default_padding_half">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tagWin7"
+            style="@style/AppTheme.TextView.Tag"
+            android:background="@drawable/tag_win7"
+            android:text="@string/win7" />
+
+
+        <TextView
+            android:id="@+id/tagWin8"
+            style="@style/AppTheme.TextView.Tag"
+            android:background="@drawable/tag_win8"
+            android:text="@string/win8" />
+
+
+        <TextView
+            android:id="@+id/tagWin10"
+            style="@style/AppTheme.TextView.Tag"
+            android:background="@drawable/tag_win10"
+            android:text="@string/win10" />
+
+
+        <TextView
+            android:id="@+id/tagUbuntu"
+            style="@style/AppTheme.TextView.Tag"
+            android:background="@drawable/tag_ubuntu"
+            android:text="@string/ubu" />
+
+
+        <TextView
+            android:id="@+id/tagTopology"
+            style="@style/AppTheme.TextView.Tag"
+            android:background="@drawable/tag_topo"
+            android:text="@string/topo" />
+    </LinearLayout>
+</RelativeLayout>

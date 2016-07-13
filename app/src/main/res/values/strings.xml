@@ -24,4 +24,9 @@
     <string name="all">All</string>
     <string name="cidr">cidr</string>
     <string name="bitlength">Bitlength</string>
+    <string name="win7">win7</string>
+    <string name="win8">win8</string>
+    <string name="win10">win10</string>
+    <string name="ubu">ubu</string>
+    <string name="topo">topo</string>
 </resources>

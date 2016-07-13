@@ -41,7 +41,7 @@ public abstract class BaseDAO<T> {
         return getAll(null, null);
     }
 
-    public List<T> getAll(String selection, String[] selectionArgs) {
+    protected List<T> getAll(String selection, String[] selectionArgs) {
         List<T> objects = new ArrayList<>();
 
         Cursor cursor = DatabaseManager.getInstance().query(getTableName(), null, selection, selectionArgs, null, null, null);
