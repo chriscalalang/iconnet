@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
@@ -48,7 +49,7 @@ public class AllTutorialsFragment extends BaseFragment {
         topicList = new ArrayList<>();
         textQueries = new ArrayList<>();
 
-        adapter = new TopicAdapter(context, topicList, textQueries);
+        adapter = new TopicAdapter(context, topicList);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
@@ -78,16 +79,17 @@ public class AllTutorialsFragment extends BaseFragment {
 
                 @Override
                 public void onUpdateCompleted() {
-                    populateList(TopicsDAO.getInstance().getAll(null, textQueries), false);
+                    populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, new ArrayList<String>());
                     progressDialog.dismiss();
                 }
             });
         } else {
-            populateList(TopicsDAO.getInstance().getAll(null, textQueries), false);
+            populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, new ArrayList<String>());
         }
     }
 
-    public void populateList(final List<Topic> topicList, boolean incremental) {
+    public void populateList(final List<Topic> topicList, boolean incremental, List<String> splittedSentenceWords) {
+        adapter.setSplittedSentenceWords(splittedSentenceWords);
         int previousSize = this.topicList.size();
         if (previousSize > 0) {
             //this.topicList.get(previousSize - 1).setLoadMore(false);
@@ -110,7 +112,7 @@ public class AllTutorialsFragment extends BaseFragment {
     @Override
     public boolean onQueryTextChange(String newText) {
         textQueries = WordQueriesBuilder.getWordQueries(newText);
-        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false);
+        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, Arrays.asList(newText.split("\\W+")));
         return super.onQueryTextChange(newText);
     }
 

@@ -53,7 +53,7 @@ public class TroubleshootingFragment extends BaseFragment {
         topicList = new ArrayList<>();
         textQueries = new ArrayList<>();
 
-        adapter = new TopicAdapter(context, topicList, textQueries);
+        adapter = new TopicAdapter(context, topicList);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);

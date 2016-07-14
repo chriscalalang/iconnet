@@ -4,13 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.activities.TopicContentActivity;
@@ -25,13 +25,16 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     private List<Topic> topicList;
 
-    private List<String> textQuery;
+    private List<String> splittedSentenceWords;
 
-    public TopicAdapter(Context context, List<Topic> TopicList, List<String> textQueries) {
+    public TopicAdapter(Context context, List<Topic> TopicList) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
         this.topicList = TopicList;
-        this.textQuery = textQueries;
+    }
+
+    public void setSplittedSentenceWords(List<String> splittedSentenceWords) {
+        this.splittedSentenceWords = splittedSentenceWords;
     }
 
     @Override
@@ -52,8 +55,20 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
         holder.tvTitle.setText(Html.fromHtml(topic.getTitle()));
 
         if (topic.getText() != null) {
-            boolean textMoreThan250Chars = topic.getText().length() > 250;
-            holder.tvText.setText(Html.fromHtml(topic.getText().substring(0, textMoreThan250Chars ? 249 : topic.getText().length()) + (textMoreThan250Chars ? "..." : "")));
+            String topicText = topic.getText() + "";
+            for (String string : splittedSentenceWords) {
+                topicText = topicText.replaceAll("(?i)" + string, "<b>" + string + "</b>");
+            }
+
+            int firstKeyIndex = topicText.indexOf("<b>") - 40;
+            if (firstKeyIndex < 0) firstKeyIndex = 0;
+
+            boolean textMoreThan250Chars = topicText.length() > 250;
+            String cutText = topicText.substring(firstKeyIndex, textMoreThan250Chars ? 249 : topic.getText().length()) + (textMoreThan250Chars ? "..." : "");
+
+            Log.e("TOPIC TEXT", cutText);
+            holder.tvText.setText(Html.fromHtml(cutText));
+
         } else {
             if (topic.getHtml() != null) {
                 boolean htmlMoreThan250Chars = topic.getHtml().length() > 250;

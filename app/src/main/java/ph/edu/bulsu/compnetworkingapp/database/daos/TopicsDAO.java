@@ -60,7 +60,6 @@ public class TopicsDAO extends BaseDAO<Topic> {
         }
 
 
-        Log.e("SELECTION", selection + " selectionArgs: " + selectionArgs.toString());
         if (!selection.isEmpty()) {
             topics = getAll(selection, selectionArgs.toArray(new String[0]));
         } else {
