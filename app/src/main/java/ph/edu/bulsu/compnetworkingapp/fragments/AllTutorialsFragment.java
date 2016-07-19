@@ -112,7 +112,7 @@ public class AllTutorialsFragment extends BaseFragment {
     @Override
     public boolean onQueryTextChange(String newText) {
         textQueries = WordQueriesBuilder.getWordQueries(newText);
-        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, Arrays.asList(newText.split("\\W+")));
+        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
         return super.onQueryTextChange(newText);
     }
 

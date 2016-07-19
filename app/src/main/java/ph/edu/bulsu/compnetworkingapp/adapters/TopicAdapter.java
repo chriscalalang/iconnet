@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Random;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.activities.TopicContentActivity;
@@ -27,10 +28,13 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     private List<String> splittedSentenceWords;
 
-    public TopicAdapter(Context context, List<Topic> TopicList) {
+    private Random random;
+
+    public TopicAdapter(Context context, List<Topic> topicList) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
-        this.topicList = TopicList;
+        this.topicList = topicList;
+        random = new Random();
     }
 
     public void setSplittedSentenceWords(List<String> splittedSentenceWords) {
@@ -57,14 +61,13 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
         if (topic.getText() != null) {
             String topicText = topic.getText() + "";
             for (String string : splittedSentenceWords) {
-                topicText = topicText.replaceAll("(?i)" + string, "<b>" + string + "</b>");
+                topicText = topicText.replaceAll("(?i)" + string, "<b><font color='#000000'>" + string + "</font></b>");
             }
 
-            int firstKeyIndex = topicText.indexOf("<b>") - 40;
+            int firstKeyIndex = topicText.indexOf("<b>") - random.nextInt(40);
             if (firstKeyIndex < 0) firstKeyIndex = 0;
 
-            boolean textMoreThan250Chars = topicText.length() > 250;
-            String cutText = topicText.substring(firstKeyIndex, textMoreThan250Chars ? 249 : topic.getText().length()) + (textMoreThan250Chars ? "..." : "");
+            String cutText = topicText.substring(firstKeyIndex, topicText.length());
 
             Log.e("TOPIC TEXT", cutText);
             holder.tvText.setText(Html.fromHtml(cutText));
