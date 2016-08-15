@@ -62,31 +62,12 @@ public class AllTutorialsFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        final ProgressDialog progressDialog = new ProgressDialog(context);
-
-        Log.e("TOPICS COUNT", "" + ResourcesManager.getTopicAssetsCount());
-        if (ResourcesManager.hasNewTopicAssets()) {
-            progressDialog.setMessage("Loading resources");
-            progressDialog.setIndeterminate(true);
-            progressDialog.setCancelable(false);
-            progressDialog.show();
-            ResourcesManager.updateTopicAssets(new ResourceUpdateStatusListener() {
-                @Override
-                public View getHandler() {
-                    return parentView;
-                }
-
-                @Override
-                public void onUpdateCompleted() {
-                    populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, new ArrayList<String>());
-                    progressDialog.dismiss();
-                }
-            });
-        } else {
-            populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, new ArrayList<String>());
-        }
     }
+
+    public void requestTopics() {
+        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, new ArrayList<String>());
+    }
+
 
     public void populateList(final List<Topic> topicList, boolean incremental, List<String> splittedSentenceWords) {
         adapter.setSplittedSentenceWords(splittedSentenceWords);

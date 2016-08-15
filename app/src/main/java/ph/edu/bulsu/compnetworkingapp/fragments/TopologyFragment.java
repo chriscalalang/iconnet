@@ -65,6 +65,10 @@ public class TopologyFragment extends BaseFragment {
         tags = new ArrayList<>();
         tags.add("Topo");
 
+        requestTopics();
+    }
+
+    public void requestTopics() {
         populateList(TopicsDAO.getInstance().getAll(tags, null), false, new ArrayList<String>());
     }
 
