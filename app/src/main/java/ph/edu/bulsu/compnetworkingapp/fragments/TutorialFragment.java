@@ -31,6 +31,7 @@ public class TutorialFragment extends BaseFragment {
     public void initializeParentView(View view) {
 
         vpTutorial = (ViewPager) view.findViewById(R.id.vpTutorial);
+        vpTutorial.setOffscreenPageLimit(3);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(AllTutorialsFragment.newInstance(), "All");
         adapter.addFragment(TopologyFragment.newInstance(), "Topology");
