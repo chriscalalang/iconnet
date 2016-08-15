@@ -1,0 +1,5 @@
+The simplest topology with a dedicated link between two endpoints. Easiest to understand, of the variations of point-to-point topology, is a point-to-point communications channel that appears, to the user, to be permanently associated with the two endpoints. A child's tin can telephone is one example of a physical dedicated channel.
+
+Using circuit-switching or packet-switching technologies, a point-to-point circuit can be set up dynamically and dropped when no longer needed. Switched point-to-point topologies are the basic model of conventional telephony.
+
+The value of a permanent point-to-point network is unimpeded communications between the two endpoints. The value of an on-demand point-to-point connection is proportional to the number of potential pairs of subscribers and has been expressed as Metcalfe's Law.

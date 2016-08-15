@@ -2,7 +2,6 @@ package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,13 +11,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.TopicAdapter;
-import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
 import ph.edu.bulsu.compnetworkingapp.database.daos.TopicsDAO;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
+import ph.edu.bulsu.compnetworkingapp.utils.WordQueriesBuilder;
 
 public class TroubleshootingFragment extends BaseFragment {
 
@@ -32,6 +32,8 @@ public class TroubleshootingFragment extends BaseFragment {
     private List<String> textQueries;
 
     private MenuItem all, win7, win8, win10, ubuntu;
+
+    private List<String> tags;
 
     public static TroubleshootingFragment newInstance() {
         Bundle args = new Bundle();
@@ -70,7 +72,7 @@ public class TroubleshootingFragment extends BaseFragment {
 
 
     private void populateListFromCheckedMenuItems() {
-        List<String> tags = new ArrayList<>();
+        tags = new ArrayList<>();
         if (win7.isChecked()) {
             tags.add("win7");
         }
@@ -83,7 +85,7 @@ public class TroubleshootingFragment extends BaseFragment {
         if (ubuntu.isChecked()) {
             tags.add("ubuntu");
         }
-        populateList(TopicsDAO.getInstance().getAll(tags, null), false, false);
+        populateList(TopicsDAO.getInstance().getAll(tags, null), false, new ArrayList<String>());
     }
 
     @Override
@@ -124,7 +126,8 @@ public class TroubleshootingFragment extends BaseFragment {
     }
 
 
-    public void populateList(final List<Topic> topicList, boolean incremental, boolean shouldLoadMore) {
+    public void populateList(final List<Topic> topicList, boolean incremental, List<String> splittedSentenceWords) {
+        adapter.setSplittedSentenceWords(splittedSentenceWords);
         int previousSize = this.topicList.size();
         if (previousSize > 0) {
             //this.topicList.get(previousSize - 1).setLoadMore(false);
@@ -140,13 +143,21 @@ public class TroubleshootingFragment extends BaseFragment {
 
         int newSize = this.topicList.size();
 
-        if (shouldLoadMore && newSize > 0) {
-            //this.topicList.get(newSize - 1).setLoadMore(true);
-        }
-
-
         adapter.notifyItemRangeInserted(previousSize, topicList.size());
 
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        textQueries = WordQueriesBuilder.getWordQueries(newText);
+        populateList(TopicsDAO.getInstance().getAll(tags, null), false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
+        return super.onQueryTextChange(newText);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        hideKeyBoard();
+        return super.onQueryTextSubmit(query);
     }
 
 }

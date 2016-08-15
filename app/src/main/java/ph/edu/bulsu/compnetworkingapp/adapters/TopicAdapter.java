@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -34,6 +35,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
         this.topicList = topicList;
+        splittedSentenceWords = new ArrayList<>();
         random = new Random();
     }
 

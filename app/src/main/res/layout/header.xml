@@ -4,13 +4,15 @@
     android:layout_height="wrap_content"
     android:layout_margin="-3dp">
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="-2dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_header" />
+        android:text="ICONNET"
+        android:gravity="center"
+        android:padding="64dp"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:background="@color/colorPrimary" />
 
 
 </RelativeLayout>
