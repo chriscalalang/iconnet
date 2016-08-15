@@ -34,6 +34,7 @@ public class TutorialFragment extends BaseFragment {
         vpTutorial.setOffscreenPageLimit(3);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(AllTutorialsFragment.newInstance(), "All");
+
         adapter.addFragment(TopologyFragment.newInstance(), "Topology");
         adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
