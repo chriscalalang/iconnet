@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -21,8 +22,9 @@ public class IPCalculatorFragment extends BaseFragment {
 
     private EditText etIP;
     private Spinner sBitLength, sSubnetMask;
-    private TextView tvHighAddress, tvLowAddress, tvMaxAddresses;
+    private TextView tvResultsWillShowIf, tvHighAddress, tvLowAddress, tvMaxAddresses;
     private CardView cvHighAddress, cvLowAddress, cvMaximumAddresses;
+    private ScrollView svContent;
 
     public static IPCalculatorFragment newInstance() {
 
@@ -40,9 +42,11 @@ public class IPCalculatorFragment extends BaseFragment {
 
     @Override
     public void initializeParentView(View view) {
+        svContent = (ScrollView) view.findViewById(R.id.svContent);
         etIP = (EditText) view.findViewById(R.id.etIP);
         sSubnetMask = (Spinner) view.findViewById(R.id.sSubnetMask);
         sBitLength = (Spinner) view.findViewById(R.id.sBitLength);
+        tvResultsWillShowIf = (TextView) view.findViewById(R.id.tvResultsWillShowIf);
         tvHighAddress = (TextView) view.findViewById(R.id.tvHighAddress);
         tvLowAddress = (TextView) view.findViewById(R.id.tvLowAddress);
         tvMaxAddresses = (TextView) view.findViewById(R.id.tvMaxAddresses);
@@ -234,14 +238,23 @@ public class IPCalculatorFragment extends BaseFragment {
     }
 
     private void clearResults() {
+        tvResultsWillShowIf.setVisibility(View.VISIBLE);
         cvMaximumAddresses.setVisibility(View.GONE);
         cvHighAddress.setVisibility(View.GONE);
         cvLowAddress.setVisibility(View.GONE);
     }
 
     private void showResults() {
+        tvResultsWillShowIf.setVisibility(View.GONE);
         cvMaximumAddresses.setVisibility(View.VISIBLE);
         cvHighAddress.setVisibility(View.VISIBLE);
         cvLowAddress.setVisibility(View.VISIBLE);
+        svContent.post(new Runnable() {
+            @Override
+            public void run() {
+
+                svContent.fullScroll(View.FOCUS_DOWN);
+            }
+        });
     }
 }

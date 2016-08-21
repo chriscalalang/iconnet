@@ -29,4 +29,5 @@
     <string name="win10">win10</string>
     <string name="ubu">ubu</string>
     <string name="topo">topo</string>
+    <string name="ip_result_will_show_up_text">Results will show up after entering a valid IP address</string>
 </resources>
