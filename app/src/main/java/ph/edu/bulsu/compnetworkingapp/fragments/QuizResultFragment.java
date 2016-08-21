@@ -78,7 +78,7 @@ public class QuizResultFragment extends BaseFragment {
             }
         }
 
-        String remark = "You got " + (score == items.size() ? " a perfect score." : (int) score + " out of " + items.size() + ". ");
+        String remark = "You got " + (score == items.size() ? " a perfect score." : (int) score==0?"0":(int) score + " out of " + items.size() + ". ");
 
         double percentage = (score / items.size()) * 100;
 
