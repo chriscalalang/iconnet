@@ -62,7 +62,6 @@ public class TroubleshootingFragment extends BaseFragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setItemViewCacheSize(0);
     }
 
     @Override

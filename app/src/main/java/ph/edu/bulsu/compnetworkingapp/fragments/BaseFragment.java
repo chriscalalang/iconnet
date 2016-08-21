@@ -29,19 +29,20 @@ public abstract class BaseFragment extends Fragment implements SearchView.OnQuer
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        if (!(context instanceof MainViewController)) {
-            throw new RuntimeException("BaseFragment should be attached to a MainViewController Activity");
+        if ((context instanceof MainViewController)) {
+            this.mainViewController = (MainViewController) context;
+            mainViewController.getQueryTextListeners().add(this);
         }
 
-        this.mainViewController = (MainViewController) context;
+
         this.context = context;
-        mainViewController.getQueryTextListeners().add(this);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mainViewController.getQueryTextListeners().remove(this);
+        if (mainViewController != null)
+            mainViewController.getQueryTextListeners().remove(this);
     }
 
     @Override

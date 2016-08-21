@@ -36,7 +36,7 @@
         android:layout_marginLeft="@dimen/default_padding"
         android:layout_marginRight="@dimen/default_padding"
         android:layout_marginTop="@dimen/default_padding_half"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <WebView
         android:id="@+id/wvHtml"

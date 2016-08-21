@@ -39,6 +39,10 @@ public abstract class HidingToolbarActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(title);
     }
 
+    protected void setToolbarSubtitle(String subtitle) {
+        getSupportActionBar().setSubtitle(subtitle);
+    }
+
 
     protected void setToolbarColor(int color) {
         tbHiding.setBackgroundColor(color);

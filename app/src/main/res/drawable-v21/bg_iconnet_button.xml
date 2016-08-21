@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="1">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+            android:color="@color/colorPrimaryDark">
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorPrimary">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorPrimary" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </ripple>
+    </item>
+
+    <!-- PRIMARY DARK -->
+    <item android:maxLevel="2">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+            android:color="@color/colorPrimaryDarkDark">
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorPrimaryDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorPrimaryDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </ripple>
+    </item>
+
+    <!-- RED -->
+    <item android:maxLevel="3">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+            android:color="@color/primaryRedDark">
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/primaryRed">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/primaryRed" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </ripple>
+    </item>
+
+    <!-- GREEN -->
+    <item android:maxLevel="4">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+            android:color="@color/primaryGreenDark">
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/primaryGreen">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/primaryGreen" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </ripple>
+    </item>
+
+
+    <!-- FACEBOOK -->
+    <item android:maxLevel="5">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+            android:color="@color/facebookDark">
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/facebook">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/facebook" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </ripple>
+    </item>
+
+
+    <!-- TRANSPARENT -->
+    <item android:maxLevel="28">
+        <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+            android:color="@color/colorAccent">
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@android:color/transparent">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@android:color/transparent" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </ripple>
+    </item>
+
+</level-list>

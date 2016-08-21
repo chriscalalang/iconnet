@@ -30,4 +30,7 @@
     <string name="ubu">ubu</string>
     <string name="topo">topo</string>
     <string name="ip_result_will_show_up_text">Results will show up after entering a valid IP address</string>
+    <string name="take_a_quiz">Take A Quiz!</string>
+    <string name="are_you_ready_to_take_the_quiz">Are you ready to take the quiz?</string>
+    <string name="yes_let_s_start">Yes, Let\'s start!</string>
 </resources>

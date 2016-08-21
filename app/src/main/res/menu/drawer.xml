@@ -17,6 +17,12 @@
             android:id="@+id/miIPCalculator"
             android:checked="false"
             android:title="@string/ip_calculator" />
+
+        <item
+            android:id="@+id/miQuiz"
+            android:checked="false"
+            android:title="@string/take_a_quiz" />
+
     </group>
 
     <group

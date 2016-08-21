@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IconNetButtonTheme">
+        <attr name="buttonTheme" />
+    </declare-styleable>
+
+    <attr name="buttonTheme" format="enum">
+        <enum name="Primary" value="1" />
+        <enum name="PrimaryDark" value="2" />
+        <enum name="Red" value="3" />
+        <enum name="Green" value="4" />
+        <enum name="Facebook" value="5" />
+        <enum name="Transparent" value="28" />
+    </attr>
+
+
+</resources>

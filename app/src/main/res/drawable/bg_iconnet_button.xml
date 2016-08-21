@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="1">
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:state_pressed="true">
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorPrimaryDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorPrimaryDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorPrimary">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorPrimary" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </selector>
+    </item>
+
+    <!-- PRIMARY DARK -->
+    <item android:maxLevel="2">
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:state_pressed="true">
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorPrimaryDarkDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorPrimaryDarkDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorPrimaryDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorPrimaryDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </selector>
+    </item>
+
+    <!-- RED -->
+    <item android:maxLevel="3">
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:state_pressed="true">
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/primaryRedDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/primaryRedDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/primaryRed">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/primaryRed" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </selector>
+    </item>
+
+    <!-- GREEN -->
+    <item android:maxLevel="4">
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:state_pressed="true">
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/primaryGreenDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/primaryGreenDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/primaryGreen">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/primaryGreen" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </selector>
+    </item>
+
+
+    <!-- FACEBOOK -->
+    <item android:maxLevel="5">
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:state_pressed="true">
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/facebookDark">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/facebookDark" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/facebook">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/facebook" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </selector>
+    </item>
+
+    <!-- TRANSPARENT -->
+    <item android:maxLevel="28">
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:state_pressed="true">
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@color/colorAccent">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@color/colorAccent" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+
+            <item>
+                <inset xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:insetBottom="6dp"
+                    android:insetLeft="4dp"
+                    android:insetRight="4dp"
+                    android:insetTop="6dp">
+                    <shape
+                        android:shape="rectangle"
+                        android:tint="@android:color/transparent">
+                        <corners android:radius="2dp" />
+                        <solid android:color="@android:color/transparent" />
+                        <padding
+                            android:bottom="4dp"
+                            android:left="8dp"
+                            android:right="8dp"
+                            android:top="4dp" />
+                    </shape>
+                </inset>
+            </item>
+        </selector>
+    </item>
+</level-list>

@@ -1,6 +1,7 @@
 package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
@@ -94,6 +95,9 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
                     case R.id.miIPCalculator:
                         showIPCalculatorPage();
                         break;
+                    case R.id.miQuiz:
+                        showQuizPage();
+                        break;
                     case R.id.miExit:
                         finish();
                         return true;
@@ -134,6 +138,11 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
             }
         }, 350);
         getSupportActionBar().setTitle(title);
+    }
+
+
+    private void showQuizPage() {
+        startActivity(new Intent(this, QuizActivity.class));
     }
 
     private void showIPCalculatorPage() {
