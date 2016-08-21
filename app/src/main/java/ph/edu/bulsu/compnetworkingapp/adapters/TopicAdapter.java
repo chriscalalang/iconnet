@@ -8,7 +8,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,7 @@ import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.activities.TopicContentActivity;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
+import ph.edu.bulsu.compnetworkingapp.utils.DeviceUtils;
 
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHolder> {
 
@@ -29,14 +33,11 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     private List<String> splittedSentenceWords;
 
-    private Random random;
-
     public TopicAdapter(Context context, List<Topic> topicList) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
         this.topicList = topicList;
         splittedSentenceWords = new ArrayList<>();
-        random = new Random();
     }
 
     public void setSplittedSentenceWords(List<String> splittedSentenceWords) {
@@ -53,11 +54,6 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
     public void onBindViewHolder(final TopicViewHolder holder, int position) {
         final Topic topic = topicList.get(position);
 
-        if (position % 2 == 1)
-            holder.itemView.setBackgroundResource(R.drawable.background_simple_item_white);
-        else holder.itemView.setBackgroundResource(R.drawable.background_simple_item_gray);
-
-
         holder.tvTitle.setText(Html.fromHtml(topic.getTitle()));
 
         if (topic.getText() != null) {
@@ -66,12 +62,10 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
                 topicText = topicText.replaceAll("(?i)" + string, "<b><font color='#000000'>" + string + "</font></b>");
             }
 
-            int firstKeyIndex = topicText.indexOf("<b>") - random.nextInt(40);
+            int firstKeyIndex = topicText.indexOf("<b>") - 39;
             if (firstKeyIndex < 0) firstKeyIndex = 0;
 
             String cutText = topicText.substring(firstKeyIndex, topicText.length());
-
-            Log.e("TOPIC TEXT", cutText);
             holder.tvText.setText(Html.fromHtml(cutText));
 
         } else {
@@ -80,6 +74,16 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
                 holder.tvText.setText(Html.fromHtml(topic.getHtml().substring(0, htmlMoreThan250Chars ? 249 : topic.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
             }
         }
+
+
+        if (topic.getImages().size() > 0) {
+            holder.ivImage.setVisibility(View.VISIBLE);
+            Glide.with(context).load(topic.getBaseFolderPath() + topic.getImages().get(0)).override(DeviceUtils.convertDpToPx(72), DeviceUtils.convertDpToPx(72)).into(holder.ivImage);
+        } else {
+            holder.ivImage.setVisibility(View.GONE);
+            Glide.clear(holder.ivImage);
+        }
+
         holder.tagWin7.setVisibility(View.GONE);
         holder.tagWin8.setVisibility(View.GONE);
         holder.tagWin10.setVisibility(View.GONE);
@@ -103,6 +107,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     public class TopicViewHolder extends RecyclerView.ViewHolder {
 
+        private ImageView ivImage;
         private TextView tvTitle;
         private TextView tvText;
         private TextView tagWin7, tagWin8, tagWin10, tagUbuntu, tagTopology;
@@ -110,6 +115,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
         public TopicViewHolder(View itemView) {
             super(itemView);
 
+            ivImage = (ImageView) itemView.findViewById(R.id.ivImage);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             tvText = (TextView) itemView.findViewById(R.id.tvText);
             tagWin7 = (TextView) itemView.findViewById(R.id.tagWin7);
