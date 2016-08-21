@@ -54,6 +54,7 @@ public class QuizResultFragment extends BaseFragment {
         rvQuizResults = (RecyclerView) view.findViewById(R.id.rvQuizResults);
         rvQuizResults.setAdapter(new QuizItemAdapter(context, items, answers));
         rvQuizResults.setLayoutManager(new LinearLayoutManager(context));
+        rvQuizResults.setNestedScrollingEnabled(false);
 
         showQuizResult();
     }
