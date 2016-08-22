@@ -1,4 +1,4 @@
-Blue Screen errors (also sometimes called black screen errors or STOP code errors) can occur if a serious problem causes Windows to shut down or restart unexpectedly. You might see a message that says, "Windows has been shut down to prevent damage to your computer."
+&nbsp &nbsp &nbsp Blue Screen errors (also sometimes called black screen errors or STOP code errors) can occur if a serious problem causes Windows to shut down or restart unexpectedly. You might see a message that says, "Windows has been shut down to prevent damage to your computer."
 These errors can be caused by both hardware and software issues. If you added new hardware to your PC before the Blue Screen error, shut down your PC, remove the hardware, and try restarting. If you're having trouble restarting, you can start your PC in safe mode. For more info, see Windows Startup Settings (including safe mode).
 You can also try getting the latest updates with Windows Update, help from other sources, or restoring Windows to an earlier point in time.
 
@@ -14,6 +14,7 @@ In Windows 8 and Windows 8.1
     3.	Tap or click Check now, and then wait while Windows looks for the latest updates for your PC.
     4.	If Windows finds updates, tap or click Install updates.
 
+<card />
 You might be asked for an admin password or to confirm your choice.
 Read and accept the license terms, and then tap or click Finish if the update requires Windows Update will tell you if it successfully installed the updates.
 

@@ -1,9 +1,9 @@
 1.	Do one of the following:
     <br />
     
-    <br />  &nbsp &nbsp &nbsp In Windows 10, in the search box on the taskbar, type View network connections, and then selectView network connections at the top of the list.
-    <br />	&nbsp &nbsp &nbsp In Windows 8.1, select the Start button, start typing View network connections, and then selectView network connections in the list.
-    <br />	&nbsp &nbsp &nbsp In Windows 7, open Network Connections by selecting the Start button, and then selecting Control Panel. In the search box, type adapter, and then, under Network and Sharing Center, select View network connections.
+    <br /> •    &nbsp &nbsp &nbsp In Windows 10, in the search box on the taskbar, type View network connections, and then selectView network connections at the top of the list.
+    <br /> •    &nbsp &nbsp &nbsp In Windows 8.1, select the Start button, start typing View network connections, and then selectView network connections in the list.
+    <br /> •	&nbsp &nbsp &nbsp In Windows 7, open Network Connections by selecting the Start button, and then selecting Control Panel. In the search box, type adapter, and then, under Network and Sharing Center, select View network connections.
     
 <card />
 2.	Right-click the connection that you want to change, and then select Properties. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
@@ -13,22 +13,22 @@
 4.	To specify IPv4 IP address settings, do one of the following:
     <br />
     
-    <br />	&nbsp &nbsp &nbsp To get IP settings automatically using DHCP, select Obtain an IP address automatically, and then select OK.
-    <br />	&nbsp &nbsp &nbsp To specify an IP address, select Use the following IP address, and then, in the IP address, Subnet mask, and Default gateway boxes, type the IP address settings.
+    <br /> •	&nbsp &nbsp &nbsp To get IP settings automatically using DHCP, select Obtain an IP address automatically, and then select OK.
+    <br /> •	&nbsp &nbsp &nbsp To specify an IP address, select Use the following IP address, and then, in the IP address, Subnet mask, and Default gateway boxes, type the IP address settings.
     
 <card />
 5.	To specify IPv6 IP address settings, do one of the following:
     <br />
     
-    <br />	&nbsp &nbsp &nbsp To get IP settings automatically using DHCP, select Obtain an IPv6 address automatically, and then select OK.
-    <br />	&nbsp &nbsp &nbsp To specify an IP address, select Use the following IPv6 address, and then, in the IPv6 address,Subnet prefix length, and Default gateway boxes, type the IP address settings.
+    <br /> •	&nbsp &nbsp &nbsp To get IP settings automatically using DHCP, select Obtain an IPv6 address automatically, and then select OK.
+    <br /> •	&nbsp &nbsp &nbsp To specify an IP address, select Use the following IPv6 address, and then, in the IPv6 address,Subnet prefix length, and Default gateway boxes, type the IP address settings.
     
 <card />
 6.	To specify DNS server address settings, do one of the following:
     <br />
     
-    <br />	&nbsp &nbsp &nbsp To get a DNS server address automatically using DHCP, select Obtain DNS server address automatically, and then select OK.
-    <br />	&nbsp &nbsp &nbsp To specify a DNS server address, select Use the following DNS server addresses, and then, in thePreferred DNS server and Alternate DNS server boxes, type the addresses of the primary and secondary DNS servers.
+    <br /> •	&nbsp &nbsp &nbsp To get a DNS server address automatically using DHCP, select Obtain DNS server address automatically, and then select OK.
+    <br /> •	&nbsp &nbsp &nbsp To specify a DNS server address, select Use the following DNS server addresses, and then, in thePreferred DNS server and Alternate DNS server boxes, type the addresses of the primary and secondary DNS servers.
     
 <card />
 7.	To change advanced DNS, WINS, and IP settings, select Advanced.
@@ -38,8 +38,8 @@
 You can sign up for the Windows 10 upgrade offer in two ways:
     <br />
     
-    <br />	&nbsp &nbsp &nbsp Click a button in the Get Windows 10 app that says “Reserve my upgrade”, “Upgrade now”, “Upgrade later”, or “Schedule my upgrade.” The Get Windows 10 app shows up as a Windows icon in the notification area at the right end of your taskbar (the taskbar is the ribbon of icons on the bottom of your desktop). If you don't see the app, get help here.
-    <br />	&nbsp &nbsp &nbsp During the set-up of a new PC, check a box that says “Reserve my free Windows 10 upgrade,” “Upgrade now,” or “Upgrade later.”
+    <br /> •	&nbsp &nbsp &nbsp Click a button in the Get Windows 10 app that says “Reserve my upgrade”, “Upgrade now”, “Upgrade later”, or “Schedule my upgrade.” The Get Windows 10 app shows up as a Windows icon in the notification area at the right end of your taskbar (the taskbar is the ribbon of icons on the bottom of your desktop). If you don't see the app, get help here.
+    <br /> •	&nbsp &nbsp &nbsp During the set-up of a new PC, check a box that says “Reserve my free Windows 10 upgrade,” “Upgrade now,” or “Upgrade later.”
     
 If you no longer want to be signed up for the free upgrade to Windows 10, you can change your PC’s status through the Get Windows 10 app. Open the app by clicking on the Windows icon on the right of your taskbar, click the menu icon in the upper left of the app, and choose “Change reservation status.”
     <br />

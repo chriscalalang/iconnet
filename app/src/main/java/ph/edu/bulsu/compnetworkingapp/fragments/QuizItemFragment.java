@@ -59,7 +59,7 @@ public class QuizItemFragment extends BaseFragment {
 
         int theme = 5;
         for (final String choice : quizItem.getChoices()) {
-            Button button = new Button(getActivity());
+            Button button = (Button) getActivity().getLayoutInflater().inflate(R.layout.button_quiz_choice,llQuiz,false);
             button.setAllCaps(false);
             button.setText(choice);
             button.setOnClickListener(new View.OnClickListener() {

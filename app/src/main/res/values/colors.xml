@@ -20,6 +20,9 @@
     <color name="topo">#757575</color>
     <color name="topo_dark">#424242</color>
 
+    <color name="stroke">#90A4AE</color>
+
+
     <!-- Primary colors -->
     <color name="colorPrimaryDarkDark">#000000</color>
     <color name="primaryRed">#F44336</color>
