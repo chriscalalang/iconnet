@@ -7,21 +7,25 @@
         <item
             android:id="@+id/miTutorials"
             android:checked="false"
+            android:icon="@drawable/ic_tutorial"
             android:title="@string/tutorials" />
         <item
             android:id="@+id/miTroubleshooting"
             android:checked="false"
+            android:icon="@drawable/ic_troubleshooting"
             android:title="@string/troubleshooting" />
 
         <item
             android:id="@+id/miIPCalculator"
             android:checked="false"
+            android:icon="@drawable/ic_calc"
             android:title="@string/ip_calculator" />
 
         <item
             android:id="@+id/miQuiz"
             android:checked="false"
-            android:title="@string/take_a_quiz" />
+            android:icon="@drawable/ic_quiz"
+            android:title="@string/take_the_quiz" />
 
     </group>
 

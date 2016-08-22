@@ -76,7 +76,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
         if (topic.getImages().size() > 0) {
             holder.ivImage.setVisibility(View.VISIBLE);
-            Glide.with(context).load(topic.getBaseFolderPath() + topic.getImages().get(0)).override(DeviceUtils.convertDpToPx(72), DeviceUtils.convertDpToPx(72)).into(holder.ivImage);
+            Glide.with(context).load(topic.getBaseFolderPath() + topic.getImages().get(0)).centerCrop().into(holder.ivImage);
         } else {
             holder.ivImage.setVisibility(View.GONE);
             Glide.clear(holder.ivImage);

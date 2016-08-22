@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#424242</color>
-    <color name="colorPrimaryDark">#282828</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
@@ -24,8 +24,8 @@
     <color name="colorPrimaryDarkDark">#000000</color>
     <color name="primaryRed">#F44336</color>
     <color name="primaryRedDark">#D32F2F</color>
-    <color name="primaryGreen">#4CAF50</color>
-    <color name="primaryGreenDark">#388E3C</color>
+    <color name="primaryGreen">@color/colorPrimary</color>
+    <color name="primaryGreenDark">@color/colorPrimaryDark</color>
     <color name="facebook">#3b5998</color>
     <color name="facebookDark">#005078</color>
     <color name="primaryYellow">#FFEB3B</color>

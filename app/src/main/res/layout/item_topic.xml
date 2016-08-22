@@ -45,13 +45,12 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:maxLength="250"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
-                <ImageView
+                <ph.edu.bulsu.compnetworkingapp.views.HeightBasedSquareImageView
                     android:id="@+id/ivImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
                     android:layout_marginLeft="@dimen/default_padding_half"
                     android:contentDescription="@string/app_name" />
             </LinearLayout>

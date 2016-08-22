@@ -33,4 +33,6 @@
     <string name="take_a_quiz">Take A Quiz!</string>
     <string name="are_you_ready_to_take_the_quiz">Are you ready to take the quiz?</string>
     <string name="yes_let_s_start">Yes, Let\'s start!</string>
+    <string name="subnet_mask_in_bytes">Subnet Mask In Bytes</string>
+    <string name="take_the_quiz">Take The Quiz!</string>
 </resources>
