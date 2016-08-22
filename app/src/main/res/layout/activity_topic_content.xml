@@ -7,7 +7,8 @@
     <RelativeLayout
         android:id="@+id/rlImages"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/slideshow_image_height">
+        android:layout_height="@dimen/slideshow_image_height"
+        android:visibility="gone">
 
         <ProgressBar
             android:id="@+id/pbImages"
@@ -29,14 +30,12 @@
         </HorizontalScrollView>
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tvText"
+    <LinearLayout
+        android:id="@+id/llContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_padding"
-        android:layout_marginRight="@dimen/default_padding"
-        android:layout_marginTop="@dimen/default_padding_half"
-        android:textSize="18sp" />
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding" />
 
     <WebView
         android:id="@+id/wvHtml"
