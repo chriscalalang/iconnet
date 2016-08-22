@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -77,13 +78,13 @@ public class QuizItemAdapter extends RecyclerView.Adapter<QuizItemAdapter.QuizIt
 
 
         private TextView tvQuestion;
-        private IconNetButton btnWrongAnswer;
+        private Button btnWrongAnswer;
         private IconNetButton btnCorrectAnswer;
 
         public QuizItemViewHolder(View itemView) {
             super(itemView);
             tvQuestion = (TextView) itemView.findViewById(R.id.tvQuestion);
-            btnWrongAnswer = (IconNetButton) itemView.findViewById(R.id.btnWrongAnswer);
+            btnWrongAnswer = (Button) itemView.findViewById(R.id.btnWrongAnswer);
             btnCorrectAnswer = (IconNetButton) itemView.findViewById(R.id.btnCorrectAnswer);
         }
     }
