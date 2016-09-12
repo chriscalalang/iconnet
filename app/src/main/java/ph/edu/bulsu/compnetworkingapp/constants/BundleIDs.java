@@ -10,6 +10,7 @@ public class BundleIDs {
     public static final String QUIZ_ITEM = "quiz_item";
     public static final String QUIZ_ITEMS = "quiz_items";
     public static final String ANSWERS = "answers";
+    public static final String PAGE_NUMBER = "page_number";
 
     private BundleIDs() {
     }

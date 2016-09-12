@@ -20,6 +20,12 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
+    <style name="AppTheme.LandingScreen" parent="AppTheme.Base">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
     <style name="AppTheme.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

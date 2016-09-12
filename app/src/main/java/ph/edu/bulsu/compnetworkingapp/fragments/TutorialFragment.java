@@ -60,32 +60,10 @@ public class TutorialFragment extends BaseFragment {
             @Override
             public void run() {
 
-                final ProgressDialog progressDialog = new ProgressDialog(context);
-
-                Log.e("TOPICS COUNT", "" + ResourcesManager.getTopicAssetsCount());
-                if (ResourcesManager.hasNewTopicAssets()) {
-                    progressDialog.setMessage("Loading resources");
-                    progressDialog.setIndeterminate(true);
-                    progressDialog.setCancelable(false);
-                    progressDialog.show();
-                    ResourcesManager.updateTopicAssets(new ResourceUpdateStatusListener() {
-                        @Override
-                        public View getHandler() {
-                            return parentView;
-                        }
-
-                        @Override
-                        public void onUpdateCompleted() {
-                            allTutorialsFragment.requestTopics();
-                            topologyFragment.requestTopics();
-                            progressDialog.dismiss();
-                        }
-                    });
-                } else {
 
                     allTutorialsFragment.requestTopics();
                     topologyFragment.requestTopics();
-                }
+
             }
         });
     }

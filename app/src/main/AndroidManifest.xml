@@ -8,17 +8,21 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".activities.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize">
+
+        <activity android:name=".activities.LandingActivity"
+            android:theme="@style/AppTheme.LandingScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.TopicContentActivity"
             android:label="@string/app_name"
@@ -28,7 +32,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.FullScreen" />
         <activity android:name=".Model3DViewerActivity" />
-        <activity android:name=".activities.QuizActivity"></activity>
+        <activity android:name=".activities.QuizActivity" />
+
     </application>
 
 </manifest>

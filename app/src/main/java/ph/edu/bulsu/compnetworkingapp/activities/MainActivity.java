@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
+import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.fragments.IPCalculatorFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TroubleshootingFragment;
 import ph.edu.bulsu.compnetworkingapp.fragments.TutorialFragment;
@@ -123,7 +124,22 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
         dlDrawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        showTutorialsPage();
+        int page = getIntent().getIntExtra(BundleIDs.PAGE_NUMBER, 0);
+        switch (page) {
+            case 0:
+                showTutorialsPage();
+                break;
+            case 1:
+                showTroubleShootingPage();
+                break;
+            case 2:
+                showIPCalculatorPage();
+                break;
+            case 3:
+                showTutorialsPage();
+                showQuizPage();
+                break;
+        }
     }
 
     private void useFragment(Fragment fragment, String title) {
