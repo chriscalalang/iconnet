@@ -35,4 +35,7 @@
     <string name="yes_let_s_start">Yes, Let\'s start!</string>
     <string name="subnet_mask_in_bytes">Subnet Mask In Bytes</string>
     <string name="take_the_quiz">Take The Quiz!</string>
+    <string name="broadcast_address">Broadcast Address</string>
+    <string name="network_address">Network Address</string>
+    <string name="home_address_range">Home Address Range</string>
 </resources>

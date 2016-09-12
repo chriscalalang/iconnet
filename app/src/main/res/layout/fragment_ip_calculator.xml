@@ -72,7 +72,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cvHighAddress"
+            android:id="@+id/cvBroadcastAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_padding_half"
@@ -89,12 +89,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/high_address"
+                    android:text="@string/broadcast_address"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvHighAddress"
+                    android:id="@+id/tvBroadcastAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp" />
@@ -102,7 +102,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cvLowAddress"
+            android:id="@+id/cvNetworkAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_padding_half"
@@ -119,12 +119,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/low_address"
+                    android:text="@string/network_address"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvLowAddress"
+                    android:id="@+id/tvNetworkAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp" />
@@ -133,7 +133,7 @@
 
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cvMaximumAddresses"
+            android:id="@+id/cvHomeAddressRange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_padding_half"
@@ -150,12 +150,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/maximum_addresses"
+                    android:text="@string/home_address_range"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvMaxAddresses"
+                    android:id="@+id/tvHomeAddressRange"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp" />

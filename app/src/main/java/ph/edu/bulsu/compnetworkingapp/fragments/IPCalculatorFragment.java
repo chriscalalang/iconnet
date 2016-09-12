@@ -1,7 +1,6 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,8 +21,8 @@ public class IPCalculatorFragment extends BaseFragment {
 
     private EditText etIP;
     private Spinner sBitLength, sSubnetMask;
-    private TextView tvResultsWillShowIf, tvHighAddress, tvLowAddress, tvMaxAddresses;
-    private CardView cvHighAddress, cvLowAddress, cvMaximumAddresses;
+    private TextView tvResultsWillShowIf, tvBroadcastAddress, tvNetworkAddress, tvHomeAddressRange;
+    private CardView cvBroadcastAddress, cvNetworkAddress, cvHomeAddressRange;
     private ScrollView svContent;
 
     public static IPCalculatorFragment newInstance() {
@@ -47,12 +46,12 @@ public class IPCalculatorFragment extends BaseFragment {
         sSubnetMask = (Spinner) view.findViewById(R.id.sSubnetMask);
         sBitLength = (Spinner) view.findViewById(R.id.sBitLength);
         tvResultsWillShowIf = (TextView) view.findViewById(R.id.tvResultsWillShowIf);
-        tvHighAddress = (TextView) view.findViewById(R.id.tvHighAddress);
-        tvLowAddress = (TextView) view.findViewById(R.id.tvLowAddress);
-        tvMaxAddresses = (TextView) view.findViewById(R.id.tvMaxAddresses);
-        cvHighAddress = (CardView) view.findViewById(R.id.cvHighAddress);
-        cvLowAddress = (CardView) view.findViewById(R.id.cvLowAddress);
-        cvMaximumAddresses = (CardView) view.findViewById(R.id.cvMaximumAddresses);
+        tvBroadcastAddress = (TextView) view.findViewById(R.id.tvBroadcastAddress);
+        tvNetworkAddress = (TextView) view.findViewById(R.id.tvNetworkAddress);
+        tvHomeAddressRange = (TextView) view.findViewById(R.id.tvHomeAddressRange);
+        cvBroadcastAddress = (CardView) view.findViewById(R.id.cvBroadcastAddress);
+        cvNetworkAddress = (CardView) view.findViewById(R.id.cvNetworkAddress);
+        cvHomeAddressRange = (CardView) view.findViewById(R.id.cvHomeAddressRange);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 context, R.array.bitlengths, android.R.layout.simple_spinner_item);
@@ -162,10 +161,11 @@ public class IPCalculatorFragment extends BaseFragment {
         String binaryNetmask = convertIPIntDec2StringBinary(netmask);
 
         if (updateView) {
-            tvLowAddress.setText(ipFirst);
-            tvHighAddress.setText(ipLast);
+            tvNetworkAddress.setText(ipFirst);
+            tvBroadcastAddress.setText(ipLast);
 
-            tvMaxAddresses.setText(String.valueOf(maximumAddresses));
+            String ipFirstTweaked = (ipFirst.substring(0, ipFirst.lastIndexOf("."))) + ".1";
+            tvHomeAddressRange.setText(ipFirstTweaked + " - " + ipLast);
         }
 
         return true;
@@ -239,16 +239,16 @@ public class IPCalculatorFragment extends BaseFragment {
 
     private void clearResults() {
         tvResultsWillShowIf.setVisibility(View.VISIBLE);
-        cvMaximumAddresses.setVisibility(View.GONE);
-        cvHighAddress.setVisibility(View.GONE);
-        cvLowAddress.setVisibility(View.GONE);
+        cvHomeAddressRange.setVisibility(View.GONE);
+        cvBroadcastAddress.setVisibility(View.GONE);
+        cvNetworkAddress.setVisibility(View.GONE);
     }
 
     private void showResults() {
         tvResultsWillShowIf.setVisibility(View.GONE);
-        cvMaximumAddresses.setVisibility(View.VISIBLE);
-        cvHighAddress.setVisibility(View.VISIBLE);
-        cvLowAddress.setVisibility(View.VISIBLE);
+        cvHomeAddressRange.setVisibility(View.VISIBLE);
+        cvBroadcastAddress.setVisibility(View.VISIBLE);
+        cvNetworkAddress.setVisibility(View.VISIBLE);
         svContent.post(new Runnable() {
             @Override
             public void run() {
