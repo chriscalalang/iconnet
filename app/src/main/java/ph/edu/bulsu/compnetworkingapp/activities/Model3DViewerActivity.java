@@ -1,4 +1,4 @@
-package ph.edu.bulsu.compnetworkingapp;
+package ph.edu.bulsu.compnetworkingapp.activities;
 
 
 import min3d.core.Object3dContainer;
@@ -20,14 +20,13 @@ public class Model3DViewerActivity extends RendererActivity {
         myLight.position.setZ(150);
         scene.lights().add(myLight);
 
-        IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(), "ph.edu.bulsu.compnetworkingapp:raw/linksys_obj", true);
+        IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(), "ph.edu.bulsu.compnetworkingapp:raw/router_obj", true);
         myParser.parse();
 
         faceObject3D = myParser.getParsedObject();
         faceObject3D.position().x = faceObject3D.position().y = faceObject3D.position().z = 0;
-        faceObject3D.scale().x = faceObject3D.scale().y = faceObject3D.scale().z = 0.009f;
 // Depending on the model you will need to change the scale
-        faceObject3D.scale().x = faceObject3D.scale().y = faceObject3D.scale().z = 0.009f;
+        faceObject3D.scale().x = faceObject3D.scale().y = faceObject3D.scale().z = 1f;
 
         scene.addChild(faceObject3D);
     }

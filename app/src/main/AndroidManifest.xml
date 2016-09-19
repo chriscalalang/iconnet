@@ -31,7 +31,7 @@
             android:name=".activities.ImageFullScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.FullScreen" />
-        <activity android:name=".Model3DViewerActivity" />
+        <activity android:name=".activities.Model3DViewerActivity" />
         <activity android:name=".activities.QuizActivity" />
 
     </application>
