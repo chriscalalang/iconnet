@@ -2,14 +2,12 @@ package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.activities.Model3DViewerActivity;
 
-public class SimulationFragment extends BaseFragment {
+public class SimulationFragment extends BaseFragment implements View.OnClickListener {
     @Override
     public int getParentLayoutId() {
         return R.layout.fragment_simulation;
@@ -25,12 +23,11 @@ public class SimulationFragment extends BaseFragment {
 
     @Override
     public void initializeParentView(View view) {
-        view.findViewById(R.id.btnSample).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(),Model3DViewerActivity.class));
-            }
-        });
+        view.findViewById(R.id.cvRouter).setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getActivity(), Model3DViewerActivity.class));
+    }
 }
