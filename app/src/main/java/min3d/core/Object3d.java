@@ -23,11 +23,11 @@ public class Object3d
 	
 	private boolean _isVisible = true;
 	private boolean _vertexColorsEnabled = true;
-	private boolean _doubleSidedEnabled = false;
+	private boolean _doubleSidedEnabled = true;
 	private boolean _texturesEnabled = true;
 	private boolean _normalsEnabled = true;
 	private boolean _ignoreFaces = false;
-	private boolean _colorMaterialEnabled = false;
+	private boolean _colorMaterialEnabled = true;
 	private boolean _lightingEnabled = true;
 
 	private Number3d _position = new Number3d(0,0,0);
