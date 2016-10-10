@@ -11,6 +11,7 @@ import min3d.core.RendererActivity;
 import min3d.parser.IParser;
 import min3d.parser.Parser;
 import min3d.vos.Light;
+import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 
 public class Model3DViewerActivity extends RendererActivity {
 
@@ -39,7 +40,7 @@ public class Model3DViewerActivity extends RendererActivity {
         scene.lights().add(myLight);
         scene.backgroundColor().setAll(233, 233, 233, 255);
 
-        IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(), "ph.edu.bulsu.compnetworkingapp:raw/router_obj", true);
+        IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(), "ph.edu.bulsu.compnetworkingapp:raw/" + getIntent().getStringExtra(BundleIDs.MODEL_FILE_NAME), true);
         myParser.parse();
 
         model = myParser.getParsedObject();

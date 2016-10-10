@@ -11,6 +11,7 @@ public class BundleIDs {
     public static final String QUIZ_ITEMS = "quiz_items";
     public static final String ANSWERS = "answers";
     public static final String PAGE_NUMBER = "page_number";
+    public static final String MODEL_FILE_NAME = "model_file_name";
 
     private BundleIDs() {
     }
