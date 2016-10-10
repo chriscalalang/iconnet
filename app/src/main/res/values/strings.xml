@@ -37,7 +37,7 @@
     <string name="take_the_quiz">Take The Quiz!</string>
     <string name="broadcast_address">Broadcast Address</string>
     <string name="network_address">Network Address</string>
-    <string name="home_address_range">Home Address Range</string>
+    <string name="home_address_range">IP Address Range</string>
     <string name="router">Router</string>
     <string name="cable">Cable</string>
 </resources>
