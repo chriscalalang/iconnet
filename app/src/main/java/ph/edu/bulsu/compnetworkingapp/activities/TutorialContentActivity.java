@@ -3,10 +3,7 @@ package ph.edu.bulsu.compnetworkingapp.activities;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
@@ -19,18 +16,16 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import ph.edu.bulsu.compnetworkingapp.IconNetApplication;
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
-import ph.edu.bulsu.compnetworkingapp.models.Topic;
-import ph.edu.bulsu.compnetworkingapp.utils.DeviceUtils;
+import ph.edu.bulsu.compnetworkingapp.models.Tutorial;
 
 /**
  * Created by Sheychan on 6/17/2016.
  */
-public class TopicContentActivity extends HidingToolbarActivity {
+public class TutorialContentActivity extends HidingToolbarActivity {
 
-    private Topic topic;
+    private Tutorial tutorial;
     private WebView wvHtml;
     private LinearLayout llImages;
     private RelativeLayout rlImages;
@@ -48,10 +43,10 @@ public class TopicContentActivity extends HidingToolbarActivity {
         super.onCreate(savedInstanceState);
 
 
-        topic = getIntent().getParcelableExtra(BundleIDs.TOPIC);
+        tutorial = getIntent().getParcelableExtra(BundleIDs.TOPIC);
 
 
-        setTitle(topic.getTitle());
+        setTitle(tutorial.getTitle());
 
         llContent = (LinearLayout) findViewById(R.id.llContent);
         rlImages = (RelativeLayout) findViewById(R.id.rlImages);
@@ -59,8 +54,8 @@ public class TopicContentActivity extends HidingToolbarActivity {
         pbImages = (ProgressBar) findViewById(R.id.pbImages);
 
 
-        Log.e("Images", "" + topic.getImages().size());
-        Log.e("Tags", "" + topic.getTags().size() + " with content" + topic.getTags().toString());
+        Log.e("Images", "" + tutorial.getImages().size());
+        Log.e("Tags", "" + tutorial.getTags().size() + " with content" + tutorial.getTags().toString());
 
 //        setupSlideShowImages();
         pbImages.setVisibility(View.GONE);
@@ -72,18 +67,18 @@ public class TopicContentActivity extends HidingToolbarActivity {
         wvHtml = (WebView) findViewById(R.id.wvHtml);
         wvHtml.getSettings();
         wvHtml.setBackgroundColor(Color.TRANSPARENT);
-        wvHtml.loadDataWithBaseURL(topic.getBaseFolderPath(), topic.getHtml(), "text/html", "UTF-8", "");
+        wvHtml.loadDataWithBaseURL(tutorial.getBaseFolderPath(), tutorial.getHtml(), "text/html", "UTF-8", "");
     }
 
     private void setupTextAndImageCards() {
-        String topicText = topic.getText();
+        String tutorialText = tutorial.getText();
 
         int index = 0;
         String subtext;
         llContent.removeAllViews();
         do {
-            boolean containsCard = topicText.contains("<card />");
-            subtext = topicText.substring(0, containsCard ? topicText.indexOf("<card />") : topicText.length());
+            boolean containsCard = tutorialText.contains("<card />");
+            subtext = tutorialText.substring(0, containsCard ? tutorialText.indexOf("<card />") : tutorialText.length());
 
             View view = getLayoutInflater().inflate(R.layout.item_text_card, llContent, false);
             TextView tvText = (TextView) view.findViewById(R.id.tvText);
@@ -91,40 +86,40 @@ public class TopicContentActivity extends HidingToolbarActivity {
 
             tvText.setText(Html.fromHtml(subtext));
 
-            if (index < topic.getImages().size()) {
-                Glide.with(TopicContentActivity.this).load(Uri.parse(topic.getBaseFolderPath() + topic.getImages().get(index))).fitCenter().into(ivImage);
+            if (index < tutorial.getImages().size()) {
+                Glide.with(TutorialContentActivity.this).load(Uri.parse(tutorial.getBaseFolderPath() + tutorial.getImages().get(index))).fitCenter().into(ivImage);
             } else {
                 ivImage.setVisibility(View.GONE);
             }
             index++;
             llContent.addView(view);
 
-            topicText = topicText.substring(subtext.length() + (containsCard ? 8 : 0));
-        } while (topicText.length() > 0);
+            tutorialText = tutorialText.substring(subtext.length() + (containsCard ? 8 : 0));
+        } while (tutorialText.length() > 0);
 
 
     }
 
     private void setupSlideShowImages() {
 
-        if (topic.getImages().size() < 1) {
+        if (tutorial.getImages().size() < 1) {
             rlImages.setVisibility(View.GONE);
         } else {
-            for (final String image : topic.getImages()) {
+            for (final String image : tutorial.getImages()) {
                 final View view = getLayoutInflater().inflate(R.layout.item_image, llImages, false);
 
                 final ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
 
                 Log.e("Image name", image);
                 llImages.addView(view);
-                Glide.with(TopicContentActivity.this).load(Uri.parse(topic.getBaseFolderPath() + image)).fitCenter().into(imageView);
+                Glide.with(TutorialContentActivity.this).load(Uri.parse(tutorial.getBaseFolderPath() + image)).fitCenter().into(imageView);
                 pbImages.setVisibility(View.GONE);
 
                 view.findViewById(R.id.flImage).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(TopicContentActivity.this, ImageFullScreenActivity.class);
-                        intent.putExtra(BundleIDs.IMAGE_URL, topic.getBaseFolderPath() + image);
+                        Intent intent = new Intent(TutorialContentActivity.this, ImageFullScreenActivity.class);
+                        intent.putExtra(BundleIDs.IMAGE_URL, tutorial.getBaseFolderPath() + image);
                         startActivity(intent);
                     }
                 });

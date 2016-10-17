@@ -16,9 +16,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
-import ph.edu.bulsu.compnetworkingapp.activities.TopicContentActivity;
+import ph.edu.bulsu.compnetworkingapp.activities.TroubleshootingContentActivity;
+import ph.edu.bulsu.compnetworkingapp.activities.TutorialContentActivity;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
+import ph.edu.bulsu.compnetworkingapp.models.Troubleshooter;
+import ph.edu.bulsu.compnetworkingapp.models.Tutorial;
 import ph.edu.bulsu.compnetworkingapp.utils.DeviceUtils;
 
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHolder> {
@@ -54,33 +57,6 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
         holder.tvTitle.setText(Html.fromHtml(topic.getTitle()));
 
-        if (topic.getText() != null) {
-            String topicText = topic.getText() + "";
-            for (String string : splittedSentenceWords) {
-                topicText = topicText.replaceAll("(?i)" + string, "<b><font color='#000000'>" + string + "</font></b>");
-            }
-
-            int firstKeyIndex = topicText.indexOf("<b>") - 39;
-            if (firstKeyIndex < 0) firstKeyIndex = 0;
-
-            String cutText = topicText.substring(firstKeyIndex, topicText.length());
-            holder.tvText.setText(Html.fromHtml(cutText));
-
-        } else {
-            if (topic.getHtml() != null) {
-                boolean htmlMoreThan250Chars = topic.getHtml().length() > 250;
-                holder.tvText.setText(Html.fromHtml(topic.getHtml().substring(0, htmlMoreThan250Chars ? 249 : topic.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
-            }
-        }
-
-
-        if (topic.getImages().size() > 0) {
-            holder.ivImage.setVisibility(View.VISIBLE);
-            Glide.with(context).load(topic.getBaseFolderPath() + topic.getImages().get(0)).centerCrop().into(holder.ivImage);
-        } else {
-            holder.ivImage.setVisibility(View.GONE);
-            Glide.clear(holder.ivImage);
-        }
 
         holder.tagWin7.setVisibility(View.GONE);
         holder.tagWin8.setVisibility(View.GONE);
@@ -96,6 +72,42 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
             }
         }
 
+
+        if (topic instanceof Tutorial) {
+            Tutorial tutorial = (Tutorial) topic;
+            if (tutorial.getText() != null) {
+                String tutorialText = tutorial.getText() + "";
+                for (String string : splittedSentenceWords) {
+                    tutorialText = tutorialText.replaceAll("(?i)" + string, "<b><font color='#000000'>" + string + "</font></b>");
+                }
+
+                int firstKeyIndex = tutorialText.indexOf("<b>") - 39;
+                if (firstKeyIndex < 0) firstKeyIndex = 0;
+
+                String cutText = tutorialText.substring(firstKeyIndex, tutorialText.length());
+                holder.tvText.setText(Html.fromHtml(cutText));
+
+            } else {
+                if (tutorial.getHtml() != null) {
+                    boolean htmlMoreThan250Chars = tutorial.getHtml().length() > 250;
+                    holder.tvText.setText(Html.fromHtml(tutorial.getHtml().substring(0, htmlMoreThan250Chars ? 249 : tutorial.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
+                }
+            }
+
+
+            if (tutorial.getImages().size() > 0) {
+                holder.ivImage.setVisibility(View.VISIBLE);
+                Glide.with(context).load(tutorial.getBaseFolderPath() + tutorial.getImages().get(0)).centerCrop().into(holder.ivImage);
+            } else {
+                holder.ivImage.setVisibility(View.GONE);
+                Glide.clear(holder.ivImage);
+            }
+        } else if (topic instanceof Troubleshooter) {
+            Troubleshooter troubleshooter = (Troubleshooter) topic;
+            if (troubleshooter.getSolutions().size() > 0) {
+                holder.tvText.setText(troubleshooter.getSolutions().get(0));
+            }
+        }
     }
 
     @Override
@@ -125,7 +137,16 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, TopicContentActivity.class);
+                    Intent intent;
+
+                    if (topicList.get(getAdapterPosition()) instanceof Tutorial) {
+                        intent = new Intent(context, TutorialContentActivity.class);
+                    } else if (topicList.get(getAdapterPosition()) instanceof Troubleshooter) {
+                        intent = new Intent(context, TroubleshootingContentActivity.class);
+                    } else {
+                        intent = null;
+                    }
+
                     intent.putExtra(BundleIDs.TOPIC, topicList.get(getAdapterPosition()));
                     context.startActivity(intent);
                 }
@@ -168,3 +189,4 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
 
 }
+

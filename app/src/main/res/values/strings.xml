@@ -39,4 +39,8 @@
     <string name="network_address">Network Address</string>
     <string name="home_address_range">IP Address Range</string>
     <string name="router">Router</string>
+    <string name="helpful">Was this helpful?</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

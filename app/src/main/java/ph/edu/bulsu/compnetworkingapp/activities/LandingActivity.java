@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.load.engine.Resource;
+
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 import ph.edu.bulsu.compnetworkingapp.interfaces.ResourceUpdateStatusListener;
@@ -40,13 +42,14 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
 
-        Log.e("TOPICS COUNT", "" + ResourcesManager.getTopicAssetsCount());
+        Log.e("TOPICS COUNT", "" + ResourcesManager.getAssetsCount());
         if (ResourcesManager.hasNewTopicAssets()) {
             progressDialog.setMessage("Loading resources");
             progressDialog.setIndeterminate(true);
             progressDialog.setCancelable(false);
             progressDialog.show();
-            ResourcesManager.updateTopicAssets(new ResourceUpdateStatusListener() {
+            ResourcesManager.updateTroubleShootingAssets();
+            ResourcesManager.updateTutorialAssets(new ResourceUpdateStatusListener() {
                 @Override
                 public View getHandler() {
                     return ivLogo;

@@ -1,0 +1,8 @@
+1. Click start
+2. Select search then type cmd
+3. On the terminal, type ping google.com
+4. If you see sets of texts like this:
+
+    64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.051 ms
+
+    It means you have successfully received a data packet from Google which means you have internet connection.

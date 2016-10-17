@@ -16,7 +16,7 @@ import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.TopicAdapter;
-import ph.edu.bulsu.compnetworkingapp.database.daos.TopicsDAO;
+import ph.edu.bulsu.compnetworkingapp.database.daos.TroubleshootersDAO;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 import ph.edu.bulsu.compnetworkingapp.utils.WordQueriesBuilder;
 
@@ -84,7 +84,9 @@ public class TroubleshootingFragment extends BaseFragment {
         if (ubuntu.isChecked()) {
             tags.add("ubuntu");
         }
-        populateList(TopicsDAO.getInstance().getAll(tags, null), false, new ArrayList<String>());
+        List<Topic> topics = new ArrayList<>();
+        topics.addAll(TroubleshootersDAO.getInstance().getAll(tags, null));
+        populateList(topics, false, new ArrayList<String>());
     }
 
     @Override
@@ -149,7 +151,9 @@ public class TroubleshootingFragment extends BaseFragment {
     @Override
     public boolean onQueryTextChange(String newText) {
         textQueries = WordQueriesBuilder.getWordQueries(newText);
-        populateList(TopicsDAO.getInstance().getAll(tags, null), false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
+        List<Topic> topics = new ArrayList<>();
+        topics.addAll(TroubleshootersDAO.getInstance().getAll(tags, null));
+        populateList(topics, false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
         return super.onQueryTextChange(newText);
     }
 

@@ -4,19 +4,19 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.BuildConfig;
 import ph.edu.bulsu.compnetworkingapp.IconNetApplication;
-import ph.edu.bulsu.compnetworkingapp.database.daos.TopicsDAO;
+import ph.edu.bulsu.compnetworkingapp.database.daos.TroubleshootersDAO;
+import ph.edu.bulsu.compnetworkingapp.database.daos.TutorialsDAO;
 import ph.edu.bulsu.compnetworkingapp.interfaces.ResourceUpdateStatusListener;
-import ph.edu.bulsu.compnetworkingapp.models.Topic;
+import ph.edu.bulsu.compnetworkingapp.models.Troubleshooter;
+import ph.edu.bulsu.compnetworkingapp.models.Tutorial;
 
 /**
  * Created by Sheychan on 7/1/2016.
@@ -28,6 +28,7 @@ public class ResourcesManager {
     private static final String ASSETS_VERSION = "assets_version";
     private static final String ASSETS_TOPIC_COUNT = "assets_topic_count";
     private static final String TOPICS_FOLDER = "topics";
+    private static final String TROUBLESHOOTERS_FOLDER = "troubleshooters";
     private static final String CONTENT_TAGS_FILE_NAME = "tags.txt";
     private static final String CONTENT_TEXT_FILE_NAME = "content.txt";
     private static final String CONTENT_HTML_FILE_NAME = "content.html";
@@ -35,16 +36,69 @@ public class ResourcesManager {
     public static boolean hasNewTopicAssets() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IconNetApplication.getInstance());
 
-        return (preferences.getInt(ASSETS_VERSION, 0) != BuildConfig.VERSION_CODE) || (preferences.getInt(ASSETS_TOPIC_COUNT, 0) != getTopicAssetsCount());
+        return (preferences.getInt(ASSETS_VERSION, 0) != BuildConfig.VERSION_CODE) || (preferences.getInt(ASSETS_TOPIC_COUNT, 0) != getAssetsCount());
     }
 
-    public static void updateTopicAssets(final ResourceUpdateStatusListener listener) {
+    public static void updateTroubleShootingAssets() {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IconNetApplication.getInstance());
 
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
-                List<Topic> topics = new ArrayList<>();
+                List<Troubleshooter> troubleshooters = new ArrayList<>();
+
+
+                String[] folders = new String[0];
+                try {
+                    folders = IconNetApplication.getInstance().getResources().getAssets().list(TROUBLESHOOTERS_FOLDER);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                for (String folder : folders) {
+                    Troubleshooter troubleshooter = new Troubleshooter(folder);
+
+                    //attempt read tags
+                    try {
+                        troubleshooter.setTags(Arrays.asList(readStringFromAssetFile(TROUBLESHOOTERS_FOLDER + "/" + folder + "/" + CONTENT_TAGS_FILE_NAME).split("\\W+")));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    //attempt get solutions
+                    List<String> solutions = new ArrayList<String>();
+                    String[] solutionFileNames = new String[0];
+                    try {
+                        solutionFileNames = IconNetApplication.getInstance().getResources().getAssets().list(TROUBLESHOOTERS_FOLDER + "/" + folder);
+
+                        for (String fileName : solutionFileNames) {
+                            if (fileName.contains(".tbs")) {
+                                solutions.add(readStringFromAssetFile(readStringFromAssetFile(TROUBLESHOOTERS_FOLDER + "/" + folder + "/" + fileName)));
+                            }
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    troubleshooter.setSolutions(solutions);
+
+                    troubleshooters.add(troubleshooter);
+                }
+
+                TroubleshootersDAO.getInstance().clearStorage();
+                TroubleshootersDAO.getInstance().saveAll(troubleshooters);
+            }
+        });
+    }
+
+    public static void updateTutorialAssets(final ResourceUpdateStatusListener listener) {
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IconNetApplication.getInstance());
+
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                List<Tutorial> tutorials = new ArrayList<>();
 
 
                 String[] folders = new String[0];
@@ -56,25 +110,25 @@ public class ResourcesManager {
 
 
                 for (String folder : folders) {
-                    Topic topic = new Topic(folder);
+                    Tutorial tutorial = new Tutorial(folder);
 
                     //attempt read text
                     try {
-                        topic.setText(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_TEXT_FILE_NAME));
+                        tutorial.setText(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_TEXT_FILE_NAME));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
 
                     //attempt read html
                     try {
-                        topic.setHtml(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_HTML_FILE_NAME));
+                        tutorial.setHtml(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_HTML_FILE_NAME));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
 
                     //attempt read tags
                     try {
-                        topic.setTags(Arrays.asList(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_TAGS_FILE_NAME).split("\\W+")));
+                        tutorial.setTags(Arrays.asList(readStringFromAssetFile(TOPICS_FOLDER + "/" + folder + "/" + CONTENT_TAGS_FILE_NAME).split("\\W+")));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -95,19 +149,19 @@ public class ResourcesManager {
                         }
                     }
 
-                    topic.setImages(imageList);
+                    tutorial.setImages(imageList);
 
-                    topics.add(topic);
+                    tutorials.add(tutorial);
                 }
 
-                TopicsDAO.getInstance().clearStorage();
-                TopicsDAO.getInstance().saveAll(topics);
+                TutorialsDAO.getInstance().clearStorage();
+                TutorialsDAO.getInstance().saveAll(tutorials);
 
                 listener.getHandler().post(new Runnable() {
                     @Override
                     public void run() {
                         preferences.edit().putInt(ASSETS_VERSION, BuildConfig.VERSION_CODE).apply();
-                        preferences.edit().putInt(ASSETS_TOPIC_COUNT, getTopicAssetsCount()).apply();
+                        preferences.edit().putInt(ASSETS_TOPIC_COUNT, getAssetsCount()).apply();
 
                         listener.onUpdateCompleted();
                     }
@@ -128,9 +182,9 @@ public class ResourcesManager {
         return fileContent.toString();
     }
 
-    public static int getTopicAssetsCount() {
+    public static int getAssetsCount() {
         try {
-            return IconNetApplication.getInstance().getResources().getAssets().list(TOPICS_FOLDER).length;
+            return IconNetApplication.getInstance().getResources().getAssets().list(TOPICS_FOLDER).length + IconNetApplication.getInstance().getResources().getAssets().list(TROUBLESHOOTERS_FOLDER).length;
         } catch (IOException e) {
             return -1;
         }

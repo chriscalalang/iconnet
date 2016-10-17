@@ -7,23 +7,19 @@ import java.util.logging.Logger;
 /**
  * Created by FDM Sydney on 7/5/2016.
  */
-public class TopicsTable {
-    private static final Logger logger = Logger.getLogger(TopicsTable.class.getSimpleName());
+public class TroubleshootersTable {
+    private static final Logger logger = Logger.getLogger(TroubleshootersTable.class.getSimpleName());
 
-    public static final String TABLE_NAME = "tbl_topics";
+    public static final String TABLE_NAME = "tbl_troubleshooters";
     public static final String TITLE = "_title";
-    public static final String TEXT = "_text";
-    public static final String IMAGES = "_images";
+    public static final String SOLUTIONS = "_solutions";
     public static final String TAGS = "_tags";
-    public static final String HTML = "_html";
 
     private static final String TABLE_CREATE_COMMAND = "CREATE TABLE "
             + TABLE_NAME + "('"
             + TITLE + "' TEXT PRIMARY KEY, '"
-            + TEXT + "' TEXT, '"
-            + IMAGES + "' TEXT, '"
             + TAGS + "' TEXT, '"
-            + HTML+ "' TEXT); ";
+            + SOLUTIONS + "' TEXT); ";
 
     public static void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_CREATE_COMMAND);
