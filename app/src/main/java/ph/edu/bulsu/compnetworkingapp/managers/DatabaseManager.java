@@ -9,7 +9,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.logging.Logger;
 
 import ph.edu.bulsu.compnetworkingapp.IconNetApplication;
-import ph.edu.bulsu.compnetworkingapp.database.tables.TopicsTable;
+import ph.edu.bulsu.compnetworkingapp.database.tables.TroubleshootersTable;
+import ph.edu.bulsu.compnetworkingapp.database.tables.TutorialsTable;
+import ph.edu.bulsu.compnetworkingapp.models.Troubleshooter;
 
 
 public class DatabaseManager extends SQLiteOpenHelper {
@@ -45,7 +47,8 @@ public class DatabaseManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         logger.info("Creating database...");
-        TopicsTable.onCreate(db);
+        TutorialsTable.onCreate(db);
+        TroubleshootersTable.onCreate(db);
 
     }
 

@@ -40,4 +40,7 @@
     <string name="home_address_range">IP Address Range</string>
     <string name="router">Router</string>
     <string name="cable">Cable</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

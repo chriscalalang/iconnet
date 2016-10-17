@@ -1,12 +1,10 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -15,9 +13,7 @@ import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.TopicAdapter;
-import ph.edu.bulsu.compnetworkingapp.database.daos.TopicsDAO;
-import ph.edu.bulsu.compnetworkingapp.interfaces.ResourceUpdateStatusListener;
-import ph.edu.bulsu.compnetworkingapp.managers.ResourcesManager;
+import ph.edu.bulsu.compnetworkingapp.database.daos.TutorialsDAO;
 import ph.edu.bulsu.compnetworkingapp.models.Topic;
 import ph.edu.bulsu.compnetworkingapp.utils.WordQueriesBuilder;
 
@@ -64,7 +60,9 @@ public class AllTutorialsFragment extends BaseFragment {
     }
 
     public void requestTopics() {
-        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, new ArrayList<String>());
+        List<Topic> topics = new ArrayList<>();
+        topics.addAll(TutorialsDAO.getInstance().getAll(null, textQueries));
+        populateList(topics, false, new ArrayList<String>());
     }
 
 
@@ -92,7 +90,9 @@ public class AllTutorialsFragment extends BaseFragment {
     @Override
     public boolean onQueryTextChange(String newText) {
         textQueries = WordQueriesBuilder.getWordQueries(newText);
-        populateList(TopicsDAO.getInstance().getAll(null, textQueries), false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
+        List<Topic> topics = new ArrayList<>();
+        topics.addAll(TutorialsDAO.getInstance().getAll(null, textQueries));
+        populateList(topics, false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
         return super.onQueryTextChange(newText);
     }
 
