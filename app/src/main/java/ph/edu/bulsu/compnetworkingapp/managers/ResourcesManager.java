@@ -3,6 +3,7 @@ package ph.edu.bulsu.compnetworkingapp.managers;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -75,7 +76,7 @@ public class ResourcesManager {
 
                         for (String fileName : solutionFileNames) {
                             if (fileName.contains(".tbs")) {
-                                solutions.add(readStringFromAssetFile(readStringFromAssetFile(TROUBLESHOOTERS_FOLDER + "/" + folder + "/" + fileName)));
+                                solutions.add(readStringFromAssetFile(TROUBLESHOOTERS_FOLDER + "/" + folder + "/" + fileName));
                             }
                         }
                     } catch (IOException e) {
@@ -83,6 +84,7 @@ public class ResourcesManager {
                     }
                     troubleshooter.setSolutions(solutions);
 
+                    Log.e("SOLUTIONS COUNT", "" + troubleshooter.getSolutions().size());
                     troubleshooters.add(troubleshooter);
                 }
 
