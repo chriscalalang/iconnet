@@ -47,7 +47,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cvCable"
+            android:id="@+id/cvRj45"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_padding_half"
@@ -66,19 +66,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/cable"
+                    android:text="@string/rj45"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageView4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/app_name"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/cable" />
+                    android:src="@drawable/rj45" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

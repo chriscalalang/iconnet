@@ -46,7 +46,7 @@ public class TutorialFragment extends BaseFragment {
         final VideoTutorialsFragment videosTutorialsFragment = VideoTutorialsFragment.newInstance();
 
         adapter.addFragment(videosTutorialsFragment, "Video Tutorials");
-        adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
+        adapter.addFragment(ModelsFragment.newInstance(), "3D Models");
         vpTutorial.setAdapter(adapter);
 
         tabLayout = mainViewController.getTabLayout();

@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="-3dp">
+    android:layout_margin="-3dp"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/default_padding">
 
-    <TextView
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ICONNET"
-        android:gravity="center"
-        android:padding="64dp"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
-        android:background="@color/colorPrimary" />
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_logo" />
 
 
 </RelativeLayout>

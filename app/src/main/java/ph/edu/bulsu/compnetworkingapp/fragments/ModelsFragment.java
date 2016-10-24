@@ -8,16 +8,16 @@ import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.activities.Model3DViewerActivity;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 
-public class SimulationFragment extends BaseFragment implements View.OnClickListener {
+public class ModelsFragment extends BaseFragment implements View.OnClickListener {
     @Override
     public int getParentLayoutId() {
         return R.layout.fragment_simulation;
     }
 
-    public static SimulationFragment newInstance() {
+    public static ModelsFragment newInstance() {
         Bundle args = new Bundle();
 
-        SimulationFragment fragment = new SimulationFragment();
+        ModelsFragment fragment = new ModelsFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -25,7 +25,7 @@ public class SimulationFragment extends BaseFragment implements View.OnClickList
     @Override
     public void initializeParentView(View view) {
         view.findViewById(R.id.cvRouter).setOnClickListener(this);
-        view.findViewById(R.id.cvCable).setOnClickListener(this);
+        view.findViewById(R.id.cvRj45).setOnClickListener(this);
     }
 
     @Override
@@ -35,9 +35,9 @@ public class SimulationFragment extends BaseFragment implements View.OnClickList
             case R.id.cvRouter:
                 intent.putExtra(BundleIDs.MODEL_FILE_NAME,"router_obj");
                 break;
-            case R.id.cvCable:
+            case R.id.cvRj45:
 
-                intent.putExtra(BundleIDs.MODEL_FILE_NAME,"cable_obj");
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME,"rj45_obj");
                 break;
         }
         startActivity(intent);
