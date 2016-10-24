@@ -44,4 +44,12 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="helpful">Was this helpful?</string>
+    <string name="centralized">Centralized</string>
+    <string name="collaborative">Collaborative</string>
+    <string name="subnetting">Subnetting</string>
+    <string name="distributed">Distributed</string>
+
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -33,4 +33,6 @@
     <color name="facebookDark">#005078</color>
     <color name="primaryYellow">#FFEB3B</color>
 
+    <color name="black_overlay">#66000000</color>
+
 </resources>

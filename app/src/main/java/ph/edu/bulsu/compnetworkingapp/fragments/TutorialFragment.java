@@ -1,17 +1,13 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.adapters.ViewPagerAdapter;
-import ph.edu.bulsu.compnetworkingapp.interfaces.ResourceUpdateStatusListener;
-import ph.edu.bulsu.compnetworkingapp.managers.ResourcesManager;
 
 public class TutorialFragment extends BaseFragment {
     private ViewPager vpTutorial;
@@ -47,9 +43,9 @@ public class TutorialFragment extends BaseFragment {
         final AllTutorialsFragment allTutorialsFragment = AllTutorialsFragment.newInstance();
 
         adapter.addFragment(allTutorialsFragment, "All");
-        final TopologyFragment topologyFragment = TopologyFragment.newInstance();
+        final VideoTutorialsFragment videosTutorialsFragment = VideoTutorialsFragment.newInstance();
 
-        adapter.addFragment(topologyFragment, "Topology");
+        adapter.addFragment(videosTutorialsFragment, "Video Tutorials");
         adapter.addFragment(SimulationFragment.newInstance(), "Simulation");
         vpTutorial.setAdapter(adapter);
 
@@ -62,7 +58,6 @@ public class TutorialFragment extends BaseFragment {
 
 
                     allTutorialsFragment.requestTopics();
-                    topologyFragment.requestTopics();
 
             }
         });

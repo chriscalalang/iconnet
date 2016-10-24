@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 
-import java.util.List;
-
 import ph.edu.bulsu.compnetworkingapp.interfaces.MainViewController;
 
 /**
@@ -31,7 +29,8 @@ public abstract class BaseFragment extends Fragment implements SearchView.OnQuer
 
         if ((context instanceof MainViewController)) {
             this.mainViewController = (MainViewController) context;
-            mainViewController.getQueryTextListeners().add(this);
+            if (mainViewController.getQueryTextListeners() != null)
+                mainViewController.getQueryTextListeners().add(this);
         }
 
 
