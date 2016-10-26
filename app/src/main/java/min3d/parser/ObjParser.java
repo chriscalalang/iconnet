@@ -251,11 +251,11 @@ public class ObjParser extends AParser implements IParser {
 					subParts = new StringTokenizer(parts.nextToken(), "/");
 
 				int index = i - 1;
-				v[index] = (short) (Short.parseShort(subParts.nextToken()) - 1);
+				v[index] = (Integer.parseInt(subParts.nextToken()) - 1);
 				if (hasuv)
-					uv[index] = (short) (Short.parseShort(subParts.nextToken()) - 1);
+					uv[index] = (Integer.parseInt(subParts.nextToken()) - 1);
 				if (hasn)
-					n[index] = (short) (Short.parseShort(subParts.nextToken()) - 1);
+					n[index] = (Integer.parseInt(subParts.nextToken()) - 1);
 			}
 		}
 	}

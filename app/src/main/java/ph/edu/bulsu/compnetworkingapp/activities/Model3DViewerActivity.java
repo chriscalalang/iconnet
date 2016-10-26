@@ -34,7 +34,7 @@ public class Model3DViewerActivity extends RendererActivity {
     @Override
     public void initScene() {
         scene.lights().add(new Light());
-//        scene.lights().add(new Light());
+        scene.lights().add(new Light());
 //        Light myLight = new Light();
 //        myLight.position.setZ(150);
 //        scene.lights().add(myLight);
@@ -45,6 +45,7 @@ public class Model3DViewerActivity extends RendererActivity {
 
         model = myParser.getParsedObject();
         model.position().x = model.position().y = model.position().z = 0;
+        model.scale().x = model.scale().y = model.scale().z = .1f;
 
         scene.addChild(model);
     }
@@ -88,11 +89,13 @@ public class Model3DViewerActivity extends RendererActivity {
             SimpleOnScaleGestureListener {
         @Override
         public boolean onScale(ScaleGestureDetector detector) {
-            mScale *= detector.getScaleFactor();
-            mScale = Math.max(0.1f, Math.min(mScale, 5.0f));
+            if (model != null) {
+                mScale *= detector.getScaleFactor();
+                mScale = Math.max(0.1f, Math.min(mScale, 5.0f));
 
 
-            model.scale().x = model.scale().y = model.scale().z = mScale;
+                model.scale().x = model.scale().y = model.scale().z = mScale;
+            }
             return true;
         }
     }
