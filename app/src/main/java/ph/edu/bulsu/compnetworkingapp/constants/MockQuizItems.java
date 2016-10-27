@@ -15,46 +15,157 @@ public class MockQuizItems {
         ArrayList<QuizItem> items = new ArrayList<>();
 
         QuizItem item = new QuizItem();
-        item.setQuestion("How long is an IPv6 address?");
-        item.setChoices(Arrays.asList("32 bits", "128 bytes", "64 bits", "128 bits"));
-        item.setAcceptedAnswers(Arrays.asList("128 bits", "128 bytes"));
+        item.setQuestion("How may bits does an IP address have?");
+        item.setChoices(Arrays.asList("8", "32", "128", "256"));
+        item.setAcceptedAnswers(Arrays.asList("32", "32 bits"));
         items.add(item);
 
 
         item = new QuizItem();
-        item.setQuestion("What flavor of Network Address Translation can be used to have one IP address allow many users to connect to the global Internet?");
-        item.setChoices(Arrays.asList("NAT", "Static", "Dynamic", "PAT"));
-        item.setAcceptedAnswers(Arrays.asList("PAT", "Port Address Translation"));
+        item.setQuestion("The address which we refer to the network.");
+        item.setChoices(Arrays.asList("Network Address", "Broadcast Address", "Subnet Mask", "Hosts Address"));
+        item.setAcceptedAnswers(Arrays.asList("Network Address", "Network"));
         items.add(item);
 
 
         item = new QuizItem();
-        item.setQuestion("What command is used to create a backup configuration?");
-        item.setChoices(Arrays.asList("copy running backup", "copy running-config startup-config", "config mem", "wr mem"));
-        item.setAcceptedAnswers(Arrays.asList("copy running-config startup-config", "copy running-config startup-config"));
+        item.setQuestion("The address assigned to the end of devices on the network.");
+        item.setChoices(Arrays.asList("Network Address", "Broadcast Address", "Subnet Mask", "Hosts Address"));
+        item.setAcceptedAnswers(Arrays.asList("Hosts Address", "Host"));
         items.add(item);
 
 
         item = new QuizItem();
-        item.setQuestion("You have 10 users plugged into a hub running 10Mbps half-duplex. There is a server connected to the switch running 10Mbps half-duplex as well. How much bandwidth does each host have to the server?");
-        item.setChoices(Arrays.asList("100 kbps", "1 Mbps", "2 Mbps", "10 Mbps"));
-        item.setAcceptedAnswers(Arrays.asList("10 Mbps", "10mbps", "10 Megabyte per second"));
+        item.setQuestion("Which determines the number of hosts in a network.");
+        item.setChoices(Arrays.asList("Network Address", "Broadcast Address", "Subnet Mask", "Hosts Address"));
+        item.setAcceptedAnswers(Arrays.asList("Subnet", "Subnet Mask"));
         items.add(item);
 
 
         item = new QuizItem();
-        item.setQuestion("Which of the following is the valid host range for the subnet on which the IP address 192.168.168.188 255.255.255.192 resides?");
-        item.setChoices(Arrays.asList("192.168.168.129-190", "192.168.168.129-191", "192.168.168.128-190", "192.168.168.128-192"));
-        item.setAcceptedAnswers(Collections.singletonList("192.168.168.129-190"));
+        item.setQuestion("A special address that is use to send all data to all hosts on the network.");
+        item.setChoices(Arrays.asList("Network Address", "Broadcast Address", "Subnet Mask", "Hosts Address"));
+        item.setAcceptedAnswers(Arrays.asList("Subnet", "Subnet Mask"));
         items.add(item);
 
 
         item = new QuizItem();
-        item.setQuestion("Which of the following commands will allow you to set your Telnet password on a Cisco router?");
-        item.setChoices(Arrays.asList("line telnet 0 4", "line aux 0 4", "line vty 0 4", "line con 0"));
-        item.setAcceptedAnswers(Collections.singletonList("line vty 0 4"));
+        item.setQuestion("An IT expert who manages organization’s network.");
+        item.setChoices(Arrays.asList("Network Systems", "Network Administrator", "Network Cisco", "Network Expert"));
+        item.setAcceptedAnswers(Arrays.asList("Network Admin", "Network Administrator"));
         items.add(item);
 
+
+        item = new QuizItem();
+        item.setQuestion("What does SMTP means?");
+        item.setChoices(Arrays.asList("Sample Mail Transfer Protocol", "Staggard Mail Transfer Protocol", "Simplex Mail Transfer Protocol", "Simple Mail Transfer Protocol"));
+        item.setAcceptedAnswers(Arrays.asList("Simple Mail Transfer Protocol", "Simple Mail Transfer Protocol"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Which of the following is a Private and Class C IP");
+        item.setChoices(Arrays.asList("192.168.1.1", "192.161.1.1", "192.168.256.1", "192.166.11.200"));
+        item.setAcceptedAnswers(Arrays.asList("192.168.1.1", "192.168.1.1"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("How do you represent 1011 0011 on decimal?");
+        item.setChoices(Arrays.asList("176", "177", "178", "179"));
+        item.setAcceptedAnswers(Arrays.asList("179", "179"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("How do represent 231 on binary?");
+        item.setChoices(Arrays.asList("1110 0111", "1100 0111", "1000 1111", "1111 0011"));
+        item.setAcceptedAnswers(Arrays.asList("1110 0111", "1110 0111"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the dotted decimal representation of the IPv4 address 11001011.00000000.01110001.11010011?");
+        item.setChoices(Arrays.asList("192.0.2.199", "192.51.100.201", "203.0.113.211", "203.0.113.211"));
+        item.setAcceptedAnswers(Arrays.asList("203.0.113.211", "203.0.113.211"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What port number does SMTP uses?");
+        item.setChoices(Arrays.asList("80", "23", "25", "21"));
+        item.setAcceptedAnswers(Arrays.asList("25", "25"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is often used to refer to a private connection of LANs and WANs that belongs to an organization, and is designed to be accessible only by the organization's members, employees, or others with authorization?");
+        item.setChoices(Arrays.asList("Internetwork", "Intranet", "Internet", "Intranetworking"));
+        item.setAcceptedAnswers(Arrays.asList("Intranet", "Intranet"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Represents data to the user plus encoding and dialog control.");
+        item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
+        item.setAcceptedAnswers(Arrays.asList("Application", "Application"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Determines the best path through the network.");
+        item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
+        item.setAcceptedAnswers(Arrays.asList("Internet", "Internet"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Support communication between diverse devices across diverse networks");
+        item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
+        item.setAcceptedAnswers(Arrays.asList("Internet", "Internet"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("It is usually administered by a single organization.");
+        item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
+        item.setAcceptedAnswers(Arrays.asList("Network Access", "Network Access"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Controls the hardware devices and media that make up the network");
+        item.setChoices(Arrays.asList("LAN", "MAN", "WAN", "TAN"));
+        item.setAcceptedAnswers(Arrays.asList("LAN", "Local Area Network"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("It is use specifically designed network devices to make the interconnections between LAN.");
+        item.setChoices(Arrays.asList("LAN", "MAN", "WAN", "TAN"));
+        item.setAcceptedAnswers(Arrays.asList("WAN", "Wide Area Network"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("The most widely known internetwork reference model?");
+        item.setChoices(Arrays.asList("OSI", "GUI", "TCIP", "IP"));
+        item.setAcceptedAnswers(Arrays.asList("OSI", "OSI"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("The general term for the PDU used at the Application layer?");
+        item.setChoices(Arrays.asList("Data", "Packet", "Segment", "Frame"));
+        item.setAcceptedAnswers(Arrays.asList("Data", "Data"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("A PDU used when physically transmitting data over the medium.");
+        item.setChoices(Arrays.asList("Data", "Packet", "Segment", "Bits"));
+        item.setAcceptedAnswers(Arrays.asList("Bits", "Bits"));
+        items.add(item);
 
         Collections.shuffle(items);
         return new ArrayList<>(items.subList(0, size));
