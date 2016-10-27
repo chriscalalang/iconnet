@@ -11,7 +11,7 @@ import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 public class ModelsFragment extends BaseFragment implements View.OnClickListener {
     @Override
     public int getParentLayoutId() {
-        return R.layout.fragment_simulation;
+        return R.layout.fragment_3d_models;
     }
 
     public static ModelsFragment newInstance() {
@@ -25,19 +25,24 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
     @Override
     public void initializeParentView(View view) {
         view.findViewById(R.id.cvRouter).setOnClickListener(this);
-        view.findViewById(R.id.cvRj45).setOnClickListener(this);
+        view.findViewById(R.id.cvCableStraight).setOnClickListener(this);
+        view.findViewById(R.id.cvCableCrossOver).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(getActivity(), Model3DViewerActivity.class);
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.cvRouter:
-                intent.putExtra(BundleIDs.MODEL_FILE_NAME,"router_obj");
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "router_obj");
                 break;
-            case R.id.cvRj45:
+            case R.id.cvCableStraight:
 
-                intent.putExtra(BundleIDs.MODEL_FILE_NAME,"rj45_obj");
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "cable_straight_obj");
+                break;
+            case R.id.cvCableCrossOver:
+
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "cable_crossover_obj");
                 break;
         }
         startActivity(intent);
