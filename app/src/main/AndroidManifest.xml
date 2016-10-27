@@ -41,8 +41,9 @@
         <activity
             android:name=".activities.VideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/AppTheme.LandingScreen"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.LandingScreen" />
+        <activity android:name=".activities.VideoDetailsActivity"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
@@ -14,6 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import ph.edu.bulsu.compnetworkingapp.R;
+import ph.edu.bulsu.compnetworkingapp.activities.VideoDetailsActivity;
+import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
+import ph.edu.bulsu.compnetworkingapp.models.VideoTutorial;
 
 public class IPCalculatorFragment extends BaseFragment {
 
@@ -24,6 +28,7 @@ public class IPCalculatorFragment extends BaseFragment {
     private TextView tvResultsWillShowIf, tvBroadcastAddress, tvNetworkAddress, tvHomeAddressRange;
     private CardView cvBroadcastAddress, cvNetworkAddress, cvHomeAddressRange;
     private ScrollView svContent;
+    private TextView tvSubnettingVideoLink;
 
     public static IPCalculatorFragment newInstance() {
 
@@ -52,6 +57,18 @@ public class IPCalculatorFragment extends BaseFragment {
         cvBroadcastAddress = (CardView) view.findViewById(R.id.cvBroadcastAddress);
         cvNetworkAddress = (CardView) view.findViewById(R.id.cvNetworkAddress);
         cvHomeAddressRange = (CardView) view.findViewById(R.id.cvHomeAddressRange);
+        tvSubnettingVideoLink = (TextView) view.findViewById(R.id.tvSubnettingVideoLink);
+
+        tvSubnettingVideoLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), VideoDetailsActivity.class);
+                intent.putExtra(BundleIDs.VIDEO_TUTORIAL, new VideoTutorial("subnetting", "Subnetting tutorial", "A tutorial for you to properly do subnetting", R.drawable.subnetting));
+
+                startActivity(intent);
+            }
+        });
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 context, R.array.bitlengths, android.R.layout.simple_spinner_item);

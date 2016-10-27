@@ -13,6 +13,7 @@ public class BundleIDs {
     public static final String PAGE_NUMBER = "page_number";
     public static final String MODEL_FILE_NAME = "model_file_name";
     public static final String VIDEO_FILE_NAME = "video_file_name";
+    public static final String VIDEO_TUTORIAL = "video_tutorial";
 
     private BundleIDs() {
     }

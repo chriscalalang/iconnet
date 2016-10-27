@@ -53,4 +53,5 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="rj45">Rj45</string>
+    <string name="click_here_for_a_video_tutorial">Click here for a subnetting video tutorial</string>
 </resources>
