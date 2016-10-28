@@ -42,7 +42,7 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
                 break;
             case R.id.cvCableCrossOver:
 
-                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "cable_crossover_obj");
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "cable_cross_over_obj");
                 break;
         }
         startActivity(intent);

@@ -45,7 +45,7 @@ public class Model3DViewerActivity extends RendererActivity {
 
         model = myParser.getParsedObject();
         model.position().x = model.position().y = model.position().z = 0;
-        model.scale().x = model.scale().y = model.scale().z = .1f;
+        model.scale().x = model.scale().y = model.scale().z = .5f;
 
         scene.addChild(model);
     }
