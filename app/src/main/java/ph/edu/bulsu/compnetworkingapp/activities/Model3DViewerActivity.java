@@ -34,10 +34,9 @@ public class Model3DViewerActivity extends RendererActivity {
     @Override
     public void initScene() {
         scene.lights().add(new Light());
-        scene.lights().add(new Light());
-//        Light myLight = new Light();
-//        myLight.position.setZ(150);
-//        scene.lights().add(myLight);
+        Light myLight = new Light();
+        myLight.position.setZ(150);
+        scene.lights().add(myLight);
         scene.backgroundColor().setAll(233, 233, 233, 255);
 
         IParser myParser = Parser.createParser(Parser.Type.OBJ, getResources(), "ph.edu.bulsu.compnetworkingapp:raw/" + getIntent().getStringExtra(BundleIDs.MODEL_FILE_NAME), true);

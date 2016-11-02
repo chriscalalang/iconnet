@@ -56,4 +56,5 @@
     <string name="click_here_for_a_video_tutorial">Click here for a subnetting video tutorial</string>
     <string name="cable_straight_through">Cable Straight-Through</string>
     <string name="cable_cross_over">Cable Cross-Over</string>
+    <string name="modem">Modem</string>
 </resources>
