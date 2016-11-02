@@ -29,6 +29,7 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
         view.findViewById(R.id.cvCableCrossOver).setOnClickListener(this);
         view.findViewById(R.id.cvModem).setOnClickListener(this);
         view.findViewById(R.id.cvSwitch).setOnClickListener(this);
+        view.findViewById(R.id.cvWirelessUSBAdapter).setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +54,10 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
             case R.id.cvSwitch:
 
                 intent.putExtra(BundleIDs.MODEL_FILE_NAME, "switch_obj");
+                break;
+            case R.id.cvWirelessUSBAdapter:
+
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "wireless_usb_adapter_obj");
                 break;
         }
         startActivity(intent);
