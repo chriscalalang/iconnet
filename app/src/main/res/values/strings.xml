@@ -57,4 +57,5 @@
     <string name="cable_straight_through">Cable Straight-Through</string>
     <string name="cable_cross_over">Cable Cross-Over</string>
     <string name="modem">Modem</string>
+    <string name="label_switch">Switch</string>
 </resources>

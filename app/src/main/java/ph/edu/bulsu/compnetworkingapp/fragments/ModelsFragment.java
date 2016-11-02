@@ -28,6 +28,7 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
         view.findViewById(R.id.cvCableStraight).setOnClickListener(this);
         view.findViewById(R.id.cvCableCrossOver).setOnClickListener(this);
         view.findViewById(R.id.cvModem).setOnClickListener(this);
+        view.findViewById(R.id.cvSwitch).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +49,10 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
             case R.id.cvModem:
 
                 intent.putExtra(BundleIDs.MODEL_FILE_NAME, "modem_obj");
+                break;
+            case R.id.cvSwitch:
+
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "switch_obj");
                 break;
         }
         startActivity(intent);
