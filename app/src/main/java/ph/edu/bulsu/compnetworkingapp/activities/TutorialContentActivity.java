@@ -71,32 +71,33 @@ public class TutorialContentActivity extends HidingToolbarActivity {
     }
 
     private void setupTextAndImageCards() {
-        String tutorialText = tutorial.getText();
+        if (tutorial.getText() != null) {
+            String tutorialText = tutorial.getText();
 
-        int index = 0;
-        String subtext;
-        llContent.removeAllViews();
-        do {
-            boolean containsCard = tutorialText.contains("<card />");
-            subtext = tutorialText.substring(0, containsCard ? tutorialText.indexOf("<card />") : tutorialText.length());
+            int index = 0;
+            String subtext;
+            llContent.removeAllViews();
+            do {
+                boolean containsCard = tutorialText.contains("<card />");
+                subtext = tutorialText.substring(0, containsCard ? tutorialText.indexOf("<card />") : tutorialText.length());
 
-            View view = getLayoutInflater().inflate(R.layout.item_text_card, llContent, false);
-            TextView tvText = (TextView) view.findViewById(R.id.tvText);
-            ImageView ivImage = (ImageView) view.findViewById(R.id.ivImage);
+                View view = getLayoutInflater().inflate(R.layout.item_text_card, llContent, false);
+                TextView tvText = (TextView) view.findViewById(R.id.tvText);
+                ImageView ivImage = (ImageView) view.findViewById(R.id.ivImage);
 
-            tvText.setText(Html.fromHtml(subtext));
+                tvText.setText(Html.fromHtml(subtext));
 
-            if (index < tutorial.getImages().size()) {
-                Glide.with(TutorialContentActivity.this).load(Uri.parse(tutorial.getBaseFolderPath() + tutorial.getImages().get(index))).fitCenter().into(ivImage);
-            } else {
-                ivImage.setVisibility(View.GONE);
-            }
-            index++;
-            llContent.addView(view);
+                if (index < tutorial.getImages().size()) {
+                    Glide.with(TutorialContentActivity.this).load(Uri.parse(tutorial.getBaseFolderPath() + tutorial.getImages().get(index))).fitCenter().into(ivImage);
+                } else {
+                    ivImage.setVisibility(View.GONE);
+                }
+                index++;
+                llContent.addView(view);
 
-            tutorialText = tutorialText.substring(subtext.length() + (containsCard ? 8 : 0));
-        } while (tutorialText.length() > 0);
-
+                tutorialText = tutorialText.substring(subtext.length() + (containsCard ? 8 : 0));
+            } while (tutorialText.length() > 0);
+        }
 
     }
 

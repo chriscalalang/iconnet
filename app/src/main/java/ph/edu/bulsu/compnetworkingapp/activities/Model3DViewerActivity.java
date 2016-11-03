@@ -79,6 +79,10 @@ public class Model3DViewerActivity extends RendererActivity {
 
                 return true;
             }
+            if (event.getPointerCount() == 2) {
+                scene.camera().target = model.position();
+            }
+
         }
         return super.onTouchEvent(event);
     }
