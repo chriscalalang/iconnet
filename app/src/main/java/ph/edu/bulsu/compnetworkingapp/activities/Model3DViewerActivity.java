@@ -11,6 +11,7 @@ import min3d.core.RendererActivity;
 import min3d.parser.IParser;
 import min3d.parser.Parser;
 import min3d.vos.Light;
+import min3d.vos.Number3dManaged;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 
 public class Model3DViewerActivity extends RendererActivity {
@@ -33,9 +34,13 @@ public class Model3DViewerActivity extends RendererActivity {
 
     @Override
     public void initScene() {
-        scene.lights().add(new Light());
         Light myLight = new Light();
-        myLight.position.setZ(150);
+        myLight.position.setZ(400);
+        myLight.position.setX(400);
+        myLight.position.setY(400);
+        myLight.direction.setX(45);
+        myLight.direction.setY(90);
+        myLight.direction.setZ(45);
         scene.lights().add(myLight);
         scene.backgroundColor().setAll(233, 233, 233, 255);
 
