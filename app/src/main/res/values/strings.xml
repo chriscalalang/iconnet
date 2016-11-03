@@ -60,4 +60,5 @@
     <string name="label_switch">Switch</string>
     <string name="wireless_adapter">Wireless USB Adapter</string>
     <string name="coaxial">Coaxial Cable</string>
+    <string name="firewall">Firewall</string>
 </resources>

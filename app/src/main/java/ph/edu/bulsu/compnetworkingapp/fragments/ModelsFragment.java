@@ -31,6 +31,7 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
         view.findViewById(R.id.cvSwitch).setOnClickListener(this);
         view.findViewById(R.id.cvWirelessUSBAdapter).setOnClickListener(this);
         view.findViewById(R.id.cvCoaxialCable).setOnClickListener(this);
+        view.findViewById(R.id.cvFirewall).setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +64,10 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
             case R.id.cvCoaxialCable:
 
                 intent.putExtra(BundleIDs.MODEL_FILE_NAME, "coaxial_cable_obj");
+                break;
+            case R.id.cvFirewall:
+
+                intent.putExtra(BundleIDs.MODEL_FILE_NAME, "firewall_obj");
                 break;
         }
         startActivity(intent);
