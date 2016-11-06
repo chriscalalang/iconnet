@@ -1,0 +1,290 @@
+1.	ADSP - AppleTalk data stream protocol manages the flow of data between two established socket connections.
+2.	AEP - AppleTalk echo protocol uses echoes to tell if a computer, or node, is available.
+3.	AFP - AppleTalk Filing protocol - Makes network files appear local by managing file sharing at the presentation layer.
+4.	AGP - Accelerated Graphics Port. This bus is developed for fast video cards. It is currently up to 4X mode speed.
+5.	API - Application Programming Interface.
+6.	APPC - Advanced Peer-to-Peer Communications provides peer to peer services at the transport and session layer.
+7.	APPN - Advanced Peer-to-Peer networking supports the computer connections at the network and transport layers.
+8.	Architecture - The method that is used to transmit packets on a network. Sometimes the term architecture includes topology. An example is Ethernet.
+9.	ARCnet - Attached Resource Computer Network is an architecture using star and bus topology.
+10.	ARP - Address resolution Protocol is used to resolve the hardware address of a card to package the Ethernet data. It works at the data link layer. RFC 826.
+11.	ARUP - AppleTalk update routing is a newer version of RTMP.
+12.	ASP - AppleTalk session protocol controls the starting and ending of sessions between computers called nodes. It works at the session level.
+13.	ATM - Asynchronous Transfer Mode may be used over a variety of media with both baseband and broadband systems. It uses fixed length data packets of 53 bytes called cell switching.
+14.	ATP - AppleTalk Transaction Protocol provides a Transport Layer connection between computers.
+15.	Attenuation - signal loss due to impedance.
+16.	AU - Access Unit provides access to resources like fax, telex, and teletex.
+17.	AUI - Attachment uint interface used to attach a station to a thicknet cable.
+18.	Backbone - Main cable used to connect computers on a network.
+19.	Bandwidth - Indicates the amount of data that can be sent in a time period. Measured in Mbps which is one million bits per second.
+20.	Baseband - Data bits are defined by discrete signal changes.
+21.	BDC - Backup Domain Controller is a backup for a PDC
+22.	BGP - Border Gateway Protocol, a dynamic routing protocol. RFC 1267.
+23.	BNC - British Naval Connector.
+24.	BOOTP - Boot Protocol. RFC 951, 1542.
+25.	Bridge - Read the outermost section of data on the data packet, to tell where the message is going. It reduces the traffic on other network segments, since it does not send all packets but only sends packets intended for that segment they are attached to.
+26.	Broadband - Uses analog signals to divide the cable into several channels with each channel at its own frequency. Each channel can only transmit one direction.
+27.	Broadcast - A transmission to all interface cards on the network.
+28.	Router - Will function similar to a bridge for network transport protocols that are not routable, and will function as a router for routable protocols.
+29.	BSC - Binary Synchronous Communication sends bits in frames which are timed sequences of data. A possible SNA communications architecture,
+30.	CCITT - International Telegraph and Telephone Consultative Committee.
+31.	CDDI - A copper version of FDDI which uses category 5 cable. Obviously the distance is more limited than FDDI.
+32.	CHAP - Challenge Handshake Authentication Protocol is a three way handshake protocol which is considered more secure than PAP.
+33.	CIDR - Classless Inter Domain Routing.
+34.	Client - This computer requests resources for its use from a computer that provides the resource (a server).
+35.	CDPD - Cellular Digital Packet Data will allow network connections for mobile users using satellites.
+36.	CSMA/CD - Carrier-sense multiple-access with collision detection for controlling access to the network media.
+37.	CSU - Channel service unit used to connect to digital leased lines on the line side.
+38.	DAS - Dual attachment stations are used by FDDI networks for servers and concentrators are attached to both rings.
+39.	DAT - Digital Audio Tape	40.
+
+•	DBMS - Database Management Systems are used to share data on a network.
+•	DCE - Data communications equipment.
+•	DDP - Datagram Delivery Protocol is a routable protocol that provides for data packet transportation. It operates at the network layer at the same level of the IP protocol.
+•	DDS - Digital data service is a leased dedicated digital line.
+•	DECnet - From Digital Equipment Corporation is a suite of protocols which may be used on large networks that integrate mainframe and minicomputer systems
+•	DHCP - Dynamic Host Configuration Protocol is used to assign IP addresses dynamically to network cards works at the application layer. RFC 1541.
+•	Direct sequence modulation - The data is broken into parts and transmitted simultaneously on multiple frequencies.
+•	DLC - Data Link Control operates at the data link layer and is designed for communications between Hewlett-Packard network printers and IBM mainframe computers on a DECnet network.
+•	DNA - Digital Network Architecture is a term from DECNet
+•	DNS - Domain Name System is used on the internet to correlate between IP address and readable names. RFC 1034, 1035, 1535-1537, 1591.
+•	DRDA - Distributed Relational Database Architecture is from IBM.
+•	DSU - Digital service unit used to connect to digital leased lines on the LAN side.
+•	DTD - Document Type Definition.
+•	DTE - Data terminal equipment.
+•	DUN - Dial up networking.
+•	DVM - Digital volt meter.
+•	EGP - Exterior Gateway Protocol. Used between routers of different systems.
+•	EIA - Electronic Industries Association.
+•	EISA - Extended ISA used when the 80286 through 80486 series microprocessors were being produced. It is backward compatible with ISA.
+•	EMI - Electromagnetic Interference.
+•	Ethernet - A network architecture that uses carrier-sense multiple-access with collision detection (CSMA/CD) for controlling access to the network media and baseband broadcasts. It uses star topology.
+•	FDDI - Fiber Distributed Data Interface is a network architecture normally used to send longer distances. Topology is ring with two counter rotating rings for reliability with no hubs. Cable type is fiber-optic.
+•	Frame Relay - Error checking is handled by devices at both sides of the connection. Frame relay uses frames of varying length and it operates at the data link layer of the OSI model. A permanent virtual circuit (PVC) is established between two points on the network. Frame relay speed is between 56Kbps and 1.544Mbps.
+•	Frequency hopping - The transmitter and receiver change predetermined frequencies at the same time (in a synchronized manner).
+•	FTP - File Transport Protocol is a TCP/IP protocol running at the application layer.
+•	Gateway - A gateway can translate information between different network data formats or network architectures. It can translate TCP/IP to AppleTalk so computers supporting TCP/IP can communicate with Apple brand computers. Not the same as a default gateway used by a client to send packets to.
+•	HTML - Hypertext Markup Language is the format many files for web viewing are in. It is a language with "mark-up" text included for formatting.
+•	HTTP - Hypertext Transfer Protocol is the protocol used to communicate between web servers and web browser software clients.
+•	Hub - A type of repeater used on several network architectures which usually connects several stations.
+•	IAB - Internet Architecture Board
+•	IANA - Internet Assigned Numbers Authority.
+•	ICMP - Internet Control Message Protocol is used to perform network error reporting and status. It works at the transport layer. RFC 792.
+•	IETF - Internet Engineering Task Force. Sets Internet technical standards.
+•	IGMP - Internet Group Management Protocol, used for managing multicast groups. RFC 1112.
+•	IMAP4 - Internet Mail Access Protocol version 4 is the replacement for POP3
+•	Impedance - The amount of resistance to the transmission device.
+•	Infrared - Infrared is just below the visible range of light between 100Ghz and 1000Thz.
+•	Interference - Electromagnetic Interference (EMI). Crosstalk - When wires pick up electromagnetic signals from nearby wires also carrying signals.
+•	InterNIC - Internet Network Information Center, the authority for allocating internet addresses.
+•	Intranet - Refers to using internet technologies such as a web server on an internal network.
+•	IP - Internet Protocol os used for software addressing of computers and works at the data link layer. RFC 791.
+•	IPIP tunneling - Tunneling IP packets in IP packets. Used for VPN tunneling.
+•	IPSec - Internet protocol security, developed by IETF, implemented at layer 3. it is a collection of security measures that address data privacy, integrity, authentication, and key management, in addition to tunneling. Used for VPN.
+•	IPX - Internetwork Packet Exchange supports the transport and network layers of the OSI network model. Provides for network addressing and routing. It provides fast, unreliable, communication with network nodes using a connection less datagram service.
+•	IRQ- Interrupt Request
+•	IRTF - Internet Research Task force.
+•	ISA - Industry Standard Architecture internal computer bus. Used when the original 8088 8bit microprocessor based personal computers were produced. (16 bit).
+•	ISAKMP/Oakley - Internet Security Association and Key Management Protocol Authentication.
+•	ISDN - Integrated Services Digital Network is a method of sending voice and data information on a digital phone line. Two 64Kbps B-channels with one 16Kbps D channel is provided with basic ISDN service
+•	ISP - Internet Service Provider
+•	ISOC - Internet Society, promotes internet policies.
+•	ITU - International Telecommunication Union.
+•	FTP - File Transfer Protocol.
+•	L2F - Layer2 Forwarding, works at the link layer of the OSI model. It has no encryption. Being replaced by L2TP. It is used for VPN.
+•	L2TP - Layer 2 tunneling protocol (RFC 2661). Used for VPN tunneling.
+•	LAN - Local Area Network
+•	LDA - Local delivery agent on the receiving machine receives the mail from its MTA. This program is usually procmail.
+•	LU - Logical Units are ports that users use to access network resources is an SNA term.
+•	MAC - Media Access Control address. Basically a network card unique hardware address.
+•	Mail notifier - This program notifies the recipient that they have mail. Normally this requires two programs, biff and comsat. Biff allows the administrator or user to turn on comsat service.
+•	MAN- Metropolitan area network refers to a network which connects several LANS over various media that is large enough to cover an area the size of a city.
+•	MAPI - Microsoft's Messaging API which is incorporated throughout Microsoft's office products supports mail at the application level.
+•	MAU - Multistation access unit used by Token Ring Networks.
+•	MBONE - Being on the MBONE means you are on a network that supports multicasting.
+•	MCI - Microchannel architecture by IBM and used mainly on IBM brand computers for the internal bus. Established in 1988. (16 or 32 bits).
+•	Media - The hardware method used to connect computers over a network. The three main types are copper cable, fiber optic cable, and wireless.
+•	Media converter - Used to adapt from one cable type to another.
+•	MHS - Message Handling Service by Novell is used for mail on Netware networks.
+•	MIB - Management Information BASE specifies variables the network elements maintain. Works with the TCP/IP protocol SNMP.
+•	MIME - Multipurpose Internet Mail Extension is the protocol that defines the way files are attached to SMTP messages.
+•	MOTIS - Message-oriented text interchange system.
+•	MS - Message Store is a storage area for messages that can't be delivered immediately when the recipient is off-line.
+•	MTA - Message transfer agent is used to pass mail from the sending machine to the receiving machine. There is a MTA program running on both the sending and receiving machine. Sendmail is a MTA.
+•	MTU - Maximum Transmission Unit is the maximum size of each data packet for the ethernet protocol.
+•	MUA - Mail users agent. This is the program a user will use to type e-mail. It usually incorporates an editor for support. The user types the mail and it is passed to the sending MTA. This may also be called the user agent (UA).
+•	Multicasting - Transmitting to a group of interface cards on the network.
+•	NADN - Nearest Active Downstream Neighbor is a Token ring Architecture term.
+•	NAU - Network Addressable Units is an SNA term.
+•	NAUN - Nearest Active Upstream Neighbor is a Token ring Architecture term.
+•	NAT - Network Address Translation.
+•	NBF - NetBIOS Frame Protocol.
+•	NBNS - NetBIOS Name Server. A server that maps NetBIOS names to IP addresses. This service is provided by the nmbd daemon on Linux.
+•	NBP - Name-binding protocol of the AppleTalk suite of protocols translates addresses into names.
+•	NBT - NetBIOS over TCP/IP defined by RFC 1002.
+•	NCP - NetWare Core Protocol provides for client/server interactions such as file and print sharing. It works at the application, presentation, and session levels.
+•	NCP - Network Control Program performs routing, session management tasks. It runs in the communications controller. It is an SNA networking term.
+•	NDIS - Network Driver Interface Specification from Microsoft, is used on Microsoft networks. It allows multiple protocols to be used on a network card and supports the data link layer of the network model.
+•	NetBEUI - NetBIOS Extended User Interface works at the transport layer and provides data transportation. It is not a routable transport protocol which is why NBT exists on large networks to use routable TCP protocol on large networks.
+•	NetBIOS - Network Basic Input Output System by Microsoft.
+•	Network Operating System - Typically used to run computers that act as servers, but may be used on various types of computers today.
+•	NFS - Network File System. A protocol that allows UNIX and Linux systems remotely mount each other's file systems. RFC 1094
+•	NIC - Network interface card. Also called LAN adapters.
+•	NNTP - Network News Transport Protocol is used to link newsgroups for discussions on the web
+•	OC - Optical Carrier level, see SONET.
+•	ODBC - Open Database Connectivity (ODBC) from Microsoft lets application developers integrate database connections in applications. It is an application programming interface (API). ODBC drivers convert an application's query int SQL and send it to the database engine program.
+•	ODI - Open Data-link Interface operates at the data link layer allowing IPX to work with any network interface card.
+•	OSI - Open Systems Interconnect is a suite of protocols developed by the International Standards Organization (ISO) which corresponds with the layers of the OSI model.
+•	OSPF - Open Shortest Path First, a dynamic routing protocol. RFC 1247.
+•	PAP - Password Authentification Protocol is a two way handshake protocol designed for use with PPP.
+•	PAP - Printer access protocol of the AppleTalk suite of protocols manages information between workstations and printers.
+•	PCI - Peripheral Component Interconnect internal computer bus. The popular expansion bus of choice. It is significantly faster than EISA. This is a 32bit bus with plug and play capability from Intel.
+•	PDC - Primary Domain Controller is an NT server providing central control of user access permissions and accounts on a network.
+•	PDL - Page description language is a printing language.
+•	PDN - Public data network.
+•	Peer - A computer that can act as both a client and a server.
+•	Plenum - Space above a false ceiling in an office area where heat ducts and cables may be run. Plenum cabling is special fire resistant cabling required for use in these areas due to fire hazards.
+•	POP - Point of presence is each point at the end of the transport media (internet) when talking about VPN.
+•	POP3 - Post Office Protocol version 3 is used by clients to access an internet mail server to get mail. It is not a transport layer protocol.
+•	Protocol - A set of standards sets of standards that define all operations within a network. There are various protocols that operate at various levels of the OSI network model such as transport protocols include TCP, SPX.
+•	PPP - Point to Point Protocol, used for serial connections to a network ot the internet. (RFC 1332, 1548)
+•	PPTP - Point to point tunneling protocol (RFC 2637) Used for VPN tunneling.
+•	PU - Physical Units are a network device used to communicate with hosts. It is an SNA term.
+•	PVC - Permanent virtual circuit is set up once in communication switches to establish a permanent circuit.
+•	RADIUS - Remote Authentication Dial-In User Service is used for dial in clients to connect to other computers or a network. It provides authentication and accounting when using PPTP or L2TP tunneling.
+•	RAID - Redundant Array of Inexpensive disks is a fault tolerant method of storing data, meaning that a failure can occur and the system will still function.
+•	RARP -Reverse Address Resolution Protocol used for disk less computers to determine their IP address using the network. It works at the data link layer. RFC 903.
+•	RAS - Remote Access Service (RAS) with Windows NT allows users connecting to the network using a modem to use network resources. The NT RAS server can handle 256 connections.
+•	Redirector - it runs on a windows operating system and directs requests for network resources to the appropriate server and makes network resources seem to be local resources.
+•	Repeater - Used on a network to regenerate signals to be sent over long distances or tie computers together on a network.
+•	Resolver - Used as part of DNS, it is the client side asking for DNS information.
+•	RIP - Routing Information Protocol, a dynamic routing protocol. A distance-vector algorithm is used to calculate the best route for a packet. RFC 1058, 1388 (RIP2).
+•	Rlogin - Remote login between UNIX hosts. This is outdated and is replaced by Telnet.
+•	Router - Routes data packets between two networks. It reads the information in each packet to tell where it is going.
+•	RPC - Remote Procedure Call. A protocol invented by Sun Microsystem to allow remote computers to invoke functions on other hosts. RFC 1057.
+•	RR - Resource Records are a part of the DNS database.
+•	RTMP - Routing table maintenance protocol is used to update routers with information about network status and address tables. The whole address table is sent across the network.
+•	S/Key - A one time password system, secure against replays. RFC 2289.
+•	SAP - Service Advertising Protocol packets are used by file and print servers to periodically advertise the address of the server and the services available. It works at the application, presentation, and session levels.
+•	SAS - Single Attachment stations attached to one ring and used by FDDI networks to attach workstations to concentrators.
+•	SDH - Synchronous Digital Hierarchy
+•	SDLS - Synchronous Data Link Control is a possible SNA communications architecture.
+•	Sector Sparing - A method of fault tolerance that automatically identifies and marks bad sectors as not available. It is also called hot-fixing.
+•	Server - For the most part it provides resources on the network for other computers to use.
+•	SGML - Standardized General Markup Language is the base language for document publishing and is used to define XML, HTML and more.
+•	Shielding - Used to minimize interference.
+•	SLED - Single Large Inexpensive disk - The concept that a large disk costs less per amount of storage than several smaller ones. Somehow this concept is used as a means of fault tolerance.
+•	SLIP - Serial Line interface Protocol used to connect serially to a network or internet. RFC 1055, 1144 (Compressed). Replaced by PPP.
+•	SMAU - Smart Multistation Access Unit.
+•	SMB - Server Message Block protocol works at the presentation level to provide peer to peer communication.
+•	SMDS - Switched Multi-megabit Data Service uses fixed length cell switching and runs at speeds of 1.533 to 45Mbps.
+•	SMS - SMS - Systems Management Server from Microsoft can collect information of software on each computer and can install and configure new software on the client computers. It will also monitor network traffic.
+•	SMTP - Simple Mail Transfer Protocol is a TCP protocol for mail transport running at the application layer. RFC 821, 822.
+•	SNA - System Network Architecture by IBM is a suite of protocols mainly used with IBM mainframe and AS/400 computers.
+•	SNMP - Simple Network Management Protocol. RFC 1155, 1157, 1213, 1441.
+•	SONET - Synchronous Optical Network is a physical layer standard that defines voice, data, and video delivery methods over fiber optic media. It defines data rates in terms of optical carrier (OC) levels.
+•	Spread spectrum - It uses several frequencies at the same time.
+•	SPX - Sequenced Packet Exchange operates at the transport layer providing connection oriented communication on top of IPX.
+•	SQL - Structured Query Language is a database access language. It is used by most client/server database applications.
+•	SSCP - Systems Services Control Point manages all resources in the host's domain. An SNA term.
+•	STP - Shielded Twisted Pair cable. 100 meter maximum length. 16-155 Mbps speed. Lower electrical interference than UTP
+•	STS
+•	SVC - Switched virtual circuit is temporarily set up by switching mechanisms to establish a connection between devices for a session.
+•	TACACS - Offers authentication, accounting, and authorization.
+•	T Carrier - Multiplexors are used to allow several channels on one line. The T1 line is basic T Carrier service.
+•	TCP - Transport Control protocol is a connection oriented reliable protocol working at the transport layer. RFC 793.
+•	TDI - Transport Driver Interface is a standard for passing messages between the drivers at the data link layer and the protocols working at the network layer such as IP or NetBEUI. It was produced by Microsoft.
+•	TDR - Time-domain reflectometer sends a sonar like electrical pulse down a cable and can determine the location of a break in the cable.
+•	TFTP - Trivial File Transfer Protocol. RFC 1350.
+•	Telnet - Remote session at the application layer. RFC 854.
+•	Thicknet - Half inch rigid cable. Maximum cable length is 500 meters. Transmission speed is 10Mbps. Expensive and is not commonly used. (RG-11 or RG-8).
+•	Thinnet - Thinnet uses a British Naval Connector (BNC) on each end. Thinnet is part of the RG-58 family of cable*. Maximum cable length is 185 meters. Transmission speed is 10Mbps.
+•	TIA - Telecommunications Industries Association.
+•	TLD - Top Level domain
+•	Token Ring - A network architecture developed by IBM which sends tokens around a ring of computers to allow media access. Standardized to IEEE 802.5
+•	Topology - The shape of the physical connection of a network with regard to repeaters and networked computers. The three main types are ring, bus, and star.
+•	UA - Users agent. This is the program a user will use to type e-mail. It usually incorporates an editor for support. The user types the mail and it is passed to the sending MTA. This may also be called the mail user agent (MUA).
+•	UDP - User Datagram Protocol is a connection less unreliable protocol working at the transport layer. RFC 768.
+•	UNC - Universal Naming Convention is used to allow the use of shared resources without mapping a drive to them.
+•	Unicast - A transmission to a single interface card.
+•	URL - Universal Resource Location is a term used to describe the name of a web based resource such as a web page or location of a file for down loading.
+•	UTP - Unshielded Twisted Pair cable. Normally UTP contains 8 wires or 4 pair. 100 meter maximum length. 4-100 Mbps speed.
+•	VIM - Vendor-Independent Messaging protocol from Lotus supports mail at the application level and is supported by many vendors exclusive of Microsoft.
+•	VPN - Virtual Private Networking. The function of VPN is to allow two computers or networks to talk to each other over a transport media that is not secure, but the network is made secure by VPN security protocols.
+•	W3C - World Wide Web Consortium, sets standards for the web working with the IETF.
+•	WAN - Wide Area Network is larger than a MAN and may be an enterprise network or a global network.
+•	WINS - Windows Internet Name Service is the Microsoft implementation of NetBIOS name service.
+•	wireless bridge - Microwave or Infared is used between two line of site points where it is difficult to run wire.
+•	X.25 - This is a set of protocols developed by the CCITT/ITU which specifies how to connect computer devices over a internetwork.
+•	X.400 - International Telecommunication Union standard defines transfer protocols for sending mail between mail servers.
+•	X.500 - This is a recommendation outlining how an organization can share objects and names on a large network. It is hierarchical similar to DNS, defining domains consisting of organizations, divisions, departments, and workgroups.
+•	XML - Extensible Markup Language is a subset of SGML and is used widely on the web.
+•	ZIP - Zone information protocol used with RTMP to map zones. Routers use zone information tables (ZITs) to define network addresses and zone names.
+•	Backbone - A high-speed link joining together several networks.
+
+•	Bandwidth - the rated throughput capacity of a given network media or protocol. The amount of data that can be transmitted in a fixed amount of time.
+•	Bit – A unit of information having just two possible values, as either of the binary digits 0 or 1.
+•	Byte - a series of consecutive binary digits that are operated upon as a unit. There are 8 bits in a byte.
+•	Category 5 (cat 5) cable -A type of twisted pair network wiring in which there is a certain number of twists per foot. It is the most commonly used network cabling.
+•	Coaxial Cable - A type of cable consisting of two insulating layers and two conductors most commonly used in older networks.
+•	Collision - An attempt by two devices to transmit over the network at the same time usually resulting in the data being lost.
+•	DNS (Domain Name System) - an internet service that translates domain names into IP addresses. For example www.google.com translates to 66.102.7.99.
+•	Dynamic DNS - A method of keeping a domain name linked to a changing IP address using a pool of available IP addresses so you can use applications that require a static IP address.
+•	Domain - A group of computers and devices on a network that are administered as a unit.
+•	DHCP (Dynamic Host Configuration Protocol ) - A TCP/IP protocol that dynamically assigns an IP address to a computer. Dynamic addressing simplifies network administration because the software keeps track of IP addresses rather than requiring a network administrator to do so.
+•	Ethernet - Ethernet is the most widely installed local area network technology. It was developed during the late 1970s through a partnership of DEC, Intel, and Xerox.
+•	Fiber Optic - A cable technology that uses glass (or plastic) threads (fibers) to transmit data. It is a very fast technology
+•	Gateway - A device on a network that serves as an entrance to another network and routes traffic
+•	Hardware (MAC) address - A unique address associated with a particular network device
+•	Hub - A common connection point for computers and devices in a network that takes an incoming signal and repeats it on all other ports
+•	Internet - Term used to refer to the world's largest internetwork, connecting thousands of networks worldwide. Also known as the world wide web (www)
+•	IP address - a 32-bit address assigned to hosts using the TCP/IP protocol. Each computer/device on the public internet has a unique IP address. An example of an IP address is 192.168.1.
+•	LAN (Local Area Network) – computer/data network which is confined in a limited geographical area.
+•	MAC Address (Media Access Control) - A unique identifier attached to most forms of networking equipment. It is burned into the device and cannot be changed
+•	Megabit - A measure of data transmission speed - 1 million bits per second or approximately 125,000 characters per second
+•	Megabyte - A unit of measure for memory or hard disk storage capacity. 1024 megabytes = 1 gigabyte.
+•	Network - A group of computers and devices that can communicate with each other and share resources.
+•	Network Interface Card (NIC) - A hardware device inside a computer or other network device that enables communication with a network.
+•	Packet - The unit of data sent across a network. Data is broken up into packets for sending over a packet switching network.
+•	PING (Packet Internet Groper) - A command used to test connectivity to a device over a TCP/IP network.
+•	Protocol - Rules determining the format and transmission of data over a network
+•	RJ-45 - Standard connectors used for unshielded twisted-pair cable. Most commonly used with Cat5 network cabling.
+•	Route - A path through an internetwork.
+•	Router - A device that routes/forwards data across a networks.
+•	Server - A computer that handles requests for data, email, files, and other network services from other computers (clients)
+•	Subnet - A portion of a network that shares a common address component but is on a different segment than the rest of the network.
+•	TI Line - A high speed dedicated data line that supports a transmission rate of 1.544 Mbps
+•	TCP/IP - Transmission Control Protocol/Internet Protocol. A suite of protocols used as the basis of the nation's internetwork (Internet). It can also be used on internal networks.
+•	UNC (Universal Naming Convention) Path - A UNC provides a naming convention for identifying network resources. UNC names consist of three parts, a server name, a share name, and an optional file path.
+•	WAN (wide area network) - A network linking together networks located in other geographic areas.
+
+•	Network Interface: A network interface can refer to any kind of software interface to networking hardware. For instance, if you have two network cards in your computer, you can control and configure each network interface associated with them individually.
+
+•	Firewall: A firewall is a program that decides whether traffic coming into a server or going out should be allowed. A firewall usually works by creating rules for which type of traffic is acceptable on which ports. Generally, firewalls block ports that are not used by a specific application on a server.
+
+•	Port: A port is an address on a single machine that can be tied to a specific piece of software. It is not a physical interface or location, but it allows your server to be able to communicate using more than one application.
+
+•	VPN: VPN stands for virtual private network. It is a means of connecting separate LANs through the internet, while maintaining privacy. This is used as a means of connecting remote systems as if they were on a local network, often for security reasons.
+
+•	VLAN - virtual LAN. Group of devices on one or more LANs that are configured (using management software) so that they can communicate as if they were attached to the same wire, when in fact they are located on a number of different LAN segments. Because VLANs are based on logical instead of physical connections, they are extremely flexible.
+•	Jitter - Refers to the variation in Latency (see definition below). Jitter is important as often larger variations in the delay due to communications can negatively impact the 'deterministic' nature of the relevant system.
+•	AAA - Authentication, authorization, and accounting. Pronounced "triple a."
+•	ACL - Access Control Lists are used for purposes filtering IP traffic generally for security reasons.
+•	Cell/Area Zone - A logical section or subset (physical, geographical or function) of the production facility. It typically contains Level 0-2 devices
+•	Control Plane - Control plane refers to network protocol traffic (e.g. routing, resiliency) that usually passes between network infrastructure devices to maintain the network's functions. Examples of control plane traffic include Spanning Tree and EIGRP.
+•	Data Plane - Data plane refers to the application data the network switches and routes being sent to and from end-devices. CIP is considered data plane traffic.
+•	DMZ, Demilitarized Zone - Refers to a buffer or network segment between two network zones. A DMZ is commonly found between a corporate network and the internet where data and services can be shared/accessed from users in either the internet or corporate networks. A DMZ is typically established with network firewalls to manage and secure the traffic from either zone.
+•	Industrial Automation and Control Systems (IACS) - Refers to the set of devices and applications used to automate and control the relevant manufacturing process. Rather than use various terms with a similar meaning (e.g., production systems, factory floor systems, we standardized on this term for use in this paper). That is not to suggest any specific focus or limitations. We intend that the ideas and concepts outline herein are applicable in various types of manufacturing including but not limited to batch, continuous, discrete, hybrid and process. Other documents and industry references may refer to Industrial Control Systems (ICS). For the purpose of this document, those terms are interchangeable. This document simply choose to use IACS, as reflected in the ISA 99 standards.
+•	IP Protocol Suite - Is a set of networking standards on which the internet and most enterprise networking is based. It includes the Layer 3 Internet Protocol (IP), the Layer-4 Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
+•	IPSec - IP Security. A framework of open standards that provides data confidentiality, data integrity, and data authentication between participating peers. IPSec provides these security services at the IP layer. IPSec uses IKE (See above) to handle the negotiation of protocols and algorithms based on local policy and to generate the encryption and authentication keys to be used by IPSec. IPSec can protect one or more data flows between a pair of hosts, between a pair of security gateways, or between a security gateway and a host.
+•	OSI Model - The Open Systems Interconnection model is a Network architectural model consisting of seven layers, each of which specifies particular network functions, such as addressing, flow control, error control, encapsulation, and reliable message transfer. The lowest layer (the physical layer) is closest to the media technology. The lower two layers are implemented in hardware and software whereas the upper five layers are implemented only in software. The highest layer (the application layer) is closest to the user. The OSI reference model is used universally as a method for teaching and understanding network functionality
+The term layer in this document generally refers to a layer 	or layers of the OSI Model.
+•	WINS - Windows Internet Naming Service. Microsoft's NetBIOS name translation service, analogous to DNS.
+
+
+
+
+
+
+
+
