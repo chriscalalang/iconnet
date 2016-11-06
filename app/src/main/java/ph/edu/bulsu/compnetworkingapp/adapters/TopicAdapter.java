@@ -87,11 +87,10 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
                 String cutText = tutorialText.substring(firstKeyIndex, tutorialText.length());
                 holder.tvText.setText(Html.fromHtml(cutText));
 
+            } else if (tutorial.getHtml() != null) {
+                holder.tvText.setText(Html.fromHtml(tutorial.getHtml()));
             } else {
-                if (tutorial.getHtml() != null) {
-                    boolean htmlMoreThan250Chars = tutorial.getHtml().length() > 250;
-                    holder.tvText.setText(Html.fromHtml(tutorial.getHtml().substring(0, htmlMoreThan250Chars ? 249 : tutorial.getHtml().length()) + (htmlMoreThan250Chars ? "..." : "")));
-                }
+                holder.tvText.setText("");
             }
 
 
