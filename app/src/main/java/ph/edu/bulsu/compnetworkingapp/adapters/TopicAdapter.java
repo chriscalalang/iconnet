@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import org.jsoup.Jsoup;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,7 +90,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
                 holder.tvText.setText(Html.fromHtml(cutText));
 
             } else if (tutorial.getHtml() != null) {
-                holder.tvText.setText(Html.fromHtml(tutorial.getHtml()));
+                holder.tvText.setText(Jsoup.parse(tutorial.getHtml()).text());
             } else {
                 holder.tvText.setText("");
             }
