@@ -1,0 +1,41 @@
+To access it, open Control Panel &gt; Network &amp; Sharing Center. In the
+
+lower part, click on Troubleshoot Problems. From the window which
+
+opens, you can select Internet Connections or any other issue you want
+
+to troubleshoot and repair.
+
+Type the following commands in Run box and hit Enter to open the
+
+required Troubleshooters directly:
+
+1. To open Internet Connections Troubleshooter:
+
+msdt.exe -id NetworkDiagnosticsWeb
+
+2. To open the Incoming Connections Troubleshooter
+
+msdt.exe -id NetworkDiagnosticsInbound
+
+3. To open the Network Adapter Troubleshooter:
+
+msdt.exe -id NetworkDiagnosticsNetworkAdapter
+
+4. Enable or Disable IPv6 to solve Internet connectivity problems in
+
+Windows 8/10.
+
+5.  Reset Winsock
+
+6. Reset TCP/IP,
+
+7. Reset Hosts file,
+
+8. Reset Windows firewall settings to default,
+
+9. Reset Internet Explorer
+
+10. Try NetChecker, NetAdapter Repair or Complete Internet Repair
+
+Tool.

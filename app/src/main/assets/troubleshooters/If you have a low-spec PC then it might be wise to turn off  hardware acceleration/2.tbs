@@ -1,0 +1,25 @@
+1. The Hardware Acceleration tab in Windows allows you to
+
+specify the performance of the graphics hardware present on
+
+your PC. To disable or reduce Hardware Acceleration
+
+in Windows 8 or Windows 7, first right-click on the Desktop
+
+and from the context menu, choose the Personalization
+
+option.
+
+2. Then, select Display from the left panel of the window and
+
+click on ‘Change display settings’.
+
+3. Next, click on ‘Advanced settings’.
+
+4. This will open the ‘Troubleshoot’ tab. If you’re current display
+
+driver does not allow you to change the settings, you will see
+
+the Change settings button grayed out, and you will not be
+
+able to change the settings.

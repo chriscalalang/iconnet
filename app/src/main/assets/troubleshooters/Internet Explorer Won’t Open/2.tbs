@@ -1,0 +1,17 @@
+There are three solutions here, among which two are the official
+
+solutions proposed by Microsoft. Let me tell you right off -
+
+Microsoft&#39;s solutions had no effect, so you might want to skip to
+
+the last one immediately.
+
+1. Deleting all IE settings so as to remove potentially blocking
+
+add-ons.
+
+2. Uninstalling and reinstalling IE completely.
+
+3. Running a script that cleans your registry and re-registers
+
+missing DLLs.
