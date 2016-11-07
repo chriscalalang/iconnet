@@ -167,6 +167,41 @@ public class MockQuizItems {
         item.setAcceptedAnswers(Arrays.asList("Bits", "Bits"));
         items.add(item);
 
+
+        item = new QuizItem();
+        item.setQuestion("Manages the flow of data between two established socket connections.");
+        item.setChoices(Arrays.asList("ASDP", "AED", "AFP", "AGP"));
+        item.setAcceptedAnswers(Arrays.asList("ASDP", "ASDP"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Uses echoes to tell if a computer, or node is available.");
+        item.setChoices(Arrays.asList("ASDP", "AED", "AFP", "AGP"));
+        item.setAcceptedAnswers(Arrays.asList("AED", "AED"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the meaning of API?");
+        item.setChoices(Arrays.asList("Application Protocol Interface", "Application Protocol Integrate", "Application Programming Interface", "Application Programming Integrate"));
+        item.setAcceptedAnswers(Arrays.asList("Application Programming Integrate", "Application Programming Integrate"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("This Bus is developed for fast video cards. It is currently up to 4X mode speed.");
+        item.setChoices(Arrays.asList("API", "APPC", "ARP", "AGP"));
+        item.setAcceptedAnswers(Arrays.asList("AGP", "AGP"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Uses analog signals to divide the cable into several channels with each channel at its own frequency.");
+        item.setChoices(Arrays.asList("BSC", "Router", "Broadcast", "Broadcast"));
+        item.setAcceptedAnswers(Arrays.asList("Broadcast", "Broadcast"));
+        items.add(item);
+
         Collections.shuffle(items);
         return new ArrayList<>(items.subList(0, size));
     }
