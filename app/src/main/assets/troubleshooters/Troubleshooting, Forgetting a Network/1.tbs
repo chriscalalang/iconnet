@@ -1,0 +1,6 @@
+1. Open the Manage Wi-Fi Settings menu. Click Start >> Settings >> Network & Internet >> WiFi. Scroll down to the bottom and click “Manage Wi-Fi Settings” from the list just above the subheading “Related settings.”
+   This is important if you would like Windows to connect to a network only once but you forgot to uncheck the “Connect automatically” option when you first added the wireless network.
+
+2. Select the network to forget. Scroll down to the bottom of this new page. You should see a list of different Wi-Fi networks that you have connected to. Single-clicking on the one to forget will bring up a small gray box around it, with only one option inside it.
+
+3. Forget the network. In the lower righthand corner of the box, you should see a button that says “Forget.” Clicking this will completely remove any settings associated with that network on your device. In order to connect to this network again, you will need to enter all the required information you entered before (SSID, Security Key, etc.).

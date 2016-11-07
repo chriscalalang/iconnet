@@ -1,0 +1,4 @@
+1. Right click the Start button and select "Command Prompt (Admin)" from the menu. This can launch Command Prompt as Admin.
+2. Type the following command and hit the Enter key:
+3. Enter the command below into the Command Prompt and press Enter key once more:
+   netcfg -v -u dni_dne

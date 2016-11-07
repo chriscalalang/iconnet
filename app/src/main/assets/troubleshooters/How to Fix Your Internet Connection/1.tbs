@@ -1,0 +1,32 @@
+1. Determine if the problem lies with your computer or with the network. Can other devices on your network connect to the internet? If the answer is yes, then the problem is likely rooted in your computer's settings or hardware. If no other devices or computers can get online, then the problem is likely with your networking hardware or network configuration.
+2. Restart your computer. This may seem like a useless suggestion, but restarting your computer is often the easiest way to fix a vast majority of the issues you may be having. A simple reset will clear out bad settings which could be causing your connectivity issues, and if it doesn't help, it only took a minute.
+3. Try a different website or program. There's always a chance that the website you are trying to visit is currently down, or the program you are using is having server problems on its end. Try another website or online program to see if you can connect.
+   Try another web browser if possible as well. For example, you may be having a problem with Chrome, but Firefox will work. If just one of your web browsers is at fault, see the articles below for instructions on repairing it:
+   Chrome
+   Firefox
+
+4. Reset your network hardware. If your internet connection was working fine and now it's not, the most likely culprit is your network hardware (modem and router). Resetting these devices is a quick and easy fix that will solve most networking problems.
+Unplug your modem and router's power cables.
+Wait about thirty seconds.
+Plug your modem back in and wait a minute for it to completely power on.
+Plug your router back in and wait a minute for it to power on and connect.
+Try loading a web page on your computer. If the problem persists, move on to 5
+
+5. Ensure your wireless adapter is enabled (laptop only). Many laptops have a switch or button that turns the wireless adapter on and off. If you've accidentally pressed the button, your computer will disconnect from the network. Press the button or toggle the switch to turn your wireless adapter back on.
+   You may have to hold the Fn button in order to be able to press the Wi-Fi button.
+
+6. Repair your connection. There could be a software problem on your computer causing 	the connectivity problem. Both Windows and Mac have built-in repair tools that you can 	use to try to fix the issue.
+   Windows - Open your Network Connection window bypressing ⊞ Win+R andtyping ncpa.cpl. Right-click on your network adapter and select "Diagnose". Windows will scan for problems. Follow the prompts to attempt to fix any problems that are found.
+
+7. Connect your computer directly to the modem (if possible). Each piece of networking 	hardware you add to your home network increases the chances that something can go 	wrong. The best way to test that your internet connection is working is to plug your 	computer directly into your modem via Ethernet cable, bypassing the router.
+   If your computer is able to connect to the internet while connected directly to the modem, 	then the issue is likely cause by your router.
+   If you cannot connect to the internet while connected directly to your modem, there is 	something wrong with the modem or with your internet service in general. You'll need to 	get in touch with your internet service provider's technical support line to fix modem-	related issues.
+
+8. Disable your network security (for now). When trying to troubleshoot a wireless 	network, network security can add unnecessary complications. Disabling the security while you're troubleshooting will make your life easier, and then you can secure your 	network again after fixing the problem.
+   Make sure you don't leave your network unsecured for any longer than you spend fixing 	it.
+
+
+9. Boost your Wi-Fi signal. If the problems you're experiencing are signal-	related, it usually means that interference and distance are the main cause. 	There are several things you can do to help minimize interference and 	increase your network's range.
+
+10. Reset your router's settings. A problem with your router's configuration may be causing 	your connection problems. You can reset your router by pressing and holding the "Reset" 	button on the back for about thirty seconds. You may need a pen or other pointy object to reach the button.
+    Resetting your router will erase any changes you have made. If you've configured a 	custom network, all of your settings will need to be redone.
