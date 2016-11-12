@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -58,6 +60,23 @@ public class IPCalculatorFragment extends BaseFragment {
         cvNetworkAddress = (CardView) view.findViewById(R.id.cvNetworkAddress);
         cvHomeAddressRange = (CardView) view.findViewById(R.id.cvHomeAddressRange);
         tvSubnettingVideoLink = (TextView) view.findViewById(R.id.tvSubnettingVideoLink);
+
+//        InputFilter alphaNumericFilter = new InputFilter() {
+//            @Override
+//            public CharSequence filter(CharSequence arg0, int arg1, int arg2, Spanned arg3, int arg4, int arg5) {
+//                for (int k = arg1; k < arg2; k++) {
+//                    if (etIP.getText().toString().length() > 15) {
+//                        return "";
+//                    }
+//                    if (!Character.isDigit(arg0.charAt(k)) && !String.valueOf(arg0.charAt(k)).equalsIgnoreCase(".")) {
+//                        return "";
+//                    }
+//                }
+//                return null;
+//            }
+//        };
+//        etIP.setFilters(new InputFilter[]{alphaNumericFilter});
+
 
         tvSubnettingVideoLink.setOnClickListener(new View.OnClickListener() {
             @Override

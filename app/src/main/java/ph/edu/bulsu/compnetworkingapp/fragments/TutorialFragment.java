@@ -52,12 +52,30 @@ public class TutorialFragment extends BaseFragment {
         tabLayout = mainViewController.getTabLayout();
         tabLayout.setupWithViewPager(vpTutorial);
 
+
+        vpTutorial.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mainViewController.getSearchView().setVisibility(position < 1 ? View.VISIBLE : View.GONE);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         tabLayout.post(new Runnable() {
             @Override
             public void run() {
 
 
-                    allTutorialsFragment.requestTopics();
+                allTutorialsFragment.requestTopics();
 
             }
         });

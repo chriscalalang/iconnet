@@ -13,4 +13,6 @@ public interface MainViewController {
     TabLayout getTabLayout();
 
     List<SearchView.OnQueryTextListener> getQueryTextListeners();
+
+    SearchView getSearchView();
 }

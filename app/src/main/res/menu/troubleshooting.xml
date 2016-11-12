@@ -26,11 +26,5 @@
             android:checked="true"
             android:title="@string/windows_10"
             app:showAsAction="never" />
-        <item
-            android:id="@+id/ubuntu"
-            android:checkable="true"
-            android:checked="true"
-            android:title="@string/ubuntu"
-            app:showAsAction="never" />
     </group>
 </menu>

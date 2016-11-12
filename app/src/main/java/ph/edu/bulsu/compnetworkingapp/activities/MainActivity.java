@@ -1,6 +1,7 @@
 package ph.edu.bulsu.compnetworkingapp.activities;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -10,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -100,7 +102,8 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
                         showQuizPage();
                         break;
                     case R.id.miExit:
-                        finish();
+                        exit();
+
                         return true;
                 }
                 return true;
@@ -140,6 +143,32 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
                 showQuizPage();
                 break;
         }
+    }
+
+    private void exit() {
+
+        new AlertDialog.Builder(MainActivity.this)
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        finish();
+                    }
+                })
+                .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                }).create().show();
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        exit();
     }
 
     private void useFragment(Fragment fragment, String title) {
@@ -205,6 +234,11 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
     @Override
     public List<SearchView.OnQueryTextListener> getQueryTextListeners() {
         return queryTextListeners;
+    }
+
+    @Override
+    public SearchView getSearchView() {
+        return searchView;
     }
 
 
