@@ -23,7 +23,7 @@ If these solutions don't solve the problem, you can get help from Microsoft Supp
 If your PC came with Windows preinstalled on it, contact the PC manufacturer.
 
 Restore Windows to an earlier point in time
-You can restore Windows back to an earlier point in time, called a restore point. System Restore doesn’t change your personal files, but it might remove recently installed apps and drivers.
+You can restore Windows back to an earlier point in time, called a restore point. System Restore doesn't change your personal files, but it might remove recently installed apps and drivers.
 If you're having trouble starting (booting) your PC, you can restore Windows in the Windows Recovery Environment. For instructions, see Windows Startup Settings (including safe mode).
 
  In Windows 7

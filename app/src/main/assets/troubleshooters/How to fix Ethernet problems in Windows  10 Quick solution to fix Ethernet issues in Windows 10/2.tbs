@@ -1,4 +1,4 @@
-Although Ethernet connections are easier to install and manage than wireless connections, sometimes they can be a bit of a headache to troubleshoot. In this article I’m going to show you how to check the basics of an Ethernet connection on a machine running Windows 10.
+Although Ethernet connections are easier to install and manage than wireless connections, sometimes they can be a bit of a headache to troubleshoot. In this article I'm going to show you how to check the basics of an Ethernet connection on a machine running Windows 10.
 
 
 Downloading drivers manually can be a long and tedious process. Outdated drivers can often cause crashes, file loss and even permanent damage to your computer. Driver Agent Plus quickly and automatically downloads all the drivers that you need:
@@ -11,7 +11,7 @@ Expand the Network adapters list and check whether there are any issues with the
 Right click on it and select Properties. In the Device status window it should say that your device is working properly, like in the image below.
 
 
-If your Ethernet controller icon has a question mark or an exclamation point than I’d recommend reinstalling the correct driver for it. You can find it either on the CD/DVD provided with your laptop or motherboard if the network card is embedded or on the CD/DVD that came with the network card if you bought it separately. You can also find the latest available driver on the manufacturer’s website.
+If your Ethernet controller icon has a question mark or an exclamation point than I'd recommend reinstalling the correct driver for it. You can find it either on the CD/DVD provided with your laptop or motherboard if the network card is embedded or on the CD/DVD that came with the network card if you bought it separately. You can also find the latest available driver on the manufacturer's website.
 
 
 Check that the connection is enabled
@@ -28,14 +28,14 @@ Check your connection details
 The next thing to check is that the connection details are correct. This can be done from the same Network connections windows, by right clicking on the Ethernet connection and selecting Properties.
 
 
-In the Ethernet Properties window double click on the Internet Protocol Version 4 (TCP/IPv4) option. This will open a window similar to the one below. This is where you can enter the correct details for your connection. In most cases all you have to do is enable Obtain an IP address automatically and Obtain DNS server address automatically but there are situations where you have to manually input the details. For this you’ll have to consult your router/switch/modem configuration manual or obtain the details from your ISP or network administrator.
+In the Ethernet Properties window double click on the Internet Protocol Version 4 (TCP/IPv4) option. This will open a window similar to the one below. This is where you can enter the correct details for your connection. In most cases all you have to do is enable Obtain an IP address automatically and Obtain DNS server address automatically but there are situations where you have to manually input the details. For this you'll have to consult your router/switch/modem configuration manual or obtain the details from your ISP or network administrator.
 
 
 Check for viruses
-Some viruses have the ability to block network connections on Windows machines. If you have an antivirus software installed on your system you can use that to scan the whole system. If you didn’t install a 3rd party AV software then Windows 10 comes with its own Windows Defender. You can find it by clicking on the Start button and selecting All apps. Then expand the Windows System folder and select Windows Defender.
+Some viruses have the ability to block network connections on Windows machines. If you have an antivirus software installed on your system you can use that to scan the whole system. If you didn't install a 3rd party AV software then Windows 10 comes with its own Windows Defender. You can find it by clicking on the Start button and selecting All apps. Then expand the Windows System folder and select Windows Defender.
 
 
 
 All you have to do is select Full under Scan options and then click the Scan now button. This will take a while, depending on the amount of data stored on your machine so sit back and enjoy a cup of coffee or tea.
 Another great tool for removing viruses is Malwarebytes Anti-Malware. This piece of software is free for personal use and can be downloaded from their official website found at www.malwarebytes.org.
-If you follow these steps and still can’t connect to your wired network than the problems might not be in your computer and rather with the network you’re trying to connect to. You can try connecting a different machine to the network and see if the problem is the same on it. If this is the case then you should consult your router/switch/modem manual or ask your network administrator for the network details.
+If you follow these steps and still can't connect to your wired network than the problems might not be in your computer and rather with the network you're trying to connect to. You can try connecting a different machine to the network and see if the problem is the same on it. If this is the case then you should consult your router/switch/modem manual or ask your network administrator for the network details.

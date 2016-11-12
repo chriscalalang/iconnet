@@ -6,11 +6,11 @@ Possible Solution/s:
         1.	Swipe in from the right edge of the screen, select Settings, then select the Network icon.
         2.	Turn on Wi-Fi.
     -	Make sure the physical Wi Fi switch on your laptop is turned on. (An indicator light usually shows when it's on.)
-    -	Check and make sure your PC isn’t in airplane mode.
+    -	Check and make sure your PC isn't in airplane mode.
         1.	Swipe in from the right edge of the screen, select Settings, then select the Network icon.
         2.	Turn off Airplane mode.
     -	Try moving your PC closer to the router or access point if you can.
-    -	If you don’t see the network name at all, the router or access point might not be set to broadcast the network name. In this case, you’ll need to connect to it manually.
+    -	If you don't see the network name at all, the router or access point might not be set to broadcast the network name. In this case, you'll need to connect to it manually.
         1.	Swipe in from the right edge of the screen, and then select Settings.
         2.	Select the Network icon, and then select Hidden network.
         3.	Type the network name and select next.

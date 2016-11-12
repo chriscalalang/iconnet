@@ -11,4 +11,4 @@ The result should be something like this:
     Reply from 192.168.1.1: bytes=32 time=5ms TTL=64
     Ping statistics for 192.168.1.1: Packets: Sent = 4, Received = 4, Lost = 0 (0% loss), Approximate round trip times in milli-seconds: Minimum = 4ms, Maximum = 5ms, Average = 4ms
 
-If the ping is successful and you see results similar to the results above, but you can’t connect to the Internet on your PC, there may be a problem with your modem or Internet service provider (ISP).
+If the ping is successful and you see results similar to the results above, but you can't connect to the Internet on your PC, there may be a problem with your modem or Internet service provider (ISP).

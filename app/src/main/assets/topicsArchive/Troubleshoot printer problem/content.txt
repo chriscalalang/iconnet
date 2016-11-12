@@ -1,11 +1,11 @@
 Start by checking your hardware
 Make sure that the printer's electrical cord is plugged into an electrical outlet and that the power switch is turned on. If you're printing to a shared printer or a printer on a network, make sure that all necessary computers and routers are turned on too. If your printer or other equipment is plugged in to a surge protector or a backup power supply, make sure that hardware is plugged in and turned on as well.
 
-If you’re using a wired printer, make sure that the printer cable is properly connected from the printer to your PC.
+If you're using a wired printer, make sure that the printer cable is properly connected from the printer to your PC.
 
-For wireless printers, check the wireless connection. Make sure the printer’s wireless option is turned on and available. Many printers have a button that displays a blue wireless icon when wireless is available.
+For wireless printers, check the wireless connection. Make sure the printer's wireless option is turned on and available. Many printers have a button that displays a blue wireless icon when wireless is available.
 
-Next, run the printer’s wireless connectivity test. Read the instructions that came with the printer or check the printer manufacturer’s website for instructions about how to do this.
+Next, run the printer's wireless connectivity test. Read the instructions that came with the printer or check the printer manufacturer's website for instructions about how to do this.
 
 Use a troubleshooter
 A troubleshooter is an automated tool that can find and automatically fix some problems with your PC. The printing troubleshooter can fix problems with installing and connecting to a printer.

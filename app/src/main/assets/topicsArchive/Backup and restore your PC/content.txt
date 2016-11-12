@@ -5,7 +5,7 @@ There are several ways to back up your PC.
     2.	Do one of the following:
         •	If you've never used Windows Backup before, or recently upgraded your version of Windows, selectSet up backup, and then follow the steps in the wizard.
         •	If you've created a backup before, you can wait for your regularly scheduled backup to occur, or you can manually create a new backup by selecting Back up now.
-        •	If you’ve created a backup before, but want to make a new, full backup rather than updating the old one, select Create new, full backup, and then follow the steps in the wizard.
+        •	If you've created a backup before, but want to make a new, full backup rather than updating the old one, select Create new, full backup, and then follow the steps in the wizard.
 Note
 Do not back up files to the same hard disk that Windows is installed on. For example, do not back up files to a recovery partition. Always store media used for backups (external hard disks, DVDs, or CDs) in a secure place to prevent unauthorized people from having access to your files; a fireproof location separate from your computer is recommended. You might also consider encrypting the data on your backup.
 

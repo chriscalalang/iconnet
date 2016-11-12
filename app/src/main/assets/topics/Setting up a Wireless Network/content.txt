@@ -1,6 +1,6 @@
 &nbsp &nbsp &nbsp A Wireless Network at home lets you get online from more places in your house. This article describes the basic steps for setting up a wireless network and to start using it.
 
-Before you can set up your wireless network, here’s what you’ll need:
+Before you can set up your wireless network, here's what you'll need:
 
 Broadband Internet connection and modem. A broadband Internet connection is a high-speed Internet connection. Digital Subscriber Line (DSL) and cable are two of the most common broadband connections. You can get a broadband connection by contacting an Internet service provider (ISP). Typically, ISPs that provide DSL are telephone companies and ISPs that provide cable are cable TV companies. ISPs frequently offer broadband modems. Some ISPs also offer combination modem/wireless routers. You can also find these at computer or electronics stores, and online.
 
@@ -8,14 +8,14 @@ Wireless router. A router sends information between your network and the Interne
 
 Wireless network adapter. A wireless network adapter is a device that connects your PC to a wireless network. To connect your portable or desktop PC to your wireless network, the PC must have a wireless network adapter. Most portable PCs and tablets—and some desktop PCs—come with a wireless network adapter already installed.
 
-To check whether you’re PC has a wireless network adapter:
+To check whether you're PC has a wireless network adapter:
 1. Select the Start button, type Device Manager, and then select it.
 2. Double-select Network adapters.
 3. Look for a network adapter that might include "wireless" in the name.
 
 
 Setting up the modem and Internet connection
-After you have all the equipment, you'll need to set up your modem and Internet connection. If your modem wasn't set up for you by your Internet service provider (ISP), follow the instructions that came with your modem to connect it to your PC and the Internet. If you're using Digital Subscriber Line (DSL), connect your modem to a phone jack. If you’re using cable, connect your modem to a cable jack.
+After you have all the equipment, you'll need to set up your modem and Internet connection. If your modem wasn't set up for you by your Internet service provider (ISP), follow the instructions that came with your modem to connect it to your PC and the Internet. If you're using Digital Subscriber Line (DSL), connect your modem to a phone jack. If you're using cable, connect your modem to a cable jack.
 
 
 Positioning the wireless router
@@ -35,7 +35,7 @@ To help make your network more secure:
   2.	Select Set up a new connection or network.
   3.	Select Set up a new network, then choose next.
 
-The wizard will walk you through creating a network name and a security key. If your router will support it, the wizard will default to Wi Fi Protected Access (WPA or WPA2) security. We recommend that you use WPA2, because it offers better security than WPA or Wired Equivalent Privacy (WEP) security. With WPA2 or WPA you can also use a passphrase, so you don’t have to remember a cryptic sequence of letters and numbers.
+The wizard will walk you through creating a network name and a security key. If your router will support it, the wizard will default to Wi Fi Protected Access (WPA or WPA2) security. We recommend that you use WPA2, because it offers better security than WPA or Wired Equivalent Privacy (WEP) security. With WPA2 or WPA you can also use a passphrase, so you don't have to remember a cryptic sequence of letters and numbers.
 
 Write down your security key and keep it in a safe place. You can also save your security key on a USB flash drive by following the instructions in the wizard.
 

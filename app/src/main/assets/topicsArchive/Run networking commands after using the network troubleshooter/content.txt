@@ -1,5 +1,5 @@
 The Network troubleshooter (mentioned above) can help diagnose and fix common connection problems. After using that, try running the network commands below because the combination of doing these two things can help you get connected.
-If your problem isn’t fixed after running the Network troubleshooter, try to:
+If your problem isn't fixed after running the Network troubleshooter, try to:
     -	Reset the TCP/IP stack.
     -	Release the IP address.
     -	Renew the IP address.
@@ -12,4 +12,4 @@ To run these networking commands in a command prompt window
         o	Type ipconfig /release and press Enter.
         o	Type ipconfig /renew and press Enter.
         o	Type ipconfig /flushdns and press Enter.
-If Windows can’t find a new driver for your network adapter, visit the PC manufacturer’s website and download the latest network adapter driver from there. If your PC can't connect to the Internet, you'll need to download a driver on a different PC and save it to a USB flash drive so you can install the driver on your PC. You’ll need to know the PC manufacturer and model name or number.
+If Windows can't find a new driver for your network adapter, visit the PC manufacturer's website and download the latest network adapter driver from there. If your PC can't connect to the Internet, you'll need to download a driver on a different PC and save it to a USB flash drive so you can install the driver on your PC. You'll need to know the PC manufacturer and model name or number.

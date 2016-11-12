@@ -6,5 +6,5 @@ Some modems have a backup battery. So if you unplug the modem and lights stay on
 If you had to remove the battery from the modem, put it back in.
 4.	Plug the modem back into the wall. The lights on the modem will blink. Wait for them to stop blinking.
 5.	Plug your router back into the wall.
-Wait a few minutes for the modem and router to fully power on. You can usually tell when they’re ready by looking at the status lights on the two devices.
+Wait a few minutes for the modem and router to fully power on. You can usually tell when they're ready by looking at the status lights on the two devices.
 6.	On your PC, try to connect to the Wi-Fi network again.

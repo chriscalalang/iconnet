@@ -7,12 +7,12 @@ In most cases, all you have to do to set up a printer is to connect it to your P
 
 For wireless printers with Windows 8.1:
 Note
-If you have a new wireless printer that hasn’t been added to your home network, read the instructions that came with the printer to learn how to add it. Check the printer manufacturer’s website to learn more and to get up-to-date software for your printer.
+If you have a new wireless printer that hasn't been added to your home network, read the instructions that came with the printer to learn how to add it. Check the printer manufacturer's website to learn more and to get up-to-date software for your printer.
 
 
     1.	Swipe in from the right edge of the screen, tap Settings, and then tap Change PC settings. (If you're using a mouse, point to the lower-right corner of the screen, move the mouse pointer up, click Settings, and then click Change PC settings.)
     2.	Tap or click PC and devices, and then tap or click Devices. If your printer is installed, it should appear underPrinters.
-    3.	If your printer isn’t listed, tap or click Add a device, and then select your printer to install it.
+    3.	If your printer isn't listed, tap or click Add a device, and then select your printer to install it.
 
 To install (add) a local printer
     1.	Click the Start  button, and then, on the Start menu, click Devices and Printers.

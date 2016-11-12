@@ -41,6 +41,6 @@ You can sign up for the Windows 10 upgrade offer in two ways:
     <br /> •	&nbsp &nbsp &nbsp Click a button in the Get Windows 10 app that says "Reserve my upgrade", "Upgrade now", "Upgrade later", or "Schedule my upgrade." The Get Windows 10 app shows up as a Windows icon in the notification area at the right end of your taskbar (the taskbar is the ribbon of icons on the bottom of your desktop). If you don't see the app, get help here.
     <br /> •	&nbsp &nbsp &nbsp During the set-up of a new PC, check a box that says "Reserve my free Windows 10 upgrade," "Upgrade now," or "Upgrade later."
     
-If you no longer want to be signed up for the free upgrade to Windows 10, you can change your PC’s status through the Get Windows 10 app. Open the app by clicking on the Windows icon on the right of your taskbar, click the menu icon in the upper left of the app, and choose "Change reservation status."
+If you no longer want to be signed up for the free upgrade to Windows 10, you can change your PC's status through the Get Windows 10 app. Open the app by clicking on the Windows icon on the right of your taskbar, click the menu icon in the upper left of the app, and choose "Change reservation status."
     <br />
-Microsoft recommends that all eligible PCs upgrade to Windows 10 for the best, most up-to-date security to protect you in today’s online world.
+Microsoft recommends that all eligible PCs upgrade to Windows 10 for the best, most up-to-date security to protect you in today's online world.
