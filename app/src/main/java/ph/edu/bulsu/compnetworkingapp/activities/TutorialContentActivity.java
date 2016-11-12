@@ -68,11 +68,11 @@ public class TutorialContentActivity extends HidingToolbarActivity {
             wvHtml = (WebView) findViewById(R.id.wvHtml);
             wvHtml.getSettings();
             wvHtml.setBackgroundColor(Color.TRANSPARENT);
-
+            wvHtml.getSettings().setDefaultTextEncodingName("utf-8");
 
             String wholeHtml = "<html>" + generateCssString() + tutorial.getHtml().substring(6);
 
-            wvHtml.loadDataWithBaseURL(tutorial.getBaseFolderPath(), wholeHtml, "text/html", "UTF-8", "");
+            wvHtml.loadDataWithBaseURL(tutorial.getBaseFolderPath(), wholeHtml, "text/html", "windows-1252", "");
         }
     }
 
@@ -83,7 +83,11 @@ public class TutorialContentActivity extends HidingToolbarActivity {
                 "    margin-left: auto !important;\n" +
                 "    width: 100% !important;\n" +
                 "    height: auto !important;\n" +
-                "    margin-right: auto !important; }</style>";
+                "    margin-right: auto !important; }" +
+                " br {\n" +
+                "   display: block;\n" +
+                "   margin: 10px 0;\n" +
+                "}</style>";
     }
 
     private void setupTextAndImageCards() {

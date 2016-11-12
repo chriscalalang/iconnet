@@ -1,8 +1,8 @@
 1. Open the Network Adapter settings. Press and hold the Windows key and hit R. This will open a small box in the lower
-left-hand corner of your screen. Inside this box, type “control net connections” then hit Enter to continue.
+left-hand corner of your screen. Inside this box, type "control net connections" then hit Enter to continue.
 
 
-2.Enable your adapter. A new window should appear in front of you. Inside this window, you should see a series of different adapters listed. In many cases, there should be two: Ethernet and Wi-Fi. If you see Wi-Fi, right-click on it, and from the context menu, select the “Enable” option.
-The Wi-Fi adapter icon should light up, and it should say “Not connected” under it, unless it is set to automatically connect to a network already.
+2.Enable your adapter. A new window should appear in front of you. Inside this window, you should see a series of different adapters listed. In many cases, there should be two: Ethernet and Wi-Fi. If you see Wi-Fi, right-click on it, and from the context menu, select the "Enable" option.
+The Wi-Fi adapter icon should light up, and it should say "Not connected" under it, unless it is set to automatically connect to a network already.
 
-3. Check the Settings menu. To make sure that everything is working properly, you will want to verify that the new settings menu has the Wi-Fi available now. Click Start >> Settings >> Network & Internet. If you see “Wi-Fi” at the top left-hand side of the window, everything is working properly.
+3. Check the Settings menu. To make sure that everything is working properly, you will want to verify that the new settings menu has the Wi-Fi available now. Click Start >> Settings >> Network & Internet. If you see "Wi-Fi" at the top left-hand side of the window, everything is working properly.
