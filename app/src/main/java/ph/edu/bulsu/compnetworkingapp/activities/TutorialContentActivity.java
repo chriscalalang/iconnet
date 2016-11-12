@@ -72,7 +72,7 @@ public class TutorialContentActivity extends HidingToolbarActivity {
 
             String wholeHtml = "<html>" + generateCssString() + tutorial.getHtml().substring(6);
 
-            wvHtml.loadDataWithBaseURL(tutorial.getBaseFolderPath(), wholeHtml, "text/html", "windows-1252", "");
+            wvHtml.loadDataWithBaseURL(tutorial.getBaseFolderPath(), wholeHtml, "text/html", "utf-8", "");
         }
     }
 
