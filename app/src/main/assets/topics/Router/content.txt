@@ -1,0 +1,12 @@
+
+A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. A data packet is typically forwarded from one router to another through the networks that constitute the internetwork until it reaches its destination node.
+
+How does router work?
+
+A router may create or maintain a table of the available routes and their conditions and use this information along with distance and cost algorithms to determine the best route for a given packet. Typically, a packet may travel through a number of network points with routers before arriving at its destination. Routing is a function associated with the network layer (Layer 3) in the standard model of network programming, the Open Systems Interconnection (OSI) model. A Layer 3 switch is a switch that can perform routing functions.
+
+An edge router is a device located at the boundary of a network that connects to other networks, wide area networks or the internet. For home and business computer users who have high-speed internet connections such as cable, satellite or DSL, a router can act as a hardware firewall. Many engineers believe that the use of a router provides better protection against hacking than a software firewall because no computer internet protocol addresses are directly exposed to the internet. This makes port scans (a technique for exploring weaknesses) essentially impossible. In addition, a router does not consume computer resources, which a software firewall does. Commercially manufactured routers are easy to install and are available for hard-wired or wireless networks.
+
+
+Function of Router
+A router is able to both send and receive packets of information from computer networks. If a person is connected to the Internet via an ISP, or Internet service provider, the router obtains packets from the personal computer, before sending them to the Internet using the ISP's modem. The response, which is typically a Web page or other information from a queried address, returns to the router, which is then relayed back to the user's computer.

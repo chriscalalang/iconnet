@@ -1,4 +1,3 @@
 Win8
 Win7
 Win10
-Ubuntu

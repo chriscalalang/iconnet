@@ -1,0 +1,7 @@
+Straight-through Cable Definition.
+A straight-through cable is a type of twisted pair cable that is used in local area networks to connect a computer to a network hub such as a router. This type of cable is also sometimes called a patch cable and is an alternative to wireless connections where one or more computers access a router through a wireless signal.
+
+Use a straight-through cable when:
+1.	Connecting a router to a hub
+2.	Connecting a computer to a switch
+3.	Connecting a LAN port to a switch, hub, or computer

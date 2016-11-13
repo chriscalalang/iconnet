@@ -1,0 +1,55 @@
+A firewall is a network security system, either hardware- or software-based, that controls incoming and outgoing network traffic based on a set of rules.
+Acting as a barrier between a trusted network and other untrusted networks -- such as the Internet -- or less-trusted networks -- such as a retail merchant's network outside of a cardholder data environment -- a firewall controls access to the resources of a network through a positive control model. This means that the only traffic allowed onto the network defined in the firewall policy is; all other traffic is denied.
+
+How do firewall work?
+Firewalls are setup at every connection to the Internet, therefore subjecting all data flow to careful monitoring. Firewalls can also be tuned to follow "rules". These Rules are simply security rules that can be set up by yourself or by the network administrators to allow traffic to their web servers, FTP servers, Telnet servers, thereby giving the computer owners/administrators immense control over the traffic that flows in & out of their systems or networks.
+Rules will decide who can connect to the internet, what kind of connections can be made, which or what kind of files can be transmitted in out. Basically all traffic in & out can be watched and controlled thus giving the firewall installer a high level of security & protection.
+Firewall logic
+Firewalls use 3 types of filtering mechanisms:
+•	Packet filtering or packet purity
+
+Data flow consists of packets of information and firewalls analyze these packets to sniff out offensive or unwanted packets depending on what you have defined as unwanted packets.
+
+•	Proxy
+
+Firewalls in this case assume the role of a recipient & in turn sends it to the node that has requested the information & vice versa.
+
+•	Inspection
+
+In this case Firewalls instead of sifting through all of the information in the packets, mark key features in all outgoing requests & check for the same matching characteristics in the inflow to decide if it relevant information that is coming through.
+Firewall Rules
+•	IP Addresses
+
+Blocking off a certain IP address or a range of IP addresses, which you think are predatory. What is my IP address?  Where is an IP address located?
+
+•	Domain names
+
+You can only allow certain specific domain names to access your systems/servers or allow access to only some specified types of domain names or domain name extension like .edu or .mil.
+
+•	Protocols
+
+A firewall can decide which of the systems can allow or have access to common protocols like IP, SMTP, FTP, UDP,ICMP,Telnet or SNMP.
+
+•	Ports
+
+Blocking or disabling ports of servers that are connected to the internet will help maintain the kind of data flow you want to see it used for & also close down possible entry points for hackers or malignant software.
+
+•	Keywords
+
+Firewalls also can sift through the data flow for a match of the keywords or phrases to block out offensive or unwanted data from flowing in.
+Types of Firewall
+•	Software firewalls
+
+New generation Operating systems come with built in firewalls or you can buy a firewall software for the computer that accesses the internet or acts as the gateway to your home network.
+
+•	Hardware firewalls
+
+Hardware firewalls are usually routers with a built in Ethernet card and hub. Your computer or computers on your network connect to this router & access the web.
+Advantages of hardware firewalls over software firewall:
+•	Speed: Normally, the hardware firewalls are tailored for faster response times, and hence handle more traffic loads.
+•	Security: A firewall with its own operating system (proprietary) is less prone for attacks. This in turn reduces the security risk. In addition, hardware firewalls have enhanced security controls.
+•	No Interference: A box, that is separated from other network components can be managed better, and does not load or slowdown other applications. The box can be moved, shutdown, or reconfigured with minimal interference to the network.
+Disadvantage of hardware firewalls:
+•	Cost. Normally, a dedicated hardware firewall costs more than a software firewall.
+•	Difficult to install, and upgrade.
+•	Takes up physical space, and involves wiring.

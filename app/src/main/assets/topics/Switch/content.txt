@@ -1,0 +1,28 @@
+A network switch (also called switching hub, bridging hub, officially MAC bridge[1]) is a computer networking device that connects devices together on a computer network, by using packet switching to receive, process and forward data to the destination device.
+A switch is a device in a computer network that electrically and logically connects together other devices. Multiple data cables are plugged into a switch to enable communication between different networked devices. Switches manage the flow of data across a network by transmitting a received network packet only to the one or more devices for which the packet is intended. Each networked device connected to a switch can be identified by its network address, allowing the switch to regulate the flow of traffic. This maximizes the security and efficiency of the network.
+
+
+How to Use a Switch in a Network
+
+STEP 1
+Determine what speed switch you need. Many switches can only go to speeds of 100 Mbps, while some gigabit switches can get up to 1000 Mbps. To decide on a speed, find out if the computer(s) you're connecting are capable of going at gigabit speeds. If so, a gigabit switch is best.
+STEP 2
+Determine if you want any advanced features. More advanced switches can accommodate more than one network (on one physical switch) through virtual local area networking (VLAN).
+STEP 3
+Determine how many ports you need on the switch. The number of ports should be equal to, or greater than, the number of computers that you are connecting.
+STEP 4
+Configure your switch. Connect a computer to the switch using the IP address found in the switch manual. Set up the IP address for the switch, network address and netmask.
+STEP 5
+Configure the VLANs, if necessary. Decide which port goes to which VLAN, and configure the switch appropriately.
+STEP 6
+Connect a cable from the uplink port to the rest of the network. Many newer switches can detect the uplink connection from any port. Use either an orange crossover or Ethernet cable.
+STEP 7
+Connect Ethernet cables from the computers to the switch's ports. If multiple VLANs are being used, make sure the computers are on the correct VLAN.
+STEP 8
+Hard code the settings, if necessary. Most computers automatically negotiate the switch's settings. If hard coding is necessary, log into the switch and hard code the settings on a per port basis.
+
+Functions
+
+The basic function that any switch is supposed to perform is to receive information from any source connected to it and dispatch that information to the appropriate destination only. This thing differentiates switches from hubs. Hub gets the information and forwards that to every other device in the network. This is the reason why switches are called intelligent devices.
+The network switch has become a crucial part of present local area networks (LANs). LANs with medium to large sizes are established using a number of inter-linked network switches. SOHO (Small Office/Home office) networks generally consist of a single switch, or sometimes a multi-purpose device like a residential gateway to utilize small office/home broadband services such as Digital subscriber line (DSL) and cable Internet. Nowadays, we have been using router-like components which interface to the particular physical broadband technology. We may see some people using telephone technology on internet using Voice over IP (VoIP).
+As mentioned above, a switch is operated at the data link layer to develop a distinct collision domain for each port of the switch. Let us consider, there are four computers - A, B, C, and D connected to four ports of the switch, then any pair , say A and B, may transfer data in either directions, at the same time, the other pair, C and D, can exchange their information simultaneously, and these two communications will not interrupt each other. Using full duplex mode, pairs may get overlapped (A communicating with B, B with C, and so on). Whereas in hubs, all of them have to share the same bandwidth by running in half duplex mode, causing collisions, which will result in unnecessary packet retransmissions.
