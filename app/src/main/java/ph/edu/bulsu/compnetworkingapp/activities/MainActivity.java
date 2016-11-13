@@ -167,7 +167,6 @@ public class MainActivity extends AppCompatActivity implements MainViewControlle
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         exit();
     }
 

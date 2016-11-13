@@ -99,13 +99,6 @@ public class MockQuizItems {
 
 
         item = new QuizItem();
-        item.setQuestion("What is often used to refer to a private connection of LANs and WANs that belongs to an organization, and is designed to be accessible only by the organization's members, employees, or others with authorization?");
-        item.setChoices(Arrays.asList("Internetwork", "Intranet", "Internet", "Intranetworking"));
-        item.setAcceptedAnswers(Arrays.asList("Intranet", "Intranet"));
-        items.add(item);
-
-
-        item = new QuizItem();
         item.setQuestion("Represents data to the user plus encoding and dialog control.");
         item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
         item.setAcceptedAnswers(Arrays.asList("Application", "Application"));
@@ -123,20 +116,6 @@ public class MockQuizItems {
         item.setQuestion("Support communication between diverse devices across diverse networks");
         item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
         item.setAcceptedAnswers(Arrays.asList("Internet", "Internet"));
-        items.add(item);
-
-
-        item = new QuizItem();
-        item.setQuestion("It is usually administered by a single organization.");
-        item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
-        item.setAcceptedAnswers(Arrays.asList("Network Access", "Network Access"));
-        items.add(item);
-
-
-        item = new QuizItem();
-        item.setQuestion("Controls the hardware devices and media that make up the network");
-        item.setChoices(Arrays.asList("LAN", "MAN", "WAN", "TAN"));
-        item.setAcceptedAnswers(Arrays.asList("LAN", "Local Area Network"));
         items.add(item);
 
 
@@ -169,20 +148,6 @@ public class MockQuizItems {
 
 
         item = new QuizItem();
-        item.setQuestion("Manages the flow of data between two established socket connections.");
-        item.setChoices(Arrays.asList("ASDP", "AED", "AFP", "AGP"));
-        item.setAcceptedAnswers(Arrays.asList("ASDP", "ASDP"));
-        items.add(item);
-
-
-        item = new QuizItem();
-        item.setQuestion("Uses echoes to tell if a computer, or node is available.");
-        item.setChoices(Arrays.asList("ASDP", "AED", "AFP", "AGP"));
-        item.setAcceptedAnswers(Arrays.asList("AED", "AED"));
-        items.add(item);
-
-
-        item = new QuizItem();
         item.setQuestion("What is the meaning of API?");
         item.setChoices(Arrays.asList("Application Protocol Interface", "Application Protocol Integrate", "Application Programming Interface", "Application Programming Integrate"));
         item.setAcceptedAnswers(Arrays.asList("Application Programming Integrate", "Application Programming Integrate"));
@@ -201,6 +166,63 @@ public class MockQuizItems {
         item.setChoices(Arrays.asList("BSC", "Router", "Broadcast", "Broadcast"));
         item.setAcceptedAnswers(Arrays.asList("Broadcast", "Broadcast"));
         items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Is a standardized telecommunication network interface for connecting voice and data equipment to a service provided by a local exchange carrier or long distance carrier.");
+        item.setChoices(Arrays.asList("Registered jack (RJ)", "Coaxial cable", "Fiber Optic", "UTP Cable"));
+        item.setAcceptedAnswers(Arrays.asList("Registered jack", "Registered jack (RJ)"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Is a flexible, transparent fiber made by drawing glass (silica) or plastic to a diameter slightly thicker than that of a human hair.");
+        item.setChoices(Arrays.asList("Fiber Optic", "UTP cable", "Coaxial cable", "Fiber cable"));
+        item.setAcceptedAnswers(Arrays.asList("Fiber Optic", "Fiber Optic"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("A type of cable that has an inner conductor surrounded by a tubular insulating layer, surrounded by a tubular conducting shield.");
+        item.setChoices(Arrays.asList("Fiber Optic", "UTP cable", "Coaxial cable", "Registered jack (RJ)"));
+        item.setAcceptedAnswers(Arrays.asList("Coaxial cable", "Coaxial cable"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Represents data to the user plus encoding and dialog control.");
+        item.setChoices(Arrays.asList("Application", "Transport", "Internet", "Network Access"));
+        item.setAcceptedAnswers(Arrays.asList("Application", "Application"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Is the most common kind of copper telephone wiring. Twisted pair is the ordinary copper wire that connects home and many business computers to the telephone company. To reduce crosstalk or electromagnetic induction between pairs of wires, two insulated copper wires are twisted around each other.");
+        item.setChoices(Arrays.asList("Unshielded Twisted Pair (UTP)", "Coaxial Cable", "Fiber Optic", "Registered jack (RJ)"));
+        item.setAcceptedAnswers(Arrays.asList("Unshielded Twisted Pair (UTP)", "UTP"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("Is a telecommunications network which allows computers to exchange data?");
+        item.setChoices(Arrays.asList("Computer Network", "Networking", "Network", "Networker"));
+        item.setAcceptedAnswers(Arrays.asList("Computer Network", "Computer Network"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("A screen of numbers used for routing traffic within a subnet.");
+        item.setChoices(Arrays.asList("Subnet Mask", "Subnet Byte", "Subnet length", "Subnetting"));
+        item.setAcceptedAnswers(Arrays.asList("Subnet Mask", "Subnet Mask"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("It connects peripheral devices such as digital cameras, mice, keyboards, printers, scanners, media devices, external hard drives and flash drives.");
+        item.setChoices(Arrays.asList("Universal Serial Bus (USB)", "UTP", "Flash drive", "HDMI"));
+        item.setAcceptedAnswers(Arrays.asList("Universal Serial Bus (USB)", "Universal Serial Bus (USB)"));
+        items.add(item);
+
 
         Collections.shuffle(items);
         return new ArrayList<>(items.subList(0, size));
