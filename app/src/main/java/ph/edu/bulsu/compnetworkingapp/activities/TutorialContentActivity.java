@@ -82,6 +82,7 @@ public class TutorialContentActivity extends HidingToolbarActivity {
                 "    display: block !important;\n" +
                 "    margin-left: auto !important;\n" +
                 "    width: 100% !important;\n" +
+                "    max-width: 100% !important;\n" +
                 "    height: auto !important;\n" +
                 "    margin-right: auto !important; }" +
                 " br {\n" +
