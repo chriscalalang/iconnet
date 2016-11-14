@@ -147,7 +147,7 @@ public class TroubleshootingFragment extends BaseFragment {
     public boolean onQueryTextChange(String newText) {
         textQueries = WordQueriesBuilder.getWordQueries(newText);
         List<Topic> topics = new ArrayList<>();
-        topics.addAll(TroubleshootersDAO.getInstance().getAll(tags, null));
+        topics.addAll(TroubleshootersDAO.getInstance().getAll(tags, textQueries));
         populateList(topics, false, newText.isEmpty() ? new ArrayList<String>() : Arrays.asList(newText.split("\\W+")));
         return super.onQueryTextChange(newText);
     }
