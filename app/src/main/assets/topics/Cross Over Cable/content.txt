@@ -1,8 +1,9 @@
 A crossover cable is a type of cable installation that is used for the interconnection of two similar devices. It is enabled by reversing the transmission and receiving pins at both ends, so that output from one computer becomes input to the other, and vice versa.
 
-Use a crossover cable when:
-1.	Connecting a computer to a router
-2.	Connecting a computer to a computer
-3.	Connecting a router to a router
-4.	Connecting a switch to a switch
-5.	Connecting a hub to a hub
+<br /><br />
+Use a crossover cable when:<br /><br />
+1.	Connecting a computer to a router<br /><br />
+2.	Connecting a computer to a computer<br /><br />
+3.	Connecting a router to a router<br /><br />
+4.	Connecting a switch to a switch<br /><br />
+5.	Connecting a hub to a hub<br /><br />

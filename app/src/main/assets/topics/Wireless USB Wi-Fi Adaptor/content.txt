@@ -1,23 +1,23 @@
 A wireless USB adapter connects a computer without wireless hardware to a wireless network by transmitting either a Wi-Fi or Bluetooth signal. Installing the adapter requires plugging it into a USB port on a computer and installing drivers and other software if necessary. Once the adapter is installed, a wireless connection can be established
-What Is a Wireless Adapter For?
-PURPOSE
-Wireless adapters are most commonly used to send a wireless signal to a wireless access point (WAP) to gain access to a network.
-APPEARANCE
+<br /><br />What Is a Wireless Adapter For?
+PURPOSE<br /><br />
+Wireless adapters are most commonly used to send a wireless signal to a wireless access point (WAP) to gain access to a network.<br /><br />
+APPEARANCE<br /><br />
 Most laptop computers have wireless adapters already installed inside the computer, so they are not visible. Many desktop computers have a wireless card that is inserted inside that has a short antenna sticking out the back side of the computer.
-
-SPEED
+<br /><br />
+SPEED<br /><br />
 Wireless adapters can communicate only with the network at the speed of radio signals. This will provide convenience, but using a wire will allow for a higher network throughput speed.
-SECURITY
+SECURITY<br /><br />
 One of the primary arguments against using wireless adapters is that the radio signal is sent in all directions, allowing any radio receiver to pick up and receive the signals. With computer communications, this allows another device to receive all the information broadcast without the sender knowing it has been intercepted.
-OTHER USES
+OTHER USES<br /><br />
 In addition to network connections, other types of wireless adapters have been tested and used for other types of computer communications, such as the wireless mouse and the infrared wireless keyboard.
-
+<br /><br />
 
 
 5 Benefits of Using a USB Wi-Fi Adapter
-
-1) Frees Computer Users from Cables
-2) Eliminates the Need to Install Internal Hardware
-3) Eliminates the Need to Run Cables
-4) Eliminates the Need to Upgrade a Computer
-5) Can Be Used on Multiple Devices
+<br /><br />
+1) Frees Computer Users from Cables<br /><br />
+2) Eliminates the Need to Install Internal Hardware<br /><br />
+3) Eliminates the Need to Run Cables<br /><br />
+4) Eliminates the Need to Upgrade a Computer<br /><br />
+5) Can Be Used on Multiple Devices<br /><br />
