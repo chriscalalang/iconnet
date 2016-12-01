@@ -3,7 +3,6 @@ package ph.edu.bulsu.compnetworkingapp.constants;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.models.QuizItem;
 
@@ -222,6 +221,313 @@ public class MockQuizItems {
         item.setChoices(Arrays.asList("Universal Serial Bus (USB)", "UTP", "Flash drive", "HDMI"));
         item.setAcceptedAnswers(Arrays.asList("Universal Serial Bus (USB)", "Universal Serial Bus (USB)"));
         items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 192.168.1.1?");
+        item.setChoices(Arrays.asList("255.256.255.255", "255.255.255.255.255", "255.255.255.255", "254.255.255.0"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 192.168.1.1?");
+        item.setChoices(Arrays.asList("128.0.0.0", "128.1.0.0", "1288.0.0.0", "128.1.1.1"));
+        item.setAcceptedAnswers(Arrays.asList("128.0.0.0", "128.0.0.0"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 90.255.0.1");
+        item.setChoices(Arrays.asList("127.255.255.255", "127.255.255.2555", "127.255.255.285"));
+        item.setAcceptedAnswers(Arrays.asList("128.0.0.0", "128.0.0.0"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 90.255.0.1");
+        item.setChoices(Arrays.asList("0.0.0.0", "0.0.0.1", "0.0.0.0.0"));
+        item.setAcceptedAnswers(Arrays.asList("0.0.0.0", "0.0.0.0"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 192.160.2.7");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 192.160.2.7?");
+        item.setChoices(Arrays.asList("127.0.0.0", " 128.1.0.0", "128.0.0.0"));
+        item.setAcceptedAnswers(Arrays.asList("128.0.0.0", "128.0.0.0"));
+        items.add(item);
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 255.0.1.1?");
+        item.setChoices(Arrays.asList("255.255.255.254", " 255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 255.0.1.1?");
+        item.setChoices(Arrays.asList("127.0.0.0", " 128.1.0.0", "128.0.0.0"));
+        item.setAcceptedAnswers(Arrays.asList("128.0.0.0", "128.0.0.0"));
+        items.add(item);
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 177.25.1.1?");
+        item.setChoices(Arrays.asList("255.255.255.254", " 255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 192.169.2.2?");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 90.255.0.2?");
+        item.setChoices(Arrays.asList("0.0.0.1", "0.0.0.8", "0.0.0.0 "));
+        item.setAcceptedAnswers(Arrays.asList("0.0.0.0 ", "0.0.0.0 "));
+        items.add(item);
+
+
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 255.1.1.1?");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 192.1.255.2 /27?");
+        item.setChoices(Arrays.asList("192.1.255.32", "192.1.255.31", "192.0.255.31"));
+        item.setAcceptedAnswers(Arrays.asList("192.1.255.31", "192.1.255.31"));
+        items.add(item);
+
+
+
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 192.1.255.2 /27?");
+        item.setChoices(Arrays.asList("192.1.255.0", "192.1.265.0", "192.1.285.0"));
+        item.setAcceptedAnswers(Arrays.asList("192.1.255.0", "192.1.255.0"));
+        items.add(item);
+
+
+
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 192.2.255.4 /28?");
+        item.setChoices(Arrays.asList("192.2.245.15", "192.2.255.15", "182.2.255.15"));
+        item.setAcceptedAnswers(Arrays.asList("192.2.255.15", "192.2.255.15"));
+        items.add(item);
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 192.2.255.4 /28?");
+        item.setChoices(Arrays.asList("192.2.255.1", "192.1.255.0", "192.2.255.0"));
+        item.setAcceptedAnswers(Arrays.asList("192.2.255.0", "192.2.255.0"));
+        items.add(item);
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 192.1.254.1 /17?");
+        item.setChoices(Arrays.asList("192.1.128.1", "192.1.128.0", "192.1.1288.0"));
+        item.setAcceptedAnswers(Arrays.asList("192.1.128.0", "192.1.128.0"));
+        items.add(item);
+
+
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 255.2.1.1?");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 255.2.1.1?");
+        item.setChoices(Arrays.asList("127.0.0.0", "128.1.0.0", "128.0.0.0"));
+        item.setAcceptedAnswers(Arrays.asList("128.0.0.0", "128.0.0.0"));
+        items.add(item);
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 193.162.1.1?");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 193.162.1.1?");
+        item.setChoices(Arrays.asList("127.0.0.0", "128.1.0.0", "128.0.0.0"));
+        item.setAcceptedAnswers(Arrays.asList("128.0.0.0", "128.0.0.0"));
+        items.add(item);
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 178.26.1.1 /5?");
+        item.setChoices(Arrays.asList("183.255.2255.255", "183.255.255.255", "183.255.955.255"));
+        item.setAcceptedAnswers(Arrays.asList("183.255.255.255", "183.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 178.26.1.1 /5?");
+        item.setChoices(Arrays.asList("176.0.0.8", "176.0.0.0", "176.0.0.2"));
+        item.setAcceptedAnswers(Arrays.asList("176.0.0.0", "176.0.0.0"));
+        items.add(item);
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 193.161.2.5 /6?");
+        item.setChoices(Arrays.asList("195.2555.255.255", "195.255.285.255", "195.255.255.255"));
+        item.setAcceptedAnswers(Arrays.asList("195.255.255.255", "195.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 193.161.2.5 /6?");
+        item.setChoices(Arrays.asList("192.0.0.1", "192.0.0.0", "195.0.0.0"));
+        item.setAcceptedAnswers(Arrays.asList("192.0.0.0", "192.0.0.0"));
+        items.add(item);
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 198.151.1.1 /7?");
+        item.setChoices(Arrays.asList("195.2555.255.255", "195.255.285.255", "199.255.255.255"));
+        item.setAcceptedAnswers(Arrays.asList("199.255.255.255", "199.255.255.255"));
+        items.add(item);
+
+
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Broadcast Address of 255.198.5.1 /9?");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.255.255.255", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.255.255.255", "255.255.255.255"));
+        items.add(item);
+
+
+
+
+        item = new QuizItem();
+        item.setQuestion("What is the Network Address of 255.198.5.1 /9?");
+        item.setChoices(Arrays.asList("255.255.255.254", "255.128.0.0", "255.255.255.2555"));
+        item.setAcceptedAnswers(Arrays.asList("255.128.0.0", "255.128.0.0"));
+        items.add(item);
+
+
 
 
         Collections.shuffle(items);
