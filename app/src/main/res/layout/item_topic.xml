@@ -47,12 +47,14 @@
                     android:maxLength="250"
                     android:textSize="14sp" />
 
-                <ph.edu.bulsu.compnetworkingapp.views.HeightBasedSquareImageView
+                <ImageView
                     android:id="@+id/ivImage"
                     android:layout_width="96dp"
-                    android:layout_height="96dp"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/default_padding_half"
-                    android:contentDescription="@string/app_name" />
+                    android:layout_marginStart="@dimen/default_padding_half"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
             </LinearLayout>
         </LinearLayout>
 
