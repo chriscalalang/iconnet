@@ -1,11 +1,12 @@
 package ph.edu.bulsu.compnetworkingapp.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
-import android.text.InputFilter;
-import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -25,12 +26,16 @@ public class IPCalculatorFragment extends BaseFragment {
 
     private static final String TAG = IPCalculatorFragment.class.getSimpleName();
 
+    private TextInputLayout tilIP;
     private EditText etIP;
     private Spinner sBitLength, sSubnetMask;
     private TextView tvResultsWillShowIf, tvBroadcastAddress, tvNetworkAddress, tvHomeAddressRange;
     private CardView cvBroadcastAddress, cvNetworkAddress, cvHomeAddressRange;
     private ScrollView svContent;
     private TextView tvSubnettingVideoLink;
+    private CardView cvTutorialLink;
+
+    private boolean isActivity;
 
     public static IPCalculatorFragment newInstance() {
 
@@ -39,6 +44,23 @@ public class IPCalculatorFragment extends BaseFragment {
         IPCalculatorFragment fragment = new IPCalculatorFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+
+    public static Fragment newInstance(boolean isActivity) {
+        Bundle args = new Bundle();
+
+        IPCalculatorFragment fragment = new IPCalculatorFragment();
+        args.putBoolean(BundleIDs.IS_ACTIVITY, true);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        isActivity = getArguments().getBoolean(BundleIDs.IS_ACTIVITY);
     }
 
     @Override
@@ -50,6 +72,7 @@ public class IPCalculatorFragment extends BaseFragment {
     public void initializeParentView(View view) {
         svContent = (ScrollView) view.findViewById(R.id.svContent);
         etIP = (EditText) view.findViewById(R.id.etIP);
+        tilIP = (TextInputLayout) view.findViewById(R.id.tilIP);
         sSubnetMask = (Spinner) view.findViewById(R.id.sSubnetMask);
         sBitLength = (Spinner) view.findViewById(R.id.sBitLength);
         tvResultsWillShowIf = (TextView) view.findViewById(R.id.tvResultsWillShowIf);
@@ -60,6 +83,9 @@ public class IPCalculatorFragment extends BaseFragment {
         cvNetworkAddress = (CardView) view.findViewById(R.id.cvNetworkAddress);
         cvHomeAddressRange = (CardView) view.findViewById(R.id.cvHomeAddressRange);
         tvSubnettingVideoLink = (TextView) view.findViewById(R.id.tvSubnettingVideoLink);
+        cvTutorialLink = (CardView) view.findViewById(R.id.cvTutorialLink);
+
+        cvTutorialLink.setVisibility(isActivity ? View.GONE : View.VISIBLE);
 
 //        InputFilter alphaNumericFilter = new InputFilter() {
 //            @Override
@@ -274,23 +300,21 @@ public class IPCalculatorFragment extends BaseFragment {
     }
 
     private void clearResults() {
-        tvResultsWillShowIf.setVisibility(View.VISIBLE);
+        tvResultsWillShowIf.setVisibility(isActivity ? View.GONE : View.VISIBLE);
+        tilIP.setErrorEnabled(true);
+        tilIP.setError("Invalid IP");
         cvHomeAddressRange.setVisibility(View.GONE);
         cvBroadcastAddress.setVisibility(View.GONE);
         cvNetworkAddress.setVisibility(View.GONE);
     }
 
     private void showResults() {
+        tilIP.setErrorEnabled(false);
         tvResultsWillShowIf.setVisibility(View.GONE);
         cvHomeAddressRange.setVisibility(View.VISIBLE);
         cvBroadcastAddress.setVisibility(View.VISIBLE);
         cvNetworkAddress.setVisibility(View.VISIBLE);
-        svContent.post(new Runnable() {
-            @Override
-            public void run() {
 
-                svContent.fullScroll(View.FOCUS_DOWN);
-            }
-        });
     }
+
 }

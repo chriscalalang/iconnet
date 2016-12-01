@@ -44,7 +44,11 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.LandingScreen" />
-        <activity android:name=".activities.VideoDetailsActivity"></activity>
+        <activity android:name=".activities.VideoDetailsActivity" />
+        <activity android:name=".activities.QuizIPCalculatorActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen.Transparent.Dark"></activity>
     </application>
 
 </manifest>

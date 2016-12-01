@@ -67,23 +67,25 @@ public class AllTutorialsFragment extends BaseFragment {
 
 
     public void populateList(final List<Topic> topicList, boolean incremental, List<String> splittedSentenceWords) {
-        adapter.setSplittedSentenceWords(splittedSentenceWords);
-        int previousSize = this.topicList.size();
-        if (previousSize > 0) {
-            //this.topicList.get(previousSize - 1).setLoadMore(false);
-            adapter.notifyItemChanged(previousSize - 1);
+        if (adapter != null) {
+            adapter.setSplittedSentenceWords(splittedSentenceWords);
+            int previousSize = this.topicList.size();
+            if (previousSize > 0) {
+                //this.topicList.get(previousSize - 1).setLoadMore(false);
+                adapter.notifyItemChanged(previousSize - 1);
+            }
+            if (!incremental) {
+                this.topicList.clear();
+                adapter.notifyItemRangeRemoved(0, previousSize);
+            }
+
+
+            this.topicList.addAll(topicList);
+
+            int newSize = this.topicList.size();
+
+            adapter.notifyItemRangeInserted(previousSize, topicList.size());
         }
-        if (!incremental) {
-            this.topicList.clear();
-            adapter.notifyItemRangeRemoved(0, previousSize);
-        }
-
-
-        this.topicList.addAll(topicList);
-
-        int newSize = this.topicList.size();
-
-        adapter.notifyItemRangeInserted(previousSize, topicList.size());
 
     }
 

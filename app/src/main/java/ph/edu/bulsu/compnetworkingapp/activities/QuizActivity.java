@@ -1,12 +1,16 @@
 package ph.edu.bulsu.compnetworkingapp.activities;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.constants.MockQuizItems;
@@ -18,7 +22,7 @@ import ph.edu.bulsu.compnetworkingapp.models.QuizItem;
 
 public class QuizActivity extends HidingToolbarActivity implements QuizViewController {
 
-    private int DEFAULT_QUIZ_QUESTION_ITEMS_SIZE = 5;
+    private static final int DEFAULT_QUIZ_QUESTION_ITEMS_SIZE = 10;
 
     private ArrayList<QuizItem> items;
     private FrameLayout flMain;
@@ -92,4 +96,51 @@ public class QuizActivity extends HidingToolbarActivity implements QuizViewContr
         useFragment(QuizResultFragment.newInstance(items, answers));
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.quiz, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                exit();
+                return true;
+            case R.id.miIPCalculator:
+                startActivity(new Intent(QuizActivity.this, QuizIPCalculatorActivity.class));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    private void exit() {
+
+        new AlertDialog.Builder(QuizActivity.this)
+                .setMessage("Your quiz will be terminated. Are you sure you want to exit?")
+                .setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        finish();
+                    }
+                })
+                .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                }).create().show();
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        exit();
+    }
 }

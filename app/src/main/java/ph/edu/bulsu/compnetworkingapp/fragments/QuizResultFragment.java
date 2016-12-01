@@ -2,7 +2,7 @@ package ph.edu.bulsu.compnetworkingapp.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Parcelable;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -23,8 +23,11 @@ public class QuizResultFragment extends BaseFragment {
 
     private List<QuizItem> items;
     private List<String> answers;
+
+
     private RecyclerView rvQuizResults;
     private TextView tvRemark;
+    private QuizItemAdapter adapter;
 
     public static QuizResultFragment newInstance(ArrayList<QuizItem> items, ArrayList<String> answers) {
         Bundle args = new Bundle();
@@ -38,8 +41,6 @@ public class QuizResultFragment extends BaseFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        items = getArguments().getParcelableArrayList(BundleIDs.QUIZ_ITEMS);
-        answers = getArguments().getStringArrayList(BundleIDs.ANSWERS);
     }
 
     @Override
@@ -51,12 +52,41 @@ public class QuizResultFragment extends BaseFragment {
     public void initializeParentView(View view) {
         tvRemark = (TextView) view.findViewById(R.id.tvRemark);
 
+        this.items = new ArrayList<>();
+        this.answers = new ArrayList<>();
+
+        adapter = new QuizItemAdapter(context, items, answers);
+
         rvQuizResults = (RecyclerView) view.findViewById(R.id.rvQuizResults);
-        rvQuizResults.setAdapter(new QuizItemAdapter(context, items, answers));
+        rvQuizResults.setAdapter(adapter);
         rvQuizResults.setLayoutManager(new LinearLayoutManager(context));
         rvQuizResults.setNestedScrollingEnabled(false);
+        rvQuizResults.setItemAnimator(new DefaultItemAnimator());
 
-        showQuizResult();
+
+        final List<QuizItem> items = getArguments().getParcelableArrayList(BundleIDs.QUIZ_ITEMS);
+        List<String> answers = getArguments().getStringArrayList(BundleIDs.ANSWERS);
+
+
+        for (int index = 0; index < items.size(); index++) {
+            final QuizItem item = items.get(index);
+            final String answer = answers.get(index);
+
+            final int finalIndex = index;
+            rvQuizResults.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    QuizResultFragment.this.items.add(item);
+                    QuizResultFragment.this.answers.add(answer);
+
+                    adapter.notifyItemInserted(QuizResultFragment.this.items.size() - 1);
+
+                    if (finalIndex == items.size() - 1)
+                        showQuizResult();
+                }
+            }, 500);
+        }
+
     }
 
     private void showQuizResult() {
