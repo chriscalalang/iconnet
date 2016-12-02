@@ -48,7 +48,7 @@
         <activity android:name=".activities.QuizIPCalculatorActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.FullScreen.Transparent.Dark"></activity>
+            android:theme="@style/AppTheme.FullScreen.Transparent.Dark"/>
     </application>
 
 </manifest>

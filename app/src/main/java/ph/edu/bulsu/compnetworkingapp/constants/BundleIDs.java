@@ -15,6 +15,7 @@ public class BundleIDs {
     public static final String VIDEO_FILE_NAME = "video_file_name";
     public static final String VIDEO_TUTORIAL = "video_tutorial";
     public static final String IS_ACTIVITY = "is_activity";
+    public static final String PARTS = "parts";
 
     private BundleIDs() {
     }

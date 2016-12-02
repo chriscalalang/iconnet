@@ -40,6 +40,7 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
         switch (v.getId()) {
             case R.id.cvRouter:
                 intent.putExtra(BundleIDs.MODEL_FILE_NAME, "router_obj");
+                intent.putExtra(BundleIDs.PARTS, "A. Antenna \n B. Reset button \n C. Lan ports \n D. Modem port \n E. Power and connection indicators");
                 break;
             case R.id.cvCableStraight:
 
@@ -68,6 +69,7 @@ public class ModelsFragment extends BaseFragment implements View.OnClickListener
             case R.id.cvFirewall:
 
                 intent.putExtra(BundleIDs.MODEL_FILE_NAME, "firewall_obj");
+                intent.putExtra(BundleIDs.PARTS, "A. Power button \n B. NIC modules");
                 break;
         }
         startActivity(intent);

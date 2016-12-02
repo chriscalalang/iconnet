@@ -1,17 +1,18 @@
 package ph.edu.bulsu.compnetworkingapp.activities;
 
 
-import android.graphics.Matrix;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import min3d.core.Object3dContainer;
 import min3d.core.RendererActivity;
 import min3d.parser.IParser;
 import min3d.parser.Parser;
 import min3d.vos.Light;
-import min3d.vos.Number3dManaged;
+import ph.edu.bulsu.compnetworkingapp.R;
 import ph.edu.bulsu.compnetworkingapp.constants.BundleIDs;
 
 public class Model3DViewerActivity extends RendererActivity {
@@ -24,12 +25,26 @@ public class Model3DViewerActivity extends RendererActivity {
 
 
     private ScaleGestureDetector scaleGestureDetector;
+    private FrameLayout flContent;
+    private TextView tvParts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
+    }
+
+    @Override
+    protected void onCreateSetContentView() {
+        setContentView(R.layout.frame_3d);
+        flContent = (FrameLayout) findViewById(R.id.flContent);
+        tvParts = (TextView) findViewById(R.id.tvParts);
+
+        if (getIntent().getExtras().containsKey(BundleIDs.PARTS)) {
+            tvParts.setText(getIntent().getStringExtra(BundleIDs.PARTS));
+        }
+        flContent.addView(glSurfaceView(), 0);
     }
 
     @Override
