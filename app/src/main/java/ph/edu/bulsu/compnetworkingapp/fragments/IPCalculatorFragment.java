@@ -301,15 +301,15 @@ public class IPCalculatorFragment extends BaseFragment {
 
     private void clearResults() {
         tvResultsWillShowIf.setVisibility(isActivity ? View.GONE : View.VISIBLE);
-        tilIP.setErrorEnabled(true);
         tilIP.setError("Invalid IP");
+        tilIP.setErrorEnabled(true);
         cvHomeAddressRange.setVisibility(View.GONE);
         cvBroadcastAddress.setVisibility(View.GONE);
         cvNetworkAddress.setVisibility(View.GONE);
     }
 
     private void showResults() {
-        tilIP.setErrorEnabled(false);
+        tilIP.setError(null);
         tvResultsWillShowIf.setVisibility(View.GONE);
         cvHomeAddressRange.setVisibility(View.VISIBLE);
         cvBroadcastAddress.setVisibility(View.VISIBLE);
